@@ -126,6 +126,8 @@ function postCard(p) {
         + '</ul></details>' : '')
     + '<div class="btn-row">'
     + (p.url && p.url !== '#' ? '<a class="btn small" href="' + esc(p.url) + '" target="_blank" rel="noopener">直达原帖 ' + ic('ext') + '</a>' : '')
+    + '<button class="btn small" data-act="download" data-id="' + (p.rank || '') + '">' + ic('down') + ' 下载</button>'
+    + '<button class="btn small" data-act="learnsearch" data-id="' + (p.rank || '') + '">' + ic('search') + ' 同类学习</button>'
     + '<button class="btn primary small" data-act="learn" data-id="' + (p.rank || '') + '">' + ic('pen') + ' 拆解</button>'
     + '<button class="btn small" data-act="clone" data-id="' + (p.rank || '') + '">' + ic('copy') + ' 克隆</button>'
     + '<button class="btn ghost small" data-act="favpost" data-id="' + (p.rank || '') + '">' + ic('star') + ' 收藏</button>'
@@ -172,6 +174,66 @@ function onPostAction(e) {
     toast('已填入爆款，点「生成完整脚本」');
   }
   if (e.target.dataset.act === 'favpost') { addFav('爆款', p.title, '作者 ' + p.author + ' ｜ ▲' + ((p.stats && p.stats.like_growth) || 0) + ' 赞 ｜ ' + (p.url || '')); toast('已收藏'); }
+  if (e.target.dataset.act === 'download') { openDownloadModal(p); }
+  if (e.target.dataset.act === 'learnsearch') { openLearnModal(p); }
+}
+
+// ---------- 下载源视频 & 跨平台同类学习 ----------
+const PLATFORMS = [
+  { name: 'B站', icon: 'play', url: (k) => 'https://search.bilibili.com/all?keyword=' + encodeURIComponent(k) },
+  { name: 'YouTube', icon: 'play', url: (k) => 'https://www.youtube.com/results?search_query=' + encodeURIComponent(k) },
+  { name: '抖音', icon: 'play', url: (k) => 'https://www.douyin.com/search/' + encodeURIComponent(k) },
+  { name: '小红书', icon: 'book', url: (k) => 'https://www.xiaohongshu.com/search_result?keyword=' + encodeURIComponent(k) },
+  { name: '快手', icon: 'play', url: (k) => 'https://www.kuaishou.com/search/video?searchKey=' + encodeURIComponent(k) },
+  { name: '微博', icon: 'chat', url: (k) => 'https://s.weibo.com/weibo?q=' + encodeURIComponent(k) },
+  { name: 'X / Twitter', icon: 'eye', url: (k) => 'https://x.com/search?q=' + encodeURIComponent(k) },
+  { name: 'Reddit', icon: 'chat', url: (k) => 'https://www.reddit.com/search/?q=' + encodeURIComponent(k) }
+];
+function renderPlatformLinks(keyword) {
+  const k = String(keyword || '').trim();
+  if (!k) return '<span class="hint">请先输入关键词。</span>';
+  return PLATFORMS.map(p =>
+    '<a class="platform-link" href="' + p.url(k) + '" target="_blank" rel="noopener">' + ic(p.icon) + '<span>' + esc(p.name) + '</span></a>'
+  ).join('');
+}
+function openModal(id) { const m = document.getElementById(id); if (m) m.classList.add('open'); }
+function closeModal(id) { const m = document.getElementById(id); if (m) m.classList.remove('open'); }
+function closeAllModals() { $('.modal.open').forEach(m => m.classList.remove('open')); }
+function extractBvid(post) {
+  const u = post.url || '';
+  const m = String(u).match(/BV[0-9A-Za-z]{10}/);
+  return m ? m[0] : (post.bvid || '');
+}
+function openDownloadModal(post) {
+  const body = $('#download-body');
+  if (!body) return;
+  const url = post.url && post.url !== '#' ? post.url : '';
+  const bvid = extractBvid(post);
+  let h = '<div class="dl-title">' + esc(post.title) + '</div>';
+  h += '<div class="dl-origin">'
+    + (url ? '<a class="btn small" href="' + esc(url) + '" target="_blank" rel="noopener">' + ic('ext') + ' 打开原视频</a>' : '')
+    + (bvid ? '<button class="btn small" data-copy="' + esc(bvid) + '">' + ic('copy') + ' 复制 BV 号</button>' : '')
+    + (url ? '<button class="btn small" data-copy="' + esc(url) + '">' + ic('copy') + ' 复制链接</button>' : '')
+    + '</div>';
+  h += '<div class="dl-steps"><h4>下载方式</h4><ol>'
+    + '<li>点击「打开原视频」，在浏览器或 B站客户端中确认视频可正常播放。</li>'
+    + '<li>手机端：B站 App 支持「缓存」到本地，离线也能看。</li>'
+    + '<li>电脑端：可选用 yt-dlp 等开源工具，命令：<code>yt-dlp "视频链接"</code></li>'
+    + '<li>下载内容仅供个人学习与研究，请勿用于商业用途。</li>'
+    + '</ol></div>';
+  h += '<p class="dl-note">' + ic('book') + ' 本项目只提供入口与指引，不托管任何视频文件。</p>';
+  body.innerHTML = h;
+  openModal('download-modal');
+}
+function openLearnModal(post) {
+  const body = $('#learn-body');
+  if (!body) return;
+  const k = String(post.title || '').replace(/^[#\s]+/, '').trim();
+  let h = '<div class="dl-title">' + esc(post.title) + '</div>';
+  h += '<p class="hint">已按标题关键词，在 8 个平台生成同类视频搜索入口，点击即可对照学习选题、结构、剪辑与文案。</p>';
+  h += '<div class="lab-links">' + renderPlatformLinks(k) + '</div>';
+  body.innerHTML = h;
+  openModal('learn-modal');
 }
 
 // ---------- Learn ----------
@@ -365,7 +427,7 @@ function setCounts(pairs) {
 }
 function initScrollspy() {
   const links = $$('.nav-link');
-  const sections = ['why', 'trends', 'hot', 'learn', 'clone', 'subscribe', 'faq'].map(id => document.getElementById(id));
+  const sections = ['why', 'trends', 'search-lab', 'hot', 'learn', 'clone', 'subscribe', 'faq'].map(id => document.getElementById(id));
   const io = new IntersectionObserver((entries) => {
     entries.forEach(en => {
       if (!en.isIntersecting) return;
@@ -395,6 +457,17 @@ function bindEvents() {
     localStorage.setItem('dm_theme', dark ? 'dark' : 'light');
     $('#btn-theme').innerHTML = dark ? ic('sun') : ic('moon');
   });
+
+  $('#btn-lab-go').addEventListener('click', () => {
+    const k = $('#lab-keyword').value.trim();
+    if (!k) { toast('请输入关键词'); $('#lab-keyword').focus(); return; }
+    $('#lab-msg').textContent = '已为「' + k + '」生成 8 个平台的学习搜索入口：';
+    $('#lab-links').innerHTML = renderPlatformLinks(k);
+  });
+  $('#lab-keyword').addEventListener('keydown', (e) => { if (e.key === 'Enter') $('#btn-lab-go').click(); });
+  $$('.modal-close').forEach(b => b.addEventListener('click', () => { const m = b.closest('.modal'); if (m) m.classList.remove('open'); }));
+  $$('.modal').forEach(m => m.addEventListener('click', (e) => { if (e.target === m) m.classList.remove('open'); }));
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeAllModals(); });
   $('#btn-subscribe').addEventListener('click', () => subscribe('sub-email', 'sub-msg'));
   $('#btn-subscribe2').addEventListener('click', () => subscribe('sub-email2', 'sub-msg2'));
   $('#btn-subscribe-top').addEventListener('click', () => { document.getElementById('subscribe').scrollIntoView({ behavior: 'smooth' }); setTimeout(() => $('#sub-email2').focus(), 500); });

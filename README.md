@@ -1,50 +1,113 @@
 # 弹幕雷达 Danmaku Radar
 
-自动追踪 **B站（bilibili）热度** 的全栈项目：定时抓取 B站真实数据，展示内容热榜、话题热榜、弹幕热词与历史趋势，支持中英双语周报订阅。
+> 面向内容创作者、运营与求职者的 B站热度雷达：每周自动抓取 B站真实热榜，把「最近什么火、为什么火、怎么抄作业」一次讲清楚。
 
-## 功能
+弹幕雷达是一个**全栈、自动更新、可对外使用**的开源项目：
 
-- 🔥 内容热榜 Top 20：真实视频标题 / 分区 / 播放 / 点赞 / 评论 / 收藏 + 直达原视频链接 + 评论摘要
-- 🏷️ 话题热榜 Top 20：按「近 7 天该话题新增视频数」排序（统计自视频真实标签）
-- 💬 弹幕热词：真实弹幕高频词
-- 📈 历史趋势：每日快照自动累积，网页直接展示走势图
-- 📧 订阅周报：中英双语，每周自动推送（SMTP 可配置）
-- 🌙 暗色模式 / 📱 PWA 可安装
-- ✅ pytest 单元测试 + CI + /api/stats 可观测性
+- 自动抓取 B站真实数据（公开接口），每 6 小时更新一次；
+- 内容热榜 Top 20：按「近 7 天点赞增量」排序，附播放 / 点赞 / 评论 / 收藏数据与直达原视频链接；
+- 每张视频卡片提供「下载源视频」与「同类学习」两个入口；
+- 跨平台学习搜索台：输入关键词，一键跳转 8 个平台搜索同类内容；
+- 弹幕热词、评论区 TOP 摘要、爆款多维度拆解、一键生成克隆脚本；
+- 中英双语邮件周报订阅、暗色模式、PWA 可安装到桌面。
+
+## 在线体验
+
+- 网站：https://cffjzsb6r7-cloud.github.io/danmaku-radar/
+- 数据接口：https://danmaku-radar-api.onrender.com/api/trends
+
+## 功能一览
+
+| 功能 | 说明 |
+| --- | --- |
+| 内容热榜 Top 20 | 近 7 天点赞增量最高的 B站视频，附完整数据与直达链接 |
+| 下载源视频 | 一键打开原视频 / 复制链接 / 复制 BV 号，并给出 yt-dlp 等下载指引 |
+| 同类学习 | 按视频标题自动生成 8 平台搜索入口：B站 / YouTube / 抖音 / 小红书 / 快手 / 微博 / X / Reddit |
+| 学习搜索台 | 手动输入任意关键词，一键生成跨平台学习搜索链接 |
+| 弹幕热词 | 每个上榜视频的弹幕高频词与出现次数 |
+| 评论区 TOP | 每个上榜视频的热门评论与点赞数 |
+| 拆解爆款 | 从热度、剪辑、画面风格、技术热词、话题、评论、作者账号等维度专业拆解 |
+| 克隆选题 | 基于原爆款与作者账号，生成完整可执行的视频脚本 |
+| 百度热搜 | 独立区块展示当前热搜词，紧跟全网热点 |
+| 邮件周报 | 中英双语，每周自动推送（SMTP 可配置） |
+| PWA / 暗色模式 | 可安装到桌面，支持深色模式 |
 
 ## 技术栈
 
-Python · FastAPI · SQLite · 爬虫（B站公开接口） · HTML/CSS/JS · GitHub Actions · GitHub Pages · PWA
+- 前端：原生 HTML / CSS / JavaScript · PWA · GitHub Pages
+- 后端：Python · FastAPI · SQLite · SMTP 邮件
+- 爬虫：B站公开接口，内置频率控制与降级策略
+- 工程化：GitHub Actions 定时抓取 · pytest 单元测试 · Docker / Render 部署 · 可观测性 API
 
 ## 目录结构
 
 ```text
 danmaku-radar/
-├── backend/            # 后端：抓取、入库、周报、邮件、API
-├── website/            # 前端网站（静态，可离线回退）
-├── data/               # 真实数据库 + 最新数据 + 历史趋势 + 周报
+├── backend/            # FastAPI 后端：抓取、入库、周报、邮件、API
+├── website/            # 前端网站（静态资源，PWA）
+├── crawler/            # 爬虫适配层
+├── data/               # 真实数据库 + 最新数据快照
 ├── examples/           # 示例数据
-└── .github/workflows/  # 自动任务：每 6 小时抓取并重新发布
+├── tests/              # pytest 单元测试
+└── .github/workflows/  # CI + 每 6 小时自动抓取并发布
 ```
-
-## 自动更新
-
-GitHub Actions 每 6 小时自动执行一次：抓取 B站真实热榜 → 更新数据库 → 生成最新数据与历史趋势 → 自动重新发布网站。
 
 ## 本地运行
 
-1. 安装依赖：`pip install -r backend/requirements.txt`
-2. 抓取真实数据：`python backend/refresh.py`
-3. 启动后端：`uvicorn backend.app.main:app --host 0.0.0.0 --port 8000`
-4. 打开前端：`website/index.html`
+1. 安装依赖：
 
-主要 API：`/api/trends`（热榜） · `/api/history`（历史趋势） · `/api/subscribe`（订阅） · `/api/digests`（周报） · `/api/health`（健康检查）
+```bash
+pip install -r backend/requirements.txt
+```
+
+2. 抓取真实数据：
+
+```bash
+python backend/refresh.py
+```
+
+3. 启动后端：
+
+```bash
+uvicorn backend.app.main:app --host 0.0.0.0 --port 8000
+```
+
+4. 打开前端：直接访问 `website/index.html`，或运行 `python -m http.server 8000 --directory website`。
+
+## API
+
+| 接口 | 说明 |
+| --- | --- |
+| GET /api/trends | 内容热榜 + 弹幕热词 + 评论摘要 + 百度热搜 |
+| GET /api/history | 历史数据快照 |
+| GET /api/stats | 运行统计（可观测性） |
+| GET /api/health | 健康检查 |
+| POST /api/subscribe | 邮件订阅周报 |
+| GET /api/digests | 历史周报列表 |
+
+## 自动更新
+
+GitHub Actions 每 6 小时自动执行一次：抓取 B站真实热榜 → 更新 SQLite 数据库 → 提交数据快照 → 重新发布 GitHub Pages；后端部署在 Render，保证网站与接口始终可用。
+
+## 项目亮点（简历 / 面试可用）
+
+- **真实数据链路**：定时抓取 → SQLite 入库 → 数据快照 → 前端展示，全程无人值守自动化；
+- **前后端分离**：FastAPI REST API + 静态前端，结构清晰、易于扩展；
+- **工程质量**：pytest 单元测试、CI 语法检查、/api/stats 可观测性、Docker / Render 部署；
+- **产品思维**：订阅系统、PWA、暗色模式、跨平台学习链路，从「看数据」到「学爆款」形成闭环。
 
 ## 数据合规
 
-- 数据来自 B站公开接口，仅用于个人学习与项目展示。
-- 爬虫已内置频率控制与降级策略；请遵守平台条款与相关法规。
+- 数据来自 B站公开接口，仅用于个人学习与项目展示；
+- 下载指引仅提供开源工具说明，不托管任何视频文件；
+- 请遵守平台条款与相关法律法规。
+
+## Roadmap
+
+- 个性化订阅：按分区 / UP 主订阅周报
+- 弹幕情感分析：判断观众对视频的情绪倾向
+- 多平台扩展：YouTube / 抖音 / 小红书热榜接入
 
 ## License
 
-MIT © 2026 Danmaku Radar contributors
+MIT © 2026 Danmaku Radar

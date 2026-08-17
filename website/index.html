@@ -40,6 +40,9 @@
   <symbol id="i-book" viewBox="0 0 24 24"><path d="M4 19V5a2 2 0 0 1 2-2h14v16H6a2 2 0 0 0-2 2Zm0 0a2 2 0 0 0 2 2h14"/></symbol>
   <symbol id="i-chev" viewBox="0 0 24 24"><path d="m9 6 6 6-6 6"/></symbol>
   <symbol id="i-radar" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 12 12 3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="17" cy="8" r="1.6" fill="currentColor"/></symbol>
+  <symbol id="i-down" viewBox="0 0 24 24"><path d="M12 4v11M7 11l5 5 5-5"/><path d="M5 19h14"/></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4.5 4.5"/></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24"><path d="M8 5.5v13l11-6.5L8 5.5Z"/></symbol>
 </svg>
 
 <header class="site-header" id="top">
@@ -48,6 +51,7 @@
     <nav class="nav-links" id="nav">
       <a href="#why" class="nav-link">初衷</a>
       <a href="#trends" class="nav-link">内容热榜</a>
+      <a href="#search-lab" class="nav-link">学习台</a>
       <a href="#hot" class="nav-link">热搜</a>
       <a href="#learn" class="nav-link">拆解爆款</a>
       <a href="#clone" class="nav-link">克隆选题</a>
@@ -135,6 +139,24 @@
           <span class="frame-url">danmaku-radar / 内容热榜</span>
         </div>
         <div id="trends-list" style="padding:22px 24px 30px"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 跨平台学习搜索台 -->
+  <section id="search-lab" class="section">
+    <div class="container">
+      <div class="section-head reveal">
+        <h2><svg class="ic lg"><use href="#i-search"/></svg> 跨平台学习搜索台</h2>
+        <p class="hint">输入标题或关键词，一键跳到 B站 / YouTube / 抖音 / 小红书 / 快手 / 微博 / X / Reddit 搜索同类视频，跟着别人的爆款学。</p>
+      </div>
+      <div class="search-lab reveal">
+        <div class="lab-row">
+          <input id="lab-keyword" type="text" placeholder="输入标题或关键词，如：年度动画盘点">
+          <button id="btn-lab-go" class="btn primary">生成跨平台链接 <span class="arrow"><svg class="ic sm"><use href="#i-arrow"/></svg></span></button>
+        </div>
+        <p class="hint" id="lab-msg"></p>
+        <div class="lab-links" id="lab-links"></div>
       </div>
     </div>
   </section>
@@ -257,6 +279,24 @@
     <a href="#top" class="btn ghost small">回到顶部 <svg class="ic sm"><use href="#i-up"/></svg></a>
   </div>
 </footer>
+
+<!-- 下载源视频 -->
+<div class="modal" id="download-modal" role="dialog" aria-modal="true" aria-label="下载源视频">
+  <div class="modal-box">
+    <button class="modal-close" data-close aria-label="关闭"><svg class="ic"><use href="#i-close"/></svg></button>
+    <h3 class="modal-title">下载源视频</h3>
+    <div id="download-body"></div>
+  </div>
+</div>
+
+<!-- 跨平台同类学习 -->
+<div class="modal" id="learn-modal" role="dialog" aria-modal="true" aria-label="跨平台同类学习">
+  <div class="modal-box">
+    <button class="modal-close" data-close aria-label="关闭"><svg class="ic"><use href="#i-close"/></svg></button>
+    <h3 class="modal-title">跨平台同类学习</h3>
+    <div id="learn-body"></div>
+  </div>
+</div>
 
 <div id="toast" class="toast" hidden></div>
 <button id="back-top" class="back-top" hidden aria-label="回到顶部"><svg class="ic"><use href="#i-up"/></svg></button>
