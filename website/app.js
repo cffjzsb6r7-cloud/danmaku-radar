@@ -6,6 +6,7 @@ const esc = (s) => String(s == null ? '' : s).replace(/[&<>"']/g, (c) => ({'&':'
 let toastTimer = null;
 function toast(msg) { const t = $('#toast'); t.textContent = msg; t.hidden = false; clearTimeout(toastTimer); toastTimer = setTimeout(() => { t.hidden = true; }, 2400); }
 const FAV_KEY = 'dm_favs';
+function ic(name, cls) { return '<svg class="ic ' + (cls || '') + '"><use href="#i-' + name + '"/></svg>'; }
 const BACKEND = (window.DANMAKU_API && String(window.DANMAKU_API).trim()) || 'http://127.0.0.1:8000';
 async function fetchWithTimeout(url, ms = 8000) {
   const ctl = new AbortController();
@@ -63,10 +64,10 @@ function renderTrends() {
   $('#trends-week').textContent = '周范围 ' + (state.data.week || '-') + ' · 平台 ' + (state.data.platform || '-') + ' · 排序口径：7 天点赞增量';
   const badge = $('#data-badge');
   if (state.fromBackend) {
-    badge.textContent = '✅ 真实数据 · B站 · 更新于 ' + (state.data.last_fetch || '-');
+    badge.textContent = '真实数据 · B站 · 更新于 ' + (state.data.last_fetch || '-');
     badge.classList.add('ok');
   } else {
-    badge.textContent = '📦 静态缓存数据（启动后端后为真实数据）';
+    badge.textContent = '静态缓存数据（后端未连接）';
     badge.classList.remove('ok');
   }
   // 分类筛选
@@ -106,24 +107,32 @@ function postCard(p) {
   const s = p.stats || {};
   const dm = p.danmaku_words || [];
   const cmts = p.top_comments || [];
-  const fans = p.author_fans ? (' ｜ 粉丝 ' + Number(p.author_fans).toLocaleString() + ' · Lv.' + (p.author_level || '-') + ' · 投稿 ' + (p.author_archives || '-')) : '';
+  const fans = p.author_fans ? ('粉丝 ' + Number(p.author_fans).toLocaleString() + ' · Lv.' + (p.author_level || '-') + ' · 投稿 ' + (p.author_archives || '-')) : '';
   const dur = fmtDur(p.duration);
+  const meta = [esc(p.author), esc(p.category || ''), esc(p.published_at || '')].filter(Boolean);
+  if (dur) meta.push('时长 ' + dur);
   return '<div class="post-card">'
     + '<div class="post-top"><span class="rank-badge' + (Number(p.rank) <= 3 ? ' rb-' + Number(p.rank) : '') + '">' + (p.rank || '') + '</span><h3>' + esc(p.title) + '</h3></div>'
-    + '<div class="post-meta">' + esc(p.author) + ' · ' + esc(p.category || '') + ' · ' + esc(p.published_at || '') + (dur ? ' · ⏱ ' + dur : '') + esc(fans) + '</div>'
-    + '<div>' + (p.topics || []).map(t => '<span class="tag">' + esc(t) + '</span>').join('') + '</div>'
-    + '<div class="stats">👁 播放 ' + (s.views || 0).toLocaleString() + ' ｜ 👍 ' + (s.likes || 0).toLocaleString() + ' ｜ <span class="growth">▲ 本周 +' + (s.like_growth || 0).toLocaleString() + '</span> ｜ 💬 ' + (s.comments || 0) + ' ｜ ⭐ 收藏 ' + (s.saves || 0).toLocaleString() + '</div>'
-    + (p.summary ? '<div class="ai-summary">📝 这条视频讲了什么：' + esc(p.summary) + '</div>' : '')
-    + (dm.length ? '<div class="dm-box">📊 本视频弹幕热词：' + dm.map(w => '<span class="tag hot">' + esc(w.word) + ' <i>×' + (w.count || 0) + '</i></span>').join('') + '</div>' : '')
-    + (cmts.length ? '<details class="cmt-details"><summary>💬 评论区 TOP' + cmts.length + '（共 ' + (s.comments || 0) + ' 条）</summary><ul class="cmt-list">'
-        + cmts.map(c => '<li><b>' + esc(c.user) + '</b> <span class="cmt-likes">▲' + (c.likes || 0) + '</span><div>' + esc(c.content) + '</div></li>').join('')
+    + '<div class="post-meta">' + meta.join('<span class="dot-sep">·</span>') + (fans ? '<span class="dot-sep">·</span>' + fans : '') + '</div>'
+    + '<div class="tags">' + (p.topics || []).map(t => '<span class="tag">' + esc(t) + '</span>').join('') + '</div>'
+    + '<div class="stats">'
+    + '<span class="st">' + ic('eye') + (s.views || 0).toLocaleString() + '</span>'
+    + '<span class="st">' + ic('heart') + (s.likes || 0).toLocaleString() + '</span>'
+    + '<span class="st growth">' + ic('bolt') + '本周 +' + (s.like_growth || 0).toLocaleString() + '</span>'
+    + '<span class="st">' + ic('chat') + (s.comments || 0).toLocaleString() + '</span>'
+    + '<span class="st">' + ic('star') + (s.saves || 0).toLocaleString() + '</span>'
+    + '</div>'
+    + (p.summary ? '<div class="ai-summary">' + ic('pen') + '<span class="ai-label">这条视频讲了什么</span><p>' + esc(p.summary) + '</p></div>' : '')
+    + (dm.length ? '<div class="dm-box"><span class="dm-label">' + ic('chat') + ' 本视频弹幕热词</span>' + dm.map(w => '<span class="tag hot">' + esc(w.word) + ' <i>×' + (w.count || 0) + '</i></span>').join('') + '</div>' : '')
+    + (cmts.length ? '<details class="cmt-details"><summary>' + ic('chat') + ' 评论区 TOP' + cmts.length + '（共 ' + (s.comments || 0) + ' 条）<span class="chev">' + ic('chev') + '</span></summary><ul class="cmt-list">'
+        + cmts.map(c => '<li><b>' + esc(c.user) + '</b> <span class="cmt-likes">' + ic('bolt') + (c.likes || 0) + '</span><div>' + esc(c.content) + '</div></li>').join('')
         + '</ul></details>' : '')
     + '<div class="btn-row">'
-    + (p.url && p.url !== '#' ? '<a class="btn small" href="' + esc(p.url) + '" target="_blank" rel="noopener">直达原帖 ↗</a>' : '')
-    + '<button class="btn primary small" data-act="learn" data-id="' + (p.rank || '') + '">Learn from this</button>'
-    + '<button class="btn small" data-act="clone" data-id="' + (p.rank || '') + '">Clone this</button>'
-    + '<button class="btn ghost small" data-act="favpost" data-id="' + (p.rank || '') + '">⭐ 收藏</button>'
-    + '<button class="btn ghost small" data-copy="' + esc(p.title + ' ' + (p.url || '')) + '">复制文案</button>'
+    + (p.url && p.url !== '#' ? '<a class="btn small" href="' + esc(p.url) + '" target="_blank" rel="noopener">直达原帖 ' + ic('ext') + '</a>' : '')
+    + '<button class="btn primary small" data-act="learn" data-id="' + (p.rank || '') + '">' + ic('pen') + ' 拆解</button>'
+    + '<button class="btn small" data-act="clone" data-id="' + (p.rank || '') + '">' + ic('copy') + ' 克隆</button>'
+    + '<button class="btn ghost small" data-act="favpost" data-id="' + (p.rank || '') + '">' + ic('star') + ' 收藏</button>'
+    + '<button class="btn ghost small" data-copy="' + esc(p.title + ' ' + (p.url || '')) + '">' + ic('copy') + ' 复制</button>'
     + '</div></div>';
 }
 function renderHighlights() {
@@ -133,9 +142,9 @@ function renderHighlights() {
   if (!hl.length) { box.innerHTML = ''; return; }
   box.innerHTML = hl.map(h =>
     '<div class="hl-card"><b>' + esc(h.title) + '</b>'
-    + '<span class="hl-growth">▲ 本周 +' + (h.like_growth || 0).toLocaleString() + '</span>'
+    + '<span class="hl-growth">' + ic('bolt') + ' 本周 +' + (h.like_growth || 0).toLocaleString() + '</span>'
     + '<span class="hl-meta">' + esc(h.category || '') + ' · ' + esc(h.author || '') + '</span>'
-    + '<div class="btn-row"><a class="btn small" href="' + esc(h.url || '#') + '" target="_blank" rel="noopener">直达 ↗</a>'
+    + '<div class="btn-row"><a class="btn small" href="' + esc(h.url || '#') + '" target="_blank" rel="noopener">直达 ' + ic('ext') + '</a>'
     + '<button class="btn ghost small" data-copy="' + esc(h.title) + '">复制标题</button></div></div>'
   ).join('');
 }
@@ -168,7 +177,7 @@ async function renderHistory() {
       + '<div class="bar" style="height:' + h + 'px"></div>'
       + '<span class="bar-label">' + esc(String(w.week).slice(5, 10)) + '</span></div>';
   }).join('') + '</div>'
-    + '<div class="hist-top">🔥 最热：' + esc(weeks[weeks.length - 1].top_title || '-') + '</div>';
+    + '<div class="hist-top">' + ic('fire') + ' 最热：' + esc(weeks[weeks.length - 1].top_title || '-') + '</div>';
 }
 function renderHotSearch() {
   const hot = state.data.hot_search || [];
@@ -189,7 +198,7 @@ function renderTopics() {
     return '<div class="topic-card">'
       + '<span class="topic-rank' + (Number(t.rank) <= 3 ? ' rb-' + Number(t.rank) : '') + '">' + (t.rank || '') + '</span>'
       + '<div class="topic-main"><b class="topic-name">' + esc(t.topic) + '</b>'
-      + '<div class="topic-meta"><span class="growth">▲ 本周 +' + (t.post_growth || 0).toLocaleString() + ' 篇</span> · 共 ' + (t.post_count || 0).toLocaleString() + ' 篇 · ' + esc(t.trend || '') + '</div>'
+      + '<div class="topic-meta"><span class="growth">' + ic('bolt') + ' 本周 +' + (t.post_growth || 0).toLocaleString() + ' 篇</span> · 共 ' + (t.post_count || 0).toLocaleString() + ' 篇 · ' + esc(t.trend || '') + '</div>'
       + '<div class="topic-bar"><i style="width:' + w + '%"></i></div></div>'
       + '</div>';
   }).join('');
@@ -214,7 +223,7 @@ function onPostAction(e) {
 }
 
 // ---------- Learn ----------
-function bdSec(title, body) { return '<div class="bd-sec"><h4>' + title + '</h4><div>' + body + '</div></div>'; }
+function bdSec(title, body, icon) { return '<div class="bd-sec"><h4>' + (icon ? ic(icon) : '') + title + '</h4><div>' + body + '</div></div>'; }
 function kpiLine(k, v) { return '<span class="bd-kpi"><b>' + (Number(v) || 0).toLocaleString() + '</b>' + esc(k) + '</span>'; }
 function analyzePost(title, content, tags, post) {
   const t = title || '', c = content || '';
@@ -286,21 +295,21 @@ function analyzePost(title, content, tags, post) {
 function renderBreakdown(r) {
   const st = r.stats;
   const dm = r.danmaku.slice(0, 8);
-  return '<div class="card reveal in" style="max-width:1160px;margin:26px auto;padding-left:28px;padding-right:28px;"><h2>🔍 爆款拆解卡</h2>'
+  return '<div class="card reveal in" style="max-width:1160px;margin:26px auto;padding-left:28px;padding-right:28px;"><h2>爆款拆解卡</h2>'
     + '<p class="bd-summary"><b>一句话总结：</b>' + esc(r.summary) + '</p>'
     + '<div class="bd-grid">'
-    + bdSec('🔥 热度诊断', kpiLine('播放', st.views) + kpiLine('点赞', st.likes) + kpiLine('本周新增赞', st.growth) + kpiLine('评论', st.comments) + kpiLine('收藏', st.saves)
-        + '<p>点赞率 ' + st.likeRate.toFixed(1) + '% ｜ 收藏/赞 ' + st.saveRate.toFixed(1) + '% ｜ 评论/赞 ' + st.cmtRate.toFixed(1) + '% ｜ 综合互动率 ' + st.engRate.toFixed(1) + '%</p>')
-    + bdSec('🎯 内容与选题', '赛道：' + esc(r.cat || '综合') + '；核心关键词：' + r.kws.map(k => '<span class="tag">' + esc(k) + '</span>').join('')
-        + '；标签：' + (r.tags.length ? r.tags.map(t => '<span class="tag alt">' + esc(t) + '</span>').join('') : '<span class="hint">无</span>'))
-    + bdSec('✂️ 剪辑与节奏', esc(r.edit))
-    + bdSec('🎨 画面风格', esc(r.style))
-    + bdSec('🧠 技术/专业热词', dm.length ? dm.map(w => '<span class="tag hot">' + esc(w.word) + ' ×' + w.count + '</span>').join('') : '<span class="hint">暂无弹幕热词</span>')
-    + bdSec('💬 评论区风向', esc(r.cmtTrend) + (r.cmts.length ? '<ul class="cmt-list">' + r.cmts.slice(0, 3).map(c => '<li><b>' + esc(c.user) + '</b> <span class="cmt-likes">▲' + (c.likes || 0) + '</span><div>' + esc(c.content) + '</div></li>').join('') + '</ul>' : ''))
-    + bdSec('👤 作者与账号', esc(r.acct) + (r.level ? '；账号等级 Lv.' + r.level : '') + (r.archives ? '；累计投稿 ' + r.archives + ' 条' : '') + (r.sign ? '；签名：' + esc(r.sign) : '') + (r.published ? '；发布时间：' + esc(r.published) : ''))
-    + bdSec('📅 发布因素', (r.published ? '发布于 ' + esc(r.published) : '发布时间未知') + '；本周新增赞 ' + st.growth.toLocaleString() + '，爆发力' + (st.growth > 100000 ? '极强（>10万）' : st.growth > 30000 ? '强（3万+）' : st.growth > 5000 ? '中等（5千+）' : '一般') + '；' + esc(r.acct))
+    + bdSec('热度诊断', kpiLine('播放', st.views) + kpiLine('点赞', st.likes) + kpiLine('本周新增赞', st.growth) + kpiLine('评论', st.comments) + kpiLine('收藏', st.saves)
+        + '<p>点赞率 ' + st.likeRate.toFixed(1) + '% ｜ 收藏/赞 ' + st.saveRate.toFixed(1) + '% ｜ 评论/赞 ' + st.cmtRate.toFixed(1) + '% ｜ 综合互动率 ' + st.engRate.toFixed(1) + '%</p>', 'fire')
+    + bdSec('内容与选题', '赛道：' + esc(r.cat || '综合') + '；核心关键词：' + r.kws.map(k => '<span class="tag">' + esc(k) + '</span>').join('')
+        + '；标签：' + (r.tags.length ? r.tags.map(t => '<span class="tag alt">' + esc(t) + '</span>').join('') : '<span class="hint">无</span>'), 'tag')
+    + bdSec('剪辑与节奏', esc(r.edit), 'pen')
+    + bdSec('画面风格', esc(r.style), 'eye')
+    + bdSec('技术/专业热词', dm.length ? dm.map(w => '<span class="tag hot">' + esc(w.word) + ' ×' + w.count + '</span>').join('') : '<span class="hint">暂无弹幕热词</span>', 'bolt')
+    + bdSec('评论区风向', esc(r.cmtTrend) + (r.cmts.length ? '<ul class="cmt-list">' + r.cmts.slice(0, 3).map(c => '<li><b>' + esc(c.user) + '</b> <span class="cmt-likes">' + ic('bolt') + (c.likes || 0) + '</span><div>' + esc(c.content) + '</div></li>').join('') + '</ul>' : ''), 'chat')
+    + bdSec('作者与账号', esc(r.acct) + (r.level ? '；账号等级 Lv.' + r.level : '') + (r.archives ? '；累计投稿 ' + r.archives + ' 条' : '') + (r.sign ? '；签名：' + esc(r.sign) : '') + (r.published ? '；发布时间：' + esc(r.published) : ''), 'star')
+    + bdSec('发布因素', (r.published ? '发布于 ' + esc(r.published) : '发布时间未知') + '；本周新增赞 ' + st.growth.toLocaleString() + '，爆发力' + (st.growth > 100000 ? '极强（>10万）' : st.growth > 30000 ? '强（3万+）' : st.growth > 5000 ? '中等（5千+）' : '一般') + '；' + esc(r.acct), 'chart')
     + '</div>'
-    + '<div class="btn-row"><button id="btn-save-breakdown" class="btn btn-dark">⭐ 收藏这张拆解卡</button><button class="btn" data-copy="' + esc(r.summary) + '">复制文案</button></div></div>';
+    + '<div class="btn-row"><button id="btn-save-breakdown" class="btn primary">' + ic('star') + ' 收藏这张拆解卡</button><button class="btn ghost" data-copy="' + esc(r.summary) + '">' + ic('copy') + ' 复制文案</button></div></div>';
 }
 
 // ---------- Clone ----------
@@ -356,14 +365,14 @@ function generateScript(title, post) {
 }
 function renderScript(s) {
   return '<div class="bd-grid">'
-    + bdSec('🎯 选题定位', '赛道：' + esc(s.cat) + '；' + esc(s.angle))
-    + bdSec('🏷 标题方案（4 选 1）', s.titles.map((x, i) => '<p class="script-title">' + (i + 1) + '. ' + esc(x) + '</p>').join(''))
-    + bdSec('📝 文案脚本（分镜大纲）', '<ol class="script-list">' + s.outline.map(x => '<li>' + esc(x) + '</li>').join('') + '</ol>')
-    + bdSec('✂️ 剪辑与制作', esc(s.edit) + '<br>' + esc(s.music) + '<br>' + esc(s.cover))
-    + bdSec('🚀 发布策略', esc(s.publish))
-    + bdSec('👤 账号建议（结合原作者）', esc(s.acct))
+    + bdSec('选题定位', '赛道：' + esc(s.cat) + '；' + esc(s.angle), 'tag')
+    + bdSec('标题方案（4 选 1）', s.titles.map((x, i) => '<p class="script-title">' + (i + 1) + '. ' + esc(x) + '</p>').join(''), 'pen')
+    + bdSec('文案脚本（分镜大纲）', '<ol class="script-list">' + s.outline.map(x => '<li>' + esc(x) + '</li>').join('') + '</ol>', 'book')
+    + bdSec('剪辑与制作', esc(s.edit) + '<br>' + esc(s.music) + '<br>' + esc(s.cover), 'copy')
+    + bdSec('发布策略', esc(s.publish), 'bolt')
+    + bdSec('账号建议（结合原作者）', esc(s.acct), 'star')
     + '</div>'
-    + '<div class="btn-row"><button class="btn btn-dark" data-save-script>⭐ 收藏脚本</button><button class="btn" data-copy="' + esc(s.scriptText) + '">📋 复制完整脚本</button></div>';
+    + '<div class="btn-row"><button class="btn primary" data-save-script>' + ic('star') + ' 收藏脚本</button><button class="btn ghost" data-copy="' + esc(s.scriptText) + '">' + ic('copy') + ' 复制完整脚本</button></div>';
 }
 
 // ---------- 收藏 ----------
@@ -426,13 +435,13 @@ function bindEvents() {
     if (!btn) return;
     const text = btn.dataset.copy || '';
     if (navigator.clipboard && navigator.clipboard.writeText) {
-      navigator.clipboard.writeText(text).then(() => toast('已复制到剪贴板 📋')).catch(() => toast('复制失败'));
+      navigator.clipboard.writeText(text).then(() => toast('已复制到剪贴板')).catch(() => toast('复制失败'));
     } else { toast('当前浏览器不支持复制'); }
   });
   $('#btn-theme').addEventListener('click', () => {
     const dark = document.body.classList.toggle('dark');
     localStorage.setItem('dm_theme', dark ? 'dark' : 'light');
-    $('#btn-theme').textContent = dark ? '☀️' : '🌙';
+    $('#btn-theme').innerHTML = dark ? ic('sun') : ic('moon');
   });
   $('#btn-subscribe').addEventListener('click', () => subscribe('sub-email', 'sub-msg'));
   $('#btn-subscribe2').addEventListener('click', () => subscribe('sub-email2', 'sub-msg2'));
@@ -444,7 +453,7 @@ function bindEvents() {
   });
   $('#btn-clone').addEventListener('click', () => {
     const scr = generateScript($('#clone-title').value, state.curPost || null);
-    $('#clone-result').innerHTML = '<div class="card reveal in" style="max-width:1160px;margin:26px auto;padding-left:28px;padding-right:28px;"><h2>🎬 完整克隆脚本（基于原爆款 + 作者账号）</h2>' + renderScript(scr) + '</div>';
+    $('#clone-result').innerHTML = '<div class="card reveal in" style="max-width:1160px;margin:26px auto;padding-left:28px;padding-right:28px;"><h2>完整克隆脚本（基于原爆款 + 作者账号）</h2>' + renderScript(scr) + '</div>';
     const saveBtn = $('#clone-result [data-save-script]');
     if (saveBtn) saveBtn.addEventListener('click', () => { addFav('脚本', $('#clone-title').value || '克隆脚本', scr.scriptText); toast('脚本已收藏'); });
   });
@@ -466,8 +475,8 @@ async function subscribe(emailId, msgId) {
     const j = await r.json();
     if (j && j.ok) {
       $('#' + emailId).value = '';
-      $('#' + msgId).textContent = '✅ 订阅成功！已写入数据库，每周一自动推送';
-      toast('订阅成功 🎉');
+      $('#' + msgId).textContent = '订阅成功！已写入数据库，每周一自动推送';
+      toast('订阅成功');
       return;
     }
     toast(j && j.msg ? j.msg : '订阅失败');
@@ -477,8 +486,8 @@ async function subscribe(emailId, msgId) {
   if (subs.includes(email)) { toast('该邮箱已订阅'); return; }
   subs.push(email); localStorage.setItem('dm_subscribers', JSON.stringify(subs));
   $('#' + emailId).value = '';
-  $('#' + msgId).textContent = '✅ 订阅成功（本地记录）！启动后端后可正式入库';
-  toast('订阅成功 🎉');
+  $('#' + msgId).textContent = '订阅成功（本地记录）！启动后端后可正式入库';
+  toast('订阅成功');
 }
 
 function skeleton(n) {
@@ -495,7 +504,7 @@ function skeleton(n) {
   initScrollspy();
   initBackTop();
   const savedTheme = localStorage.getItem('dm_theme');
-  if (savedTheme === 'dark') { document.body.classList.add('dark'); $('#btn-theme').textContent = '☀️'; }
+  if (savedTheme === 'dark') { document.body.classList.add('dark'); $('#btn-theme').innerHTML = ic('sun'); }
   if ('serviceWorker' in navigator) { navigator.serviceWorker.register('sw.js').catch(() => {}); }
   $('#trends-list').innerHTML = skeleton(6);
   $('#topic-list').innerHTML = skeleton(4);
