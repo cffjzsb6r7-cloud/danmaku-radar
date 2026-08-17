@@ -36,7 +36,6 @@ async function loadData() {
   state.data = FALLBACK;
 }
 function allPosts() { return state.data.content_rank || []; }
-function allTopics() { return state.data.topic_rank || []; }
 
 function extractKeywords(text, n) {
   const runs = String(text || '').match(/[\u4e00-\u9fff]{2,4}/g) || [];
@@ -59,7 +58,7 @@ function titlePatterns(t) {
 function renderTrends() {
   if (!state.data) return;
   const posts = allPosts();
-  const topics = allTopics();
+  const hot = state.data.hot_search || [];
   const totalGrowth = posts.reduce((a, p) => a + ((p.stats && p.stats.like_growth) || 0), 0);
   $('#trends-week').textContent = '周范围 ' + (state.data.week || '-') + ' · 平台 ' + (state.data.platform || '-') + ' · 排序口径：7 天点赞增量';
   const badge = $('#data-badge');
@@ -80,13 +79,11 @@ function renderTrends() {
     $$('#trends-filter .chip').forEach(x => x.classList.toggle('active', x === b));
   }));
   renderTrendsList();
-  setCounts([[20, posts.length], [86200, totalGrowth], [20, topics.length]]);
-  const hot = topics.slice(0, 10).map(t => t.topic).concat(topics.slice(0, 10).map(t => t.topic));
-  $('#marquee').innerHTML = hot.map(w => '<span>' + esc(w) + '</span>').join('');
-  renderTopics();
+  setCounts([[20, posts.length], [86200, totalGrowth], [20, hot.length]]);
+  const marq = hot.length ? hot.map(h => h.word) : (state.data.danmaku_words || []).map(w => w.word);
+  $('#marquee').innerHTML = marq.concat(marq).map(w => '<span>' + esc(w) + '</span>').join('');
+  renderHotSearch();
   renderHighlights();
-  renderDanmaku();
-  renderHistory();
 }
 function renderTrendsList() {
   const list = state.filter === '全部' ? allPosts() : allPosts().filter(p => p.category === state.filter);
@@ -148,37 +145,6 @@ function renderHighlights() {
     + '<button class="btn ghost small" data-copy="' + esc(h.title) + '">复制标题</button></div></div>'
   ).join('');
 }
-function renderDanmaku() {
-  const box = document.getElementById('danmaku-words');
-  if (!box) return;
-  const dm = state.data.danmaku_words || [];
-  if (!dm.length) { box.innerHTML = '<span class="hint">本次未取到弹幕</span>'; return; }
-  box.innerHTML = dm.map(w => '<span class="hot-chip"><b>' + (w.count || 0) + '</b> ' + esc(w.word) + '</span>').join('');
-}
-async function renderHistory() {
-  const box = document.getElementById('history-chart');
-  if (!box) return;
-  let weeks = null;
-  try {
-    const r = await fetchWithTimeout(BACKEND + '/api/history');
-    if (r.ok) weeks = (await r.json()).weeks || null;
-  } catch (e) { /* 后端不可用 */ }
-  if (!weeks || !weeks.length) {
-    for (const u of ['../data/history.json', 'data/history.json']) {
-      try { const r = await fetch(u, { cache: 'no-store' }); if (r.ok) { weeks = (await r.json()).weeks || null; if (weeks && weeks.length) break; } } catch (e) { /* next */ }
-    }
-  }
-  if (!weeks || !weeks.length) { box.innerHTML = '<div class="empty">暂无历史数据：网站每 6 小时自动抓取，几天后这里会自动长出趋势图</div>'; return; }
-  const max = Math.max(1, ...weeks.map(w => w.total_likes || 0));
-  box.innerHTML = '<div class="history-chart">' + weeks.map(w => {
-    const h = Math.max(3, Math.round(((w.total_likes || 0) / max) * 180));
-    return '<div class="hist-bar" title="' + esc(w.week) + ' · ' + (w.top_title || '') + '">'
-      + '<span class="bar-val">' + (w.total_likes || 0).toLocaleString() + '</span>'
-      + '<div class="bar" style="height:' + h + 'px"></div>'
-      + '<span class="bar-label">' + esc(String(w.week).slice(5, 10)) + '</span></div>';
-  }).join('') + '</div>'
-    + '<div class="hist-top">' + ic('fire') + ' 最热：' + esc(weeks[weeks.length - 1].top_title || '-') + '</div>';
-}
 function renderHotSearch() {
   const hot = state.data.hot_search || [];
   const box = document.getElementById('hot-search');
@@ -188,20 +154,6 @@ function renderHotSearch() {
     '<a class="hot-chip" href="' + esc(h.url || '#') + '" target="_blank" rel="noopener">'
     + '<b>' + (h.rank || i + 1) + '</b> ' + esc(h.word) + '</a>'
   ).join('');
-}
-function renderTopics() {
-  renderHotSearch();
-  const list = allTopics();
-  const max = Math.max(1, ...list.map(t => t.post_growth || 0));
-  $('#topic-list').innerHTML = list.map(t => {
-    const w = Math.round(((t.post_growth || 0) / max) * 100);
-    return '<div class="topic-card">'
-      + '<span class="topic-rank' + (Number(t.rank) <= 3 ? ' rb-' + Number(t.rank) : '') + '">' + (t.rank || '') + '</span>'
-      + '<div class="topic-main"><b class="topic-name">' + esc(t.topic) + '</b>'
-      + '<div class="topic-meta"><span class="growth">' + ic('bolt') + ' 本周 +' + (t.post_growth || 0).toLocaleString() + ' 篇</span> · 共 ' + (t.post_count || 0).toLocaleString() + ' 篇 · ' + esc(t.trend || '') + '</div>'
-      + '<div class="topic-bar"><i style="width:' + w + '%"></i></div></div>'
-      + '</div>';
-  }).join('');
 }
 function findPost(rank) { return allPosts().find(p => Number(p.rank) === Number(rank)); }
 function onPostAction(e) {
@@ -413,7 +365,7 @@ function setCounts(pairs) {
 }
 function initScrollspy() {
   const links = $$('.nav-link');
-  const sections = ['why', 'trends', 'topics', 'history', 'learn', 'clone', 'subscribe', 'faq'].map(id => document.getElementById(id));
+  const sections = ['why', 'trends', 'hot', 'learn', 'clone', 'subscribe', 'faq'].map(id => document.getElementById(id));
   const io = new IntersectionObserver((entries) => {
     entries.forEach(en => {
       if (!en.isIntersecting) return;
@@ -507,7 +459,6 @@ function skeleton(n) {
   if (savedTheme === 'dark') { document.body.classList.add('dark'); $('#btn-theme').innerHTML = ic('sun'); }
   if ('serviceWorker' in navigator) { navigator.serviceWorker.register('sw.js').catch(() => {}); }
   $('#trends-list').innerHTML = skeleton(6);
-  $('#topic-list').innerHTML = skeleton(4);
   await loadData();
   localStorage.setItem('dm_lastload', String(Date.now()));
   renderTrends();
