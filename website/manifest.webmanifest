@@ -1,0 +1,12 @@
+{
+  "name": "弹幕雷达 Danmaku Radar",
+  "short_name": "弹幕雷达",
+  "description": "B站真实热度周报 + 爆款拆解 + 选题克隆",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#F9F7F5",
+  "theme_color": "#F9F7F5",
+  "icons": [
+    { "src": "icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+  ]
+}

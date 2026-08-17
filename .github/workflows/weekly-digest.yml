@@ -1,0 +1,51 @@
+name: Weekly Digest & Deploy
+
+on:
+  push:
+    branches: [main]
+  schedule:
+    - cron: '0 */6 * * *'   # 每 6 小时自动抓取更新（北京时间 02:00 / 08:00 / 14:00 / 20:00）
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  digest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install -r backend/requirements.txt
+      - name: Fetch real Bilibili data & update DB
+        run: python backend/refresh.py || echo "refresh failed, keep old data"
+      - name: Send bilingual digest email (skips if SMTP not configured)
+        env:
+          SMTP_HOST: ${{ secrets.SMTP_HOST }}
+          SMTP_PORT: ${{ secrets.SMTP_PORT }}
+          SMTP_USER: ${{ secrets.SMTP_USER }}
+          SMTP_PASS: ${{ secrets.SMTP_PASS }}
+          SMTP_FROM: ${{ secrets.SMTP_FROM }}
+        run: python backend/send_digest.py
+      - name: Commit DB & data snapshot
+        run: |
+          git config user.name "DanmakuRadar Bot"
+          git config user.email "bot@danmaku-radar.local"
+          git add data
+          git commit -m "weekly digest: real bilibili data" || echo "nothing to commit"
+          git push || echo "push skipped"
+      - name: Deploy to GitHub Pages
+        uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+      - id: deployment
+        uses: actions/deploy-pages@v4

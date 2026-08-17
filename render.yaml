@@ -1,0 +1,23 @@
+# Render.com 免费部署后端 API（对外公开接口）
+# 用法：把仓库推到 GitHub → Render New Web Service → 选仓库 → 自动读取本文件
+services:
+  - type: web
+    name: danmaku-radar-api
+    runtime: python
+    plan: free
+    buildCommand: pip install -r backend/requirements.txt
+    startCommand: uvicorn backend.app.main:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /api/health
+    envVars:
+      - key: DANMAKU_CORS
+        value: "*"
+      - key: SMTP_HOST
+        sync: false
+      - key: SMTP_PORT
+        sync: false
+      - key: SMTP_USER
+        sync: false
+      - key: SMTP_PASS
+        sync: false
+      - key: SMTP_FROM
+        sync: false

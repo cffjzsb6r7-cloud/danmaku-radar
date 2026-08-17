@@ -1,0 +1,31 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install -r backend/requirements-dev.txt
+      - name: Unit tests (pytest)
+        env:
+          PYTHONIOENCODING: utf-8
+        run: python -m pytest tests -q
+      - name: Python syntax check
+        run: python -m compileall backend
+      - name: Run self-test
+        env:
+          PYTHONIOENCODING: utf-8
+        run: python backend/selftest.py
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Frontend JS syntax check
+        run: node --check website/app.js
