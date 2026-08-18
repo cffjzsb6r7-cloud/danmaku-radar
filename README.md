@@ -89,12 +89,6 @@ uvicorn backend.app.main:app --host 0.0.0.0 --port 8000
 
 GitHub Actions 每 6 小时自动执行一次：抓取 B站真实热榜 → 更新 SQLite 数据库 → 提交数据快照 → 重新发布 GitHub Pages；后端部署在 Render，保证网站与接口始终可用。
 
-## 项目亮点（简历 / 面试可用）
-
-- **真实数据链路**：定时抓取 → SQLite 入库 → 数据快照 → 前端展示，全程无人值守自动化；
-- **前后端分离**：FastAPI REST API + 静态前端，结构清晰、易于扩展；
-- **工程质量**：pytest 单元测试、CI 语法检查、/api/stats 可观测性、Docker / Render 部署；
-- **产品思维**：订阅系统、PWA、暗色模式、跨平台学习链路，从「看数据」到「学爆款」形成闭环。
 
 ## 数据合规
 
