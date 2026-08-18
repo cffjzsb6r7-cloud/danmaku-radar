@@ -147,7 +147,12 @@ def _cjk_ngrams(text, n=4):
     return out
 
 
-def fetch_danmaku_words(bvid, cid=None, top_n=15, max_lines=800):
+_dm_cache = {}
+
+def _danmaku_raw(bvid, cid=None, max_lines=800):
+    key = (bvid, cid or 0)
+    if key in _dm_cache:
+        return _dm_cache[key]
     try:
         if not cid:
             view = fetch_json("https://api.bilibili.com/x/web-interface/view?bvid=" + bvid, timeout=10)
@@ -157,15 +162,45 @@ def fetch_danmaku_words(bvid, cid=None, top_n=15, max_lines=800):
         r = get_session().get("https://api.bilibili.com/x/v1/dm/list.so?oid=" + str(cid), timeout=12)
         xml = r.content.decode("utf-8", "ignore")
         ms = re.findall(r"<d p=.{0,80}?>([^<]+)</d>", xml)[:max_lines]
-        if not ms:
-            return []
-        counter = Counter()
-        for line in ms:
-            for g in _cjk_ngrams(line):
-                counter[g] += 1
-        return [{"word": w, "count": c} for w, c in counter.most_common(top_n)]
+        _dm_cache[key] = ms
+        return ms
     except Exception:
         return []
+
+
+def fetch_danmaku_words(bvid, cid=None, top_n=15, max_lines=800):
+    ms = _danmaku_raw(bvid, cid, max_lines)
+    counter = Counter()
+    for line in ms:
+        for g in _cjk_ngrams(line):
+            counter[g] += 1
+    return [{"word": w, "count": c} for w, c in counter.most_common(top_n)]
+
+
+def fetch_danmaku_lines(bvid, cid=None, top_words=None, max_lines=800, n=3):
+    ms = _danmaku_raw(bvid, cid, max_lines)
+    words = [w["word"] for w in (top_words or [])[:6]]
+    seen = set()
+    out = []
+    for line in ms:
+        l = line.strip()
+        if not (4 <= len(l) <= 24) or l in seen or re.fullmatch(r"[哈哈呵哦嗯啊诶哟哈]+", l):
+            continue
+        if any(w in l for w in words):
+            seen.add(l)
+            out.append(l)
+        if len(out) >= n:
+            break
+    if len(out) < n:
+        for line in ms:
+            l = line.strip()
+            if l in seen or not (4 <= len(l) <= 24) or re.fullmatch(r"[哈哈呵哦嗯啊诶哟哈]+", l):
+                continue
+            seen.add(l)
+            out.append(l)
+            if len(out) >= n:
+                break
+    return out
 
 
 def fetch_danmaku_for_top(posts, n_videos=3, top_n=15):
@@ -221,21 +256,60 @@ def fetch_author_card(mid):
         return {}
 
 
-def build_summary(title, category, desc, topics, dm_words, comments, acct):
-    """基于真实公开信息，自动生成「这条视频讲了什么」小结（本地规则，不调 AI）"""
-    dm = "、".join(w["word"] for w in (dm_words or [])[:6]) or "暂无弹幕热词"
-    cm = "；".join((c.get("content") or "")[:50] for c in (comments or [])[:3]) or "暂无热评"
-    fans = acct.get("author_fans") or 0
-    parts = [f"这是一条「{category}」类视频《{title}》"]
-    if fans:
-        parts.append(f"作者粉丝 {fans:,}（Lv.{acct.get('author_level') or '-'}，累计投稿 {acct.get('author_archives') or '-'} 条）")
-    if desc:
-        parts.append("简介：" + desc[:80])
-    if topics:
-        parts.append("话题标签：" + "、".join(topics[:5]))
-    parts.append("弹幕热词：" + dm)
-    parts.append("评论区热评：" + cm)
-    return "；".join(parts)[:600]
+DISCLAIMER_MARK = ("⛔", "请勿", "仅供娱乐", "未经授权", "禁止转载", "免责", "官方社群", "添加好友", "人工智能生成")
+
+
+def _clean_desc_lines(desc):
+    out = []
+    for ln in (desc or "").splitlines():
+        s = ln.strip()
+        if not s or any(m in s for m in DISCLAIMER_MARK):
+            continue
+        if len(s) > 2:
+            out.append(s)
+    return out
+
+
+def _title_angle(title):
+    t = title or ""
+    if any(k in t for k in ("教程", "攻略", "教你", "学会", "入门", "保姆级")):
+        return "教学向", "教你一步步上手"
+    if any(k in t for k in ("盘点", "排名", "Top", "年度", "合集", "排行")):
+        return "盘点向", "把同类内容集中盘一遍"
+    if any(k in t for k in ("测评", "体验", "开箱", "评测")):
+        return "测评向", "亲自试过之后的真实反馈"
+    if any(k in t for k in ("挑战", "试吃", "沉浸", "实录", "全程")):
+        return "体验向", "带你沉浸式经历整个过程"
+    if any(k in t for k in ("新闻", "最新", "发布", "官宣", "曝光")):
+        return "资讯向", "第一时间跟进最新消息"
+    return "内容向", "围绕核心话题展开"
+
+
+def _clean_snippet(t):
+    s = strip_html(t or "")
+    s = re.sub(r"[\U0001F000-\U0001FAFF\u2600-\u27BF\uFE0F\u200D]", "", s)
+    s = re.sub(r"\s+", " ", s).strip()
+    return s[:22]
+
+
+def build_summary(title, category, desc, topics, dm_words, dm_lines, comments):
+    """基于真实公开信息提炼「这条视频到底讲了什么」（本地规则，不调 AI）"""
+    lines_clean = _clean_desc_lines(desc)
+    kw = chinese_keywords(title, 3)
+    kw_s = "、".join(kw) if kw else (category or "综合")
+    angle, hook = _title_angle(title)
+    core = lines_clean[0][:80] if lines_clean else ""
+    dm_ev = "「" + "」「".join(dm_lines[:2]) + "」" if dm_lines else ""
+    cmt_ev = "；".join(_clean_snippet(c.get("content")) for c in (comments or [])[:2])
+    parts = ["《" + title + "》是一条" + (category or "综合") + "类、" + angle + "视频，核心话题是「" + kw_s + "」。"]
+    if core:
+        parts.append("简介里它写道：" + core + "。")
+    if dm_ev:
+        parts.append("观众弹幕高频出现" + dm_ev + "，说明大家在讨论这些点。")
+    if cmt_ev:
+        parts.append("评论区讨论集中在「" + cmt_ev + "」。")
+    parts.append("整体来看，这条视频" + hook + "。")
+    return "".join(parts)[:300]
 
 
 def build_week(limit=20, week=None):
@@ -251,6 +325,7 @@ def build_week(limit=20, week=None):
         topics = [tname] + chinese_keywords(title, 3) + english_words(title, 2)
         comments, csum = fetch_top_comments(it.get("aid"), desc)
         dm_words = fetch_danmaku_words(bvid, cid=it.get("cid"), top_n=10, max_lines=400)
+        dm_lines = fetch_danmaku_lines(bvid, cid=it.get("cid"), top_words=dm_words, max_lines=400)
         acct = fetch_author_card(owner.get("mid"))
         posts.append({
             "source_id": it.get("aid"),
@@ -265,7 +340,7 @@ def build_week(limit=20, week=None):
             "comments": stat.get("reply", 0),
             "views": stat.get("view", 0),
             "saves": stat.get("favorite", 0),
-            "summary": build_summary(title, tname, desc, topics, dm_words, comments, acct),
+            "summary": build_summary(title, tname, desc, topics, dm_words, dm_lines, comments),
             "desc": desc[:300],
             "duration": it.get("duration") or 0,
             "author_mid": owner.get("mid") or 0,

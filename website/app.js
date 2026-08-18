@@ -71,15 +71,16 @@ function renderTrends() {
   if (!state.data) return;
   const posts = allPosts();
   const hot = state.data.hot_search || [];
-  const totalGrowth = posts.reduce((a, p) => a + ((p.stats && p.stats.like_growth) || 0), 0);
   const fetchTime = state.data.last_fetch || state.data.generated_at || '-';
   $('#trends-week').textContent = '周范围 ' + (state.data.week || '-') + ' · 平台 ' + (state.data.platform || '-') + ' · 排序口径：近 7 天点赞增量 · 数据更新于 ' + fetchTime;
   const badge = $('#data-badge');
   if (state.fromBackend) {
     badge.textContent = '真实数据 · B站 · 更新于 ' + fetchTime;
+    badge.style.display = '';
     badge.classList.add('ok');
   } else {
-    badge.textContent = '静态缓存数据 · 更新于 ' + fetchTime + ' · 后端暂未连接';
+    badge.textContent = '';
+    badge.style.display = 'none';
     badge.classList.remove('ok');
   }
   // 分类筛选
@@ -92,7 +93,6 @@ function renderTrends() {
     $$('#trends-filter .chip').forEach(x => x.classList.toggle('active', x === b));
   }));
   renderTrendsList();
-  setCounts([[20, posts.length], [86200, totalGrowth], [20, hot.length]]);
   const marq = hot.length ? hot.map(h => h.word) : (state.data.danmaku_words || []).map(w => w.word);
   $('#marquee').innerHTML = marq.concat(marq).map(w => '<a class="marquee-item" href="https://search.bilibili.com/all?keyword=' + encodeURIComponent(w) + '" target="_blank" rel="noopener">' + esc(w) + '</a>').join('');
   renderHotSearch();
