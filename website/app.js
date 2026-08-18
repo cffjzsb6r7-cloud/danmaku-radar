@@ -477,7 +477,7 @@ function initScrollspy() {
 function initBackTop() {
   const btn = $('#back-top');
   window.addEventListener('scroll', () => { btn.hidden = window.scrollY < 400; }, { passive: true });
-  btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+  btn.addEventListener('click', () => window.scrollTo(0, 0));
 }
 
 // ---------- 事件 ----------
