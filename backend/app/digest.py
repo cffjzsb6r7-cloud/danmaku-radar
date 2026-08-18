@@ -28,7 +28,7 @@ def _dm_text(danmaku):
     return "、".join(f"{w.get('word')}×{w.get('count')}" for w in danmaku[:10])
 
 
-def build_zh(posts, topics, week, hot=None, highlights=None, danmaku=None):
+def build_zh(posts, topics, week, hot=None, highlights=None, danmaku=None, unsubscribe_url=""):
     lines = [f"# 📡 弹幕雷达 · 周报（中文）", "", f"统计周期：{week} ｜ 数据源：B站真实排行榜 + 百度热搜 + 真实弹幕", ""]
     lines.append("## ⭐ 本周必看 Top 3")
     lines.append(_hl_text(highlights))
@@ -54,11 +54,11 @@ def build_zh(posts, topics, week, hot=None, highlights=None, danmaku=None):
     lines.append("## 🔥 百度热搜")
     lines.append(_zh_hot(hot))
     lines.append("")
-    lines.append("> 免费订阅 · 每周一推送 · 可随时退订")
+    lines.append(("> 免费订阅 · 每周一推送 · [点此退订](" + unsubscribe_url + ")") if unsubscribe_url else "> 免费订阅 · 每周一推送 · 可随时退订")
     return "\n".join(lines)
 
 
-def build_en(posts, topics, week, hot=None, highlights=None, danmaku=None):
+def build_en(posts, topics, week, hot=None, highlights=None, danmaku=None, unsubscribe_url=""):
     lines = ["# 📡 Danmaku Radar · Weekly Digest (English)", "", f"Period: {week} ｜ Source: Bilibili (real) + Baidu Hot Search + Danmaku", ""]
     lines.append("## ⭐ Must-Watch Top 3")
     if highlights:
@@ -85,12 +85,12 @@ def build_en(posts, topics, week, hot=None, highlights=None, danmaku=None):
     if hot:
         lines.append(", ".join(f"{h.get('rank')}. {h.get('word')}" for h in hot[:10]))
     lines.append("")
-    lines.append("> Free weekly digest · Unsubscribe anytime")
+    lines.append(("> Free weekly digest · [Unsubscribe](" + unsubscribe_url + ")") if unsubscribe_url else "> Free weekly digest · Unsubscribe anytime")
     return "\n".join(lines)
 
 
-def build_bilingual(posts, topics, week, hot=None, highlights=None, danmaku=None):
-    return build_zh(posts, topics, week, hot, highlights, danmaku) + "\n\n---\n\n" + build_en(posts, topics, week, hot, highlights, danmaku)
+def build_bilingual(posts, topics, week, hot=None, highlights=None, danmaku=None, unsubscribe_url=""):
+    return build_zh(posts, topics, week, hot, highlights, danmaku, unsubscribe_url) + "\n\n---\n\n" + build_en(posts, topics, week, hot, highlights, danmaku, unsubscribe_url)
 
 
 def _chip_spans(items, bg):
@@ -99,7 +99,7 @@ def _chip_spans(items, bg):
         for item in items[:12])
 
 
-def build_html(posts, topics, week, hot=None, highlights=None, danmaku=None):
+def build_html(posts, topics, week, hot=None, highlights=None, danmaku=None, unsubscribe_url=""):
     """简洁好看的 HTML 邮件（内联样式）"""
     def post_rows(posts):
         rows = []
@@ -120,6 +120,7 @@ def build_html(posts, topics, week, hot=None, highlights=None, danmaku=None):
             for i, h in enumerate(highlights[:3]))
         hl = f"<h2 style='font-size:18px;margin:0 0 8px;'>⭐ 本周必看 Top 3</h2>{items}"
 
+    unsub_link = unsubscribe_url or "#"
     return f"""<div style="background:#F9F7F5;padding:24px;font-family:-apple-system,'PingFang SC','Microsoft YaHei',sans-serif;color:#231C33;">
   <div style="max-width:640px;margin:0 auto;background:#FFFFFF;border:2px solid #231C33;border-radius:20px;overflow:hidden;">
     <div style="background:#231C33;color:#fff;padding:20px 24px;">
@@ -138,7 +139,7 @@ def build_html(posts, topics, week, hot=None, highlights=None, danmaku=None):
       <h2 style="font-size:18px;margin:18px 0 8px;">🔥 百度热搜</h2>
       <div style="line-height:2;">{_chip_spans([h.get('word') for h in hot or []], "#FEF2ED")}</div>
       <div style="margin-top:20px;padding-top:14px;border-top:1px solid #EEE;font-size:12px;color:#736C83;">
-        免费订阅 · 每周一推送 · <a href="#" style="color:#5522FA;">点此退订</a>
+        免费订阅 · 每周一推送 · <a href="{unsub_link}" style="color:#5522FA;">点此退订</a>
       </div>
     </div>
   </div>

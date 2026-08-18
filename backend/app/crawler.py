@@ -297,7 +297,7 @@ def build_summary(title, category, desc, topics, dm_words, dm_lines, comments):
     lines_clean = _clean_desc_lines(desc)
     kw = chinese_keywords(title, 3)
     kw_s = "、".join(kw) if kw else (category or "综合")
-    angle, hook = _title_angle(title)
+    angle = _title_angle(title)[0]
     core = lines_clean[0][:80] if lines_clean else ""
     dm_ev = "「" + "」「".join(dm_lines[:2]) + "」" if dm_lines else ""
     cmt_ev = "；".join(_clean_snippet(c.get("content")) for c in (comments or [])[:2])
@@ -308,7 +308,6 @@ def build_summary(title, category, desc, topics, dm_words, dm_lines, comments):
         parts.append("观众弹幕高频出现" + dm_ev + "，说明大家在讨论这些点。")
     if cmt_ev:
         parts.append("评论区讨论集中在「" + cmt_ev + "」。")
-    parts.append("整体来看，这条视频" + hook + "。")
     return "".join(parts)[:300]
 
 

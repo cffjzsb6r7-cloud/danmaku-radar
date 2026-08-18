@@ -4,6 +4,7 @@
 用法：SMTP_HOST=... SMTP_USER=... SMTP_PASS=... python backend/send_digest.py
 """
 import json
+import os
 import pathlib
 import sys
 
@@ -47,8 +48,9 @@ def main():
     sent = 0
     for sub in subs:
         mine = filter_by_categories(posts, sub.get("categories", ""))
-        text = digest.build_bilingual(mine, topics, week, hot, highlights, danmaku)
-        html = digest.build_html(mine, topics, week, hot, highlights, danmaku)
+        url = os.environ.get("BACKEND_BASE", "https://danmaku-radar-api.onrender.com") + "/api/unsubscribe?token=" + (sub.get("token") or "")
+        text = digest.build_bilingual(mine, topics, week, hot, highlights, danmaku, url)
+        html = digest.build_html(mine, topics, week, hot, highlights, danmaku, url)
         sent += emailer.send_digest([sub["email"]], subject, text, html)
     db.save_digest(conn, week, "both", f"sent={sent}", sent)
     print(f"已发送 {sent}/{len(subs)} 封")

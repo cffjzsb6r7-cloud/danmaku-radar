@@ -17,6 +17,7 @@ import sys
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
 
 from fastapi import FastAPI
+from fastapi.responses import HTMLResponse
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 
@@ -166,6 +167,21 @@ def unsubscribe(body: UnsubscribeIn):
     conn = db.get_conn()
     db.unsubscribe(conn, email=body.email, token=body.token)
     return {"ok": True, "msg": "已退订"}
+
+
+@app.get("/api/unsubscribe")
+def unsubscribe_get(token: str = ""):
+    conn = db.get_conn()
+    db.unsubscribe(conn, token=token)
+    return HTMLResponse(
+        "<html lang=\"zh-CN\"><head><meta charset=\"utf-8\"><title>已退订</title></head>"
+        "<body style=\"font-family:system-ui;background:#F9F7F5;color:#231C33;display:grid;place-items:center;height:100vh;margin:0\">"
+        "<div style=\"text-align:center;background:#fff;border:2px solid #231C33;border-radius:20px;padding:40px;max-width:420px\">"
+        "<h1 style=\"font-size:22px;margin:0 0 10px\">已退订 ✅</h1>"
+        "<p style=\"color:#736C83\">你已从弹幕雷达周报中退订。欢迎随时回来。</p>"
+        "</div></body></html>",
+        status_code=200,
+    )
 
 
 @app.get("/api/digests")
