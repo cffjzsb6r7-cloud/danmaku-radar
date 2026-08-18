@@ -60,13 +60,14 @@ function renderTrends() {
   const posts = allPosts();
   const hot = state.data.hot_search || [];
   const totalGrowth = posts.reduce((a, p) => a + ((p.stats && p.stats.like_growth) || 0), 0);
-  $('#trends-week').textContent = '周范围 ' + (state.data.week || '-') + ' · 平台 ' + (state.data.platform || '-') + ' · 排序口径：7 天点赞增量';
+  const fetchTime = state.data.last_fetch || state.data.generated_at || '-';
+  $('#trends-week').textContent = '周范围 ' + (state.data.week || '-') + ' · 平台 ' + (state.data.platform || '-') + ' · 排序口径：近 7 天点赞增量 · 数据更新于 ' + fetchTime;
   const badge = $('#data-badge');
   if (state.fromBackend) {
-    badge.textContent = '真实数据 · B站 · 更新于 ' + (state.data.last_fetch || '-');
+    badge.textContent = '真实数据 · B站 · 更新于 ' + fetchTime;
     badge.classList.add('ok');
   } else {
-    badge.textContent = '静态缓存数据（后端未连接）';
+    badge.textContent = '静态缓存数据 · 更新于 ' + fetchTime + ' · 后端暂未连接';
     badge.classList.remove('ok');
   }
   // 分类筛选
@@ -81,7 +82,7 @@ function renderTrends() {
   renderTrendsList();
   setCounts([[20, posts.length], [86200, totalGrowth], [20, hot.length]]);
   const marq = hot.length ? hot.map(h => h.word) : (state.data.danmaku_words || []).map(w => w.word);
-  $('#marquee').innerHTML = marq.concat(marq).map(w => '<span>' + esc(w) + '</span>').join('');
+  $('#marquee').innerHTML = marq.concat(marq).map(w => '<a class="marquee-item" href="https://search.bilibili.com/all?keyword=' + encodeURIComponent(w) + '" target="_blank" rel="noopener">' + esc(w) + '</a>').join('');
   renderHotSearch();
   renderHighlights();
 }
@@ -108,9 +109,14 @@ function postCard(p) {
   const dur = fmtDur(p.duration);
   const meta = [esc(p.author), esc(p.category || ''), esc(p.published_at || '')].filter(Boolean);
   if (dur) meta.push('时长 ' + dur);
+  const link = p.url && p.url !== '#' ? p.url : '';
   return '<div class="post-card">'
-    + '<div class="post-top"><span class="rank-badge' + (Number(p.rank) <= 3 ? ' rb-' + Number(p.rank) : '') + '">' + (p.rank || '') + '</span><h3>' + esc(p.title) + '</h3></div>'
+    + '<div class="post-top"><span class="rank-badge' + (Number(p.rank) <= 3 ? ' rb-' + Number(p.rank) : '') + '">' + (p.rank || '') + '</span>'
+    + (p.pic && link ? '<a class="thumb" href="' + esc(link) + '" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="' + esc(p.pic) + '" alt="" loading="lazy"></a>' : '')
+    + '<div class="post-main">'
+    + (link ? '<a class="post-title" href="' + esc(link) + '" target="_blank" rel="noopener">' + esc(p.title) + '</a>' : '<h3 class="post-title">' + esc(p.title) + '</h3>')
     + '<div class="post-meta">' + meta.join('<span class="dot-sep">·</span>') + (fans ? '<span class="dot-sep">·</span>' + fans : '') + '</div>'
+    + '</div></div>'
     + '<div class="tags">' + (p.topics || []).map(t => '<span class="tag">' + esc(t) + '</span>').join('') + '</div>'
     + '<div class="stats">'
     + '<span class="st">' + ic('eye') + (s.views || 0).toLocaleString() + '</span>'
@@ -456,6 +462,17 @@ function bindEvents() {
     const dark = document.body.classList.toggle('dark');
     localStorage.setItem('dm_theme', dark ? 'dark' : 'light');
     $('#btn-theme').innerHTML = dark ? ic('sun') : ic('moon');
+
+  $('#btn-menu').addEventListener('click', () => {
+    const open = $('#nav').classList.toggle('open');
+    $('#btn-menu').setAttribute('aria-expanded', String(open));
+    $('#btn-menu').setAttribute('aria-label', open ? '关闭菜单' : '打开菜单');
+  });
+  $$('.nav-link').forEach(a => a.addEventListener('click', () => {
+    $('#nav').classList.remove('open');
+    $('#btn-menu').setAttribute('aria-expanded', 'false');
+    $('#btn-menu').setAttribute('aria-label', '打开菜单');
+  }));
   });
 
   $('#btn-lab-go').addEventListener('click', () => {

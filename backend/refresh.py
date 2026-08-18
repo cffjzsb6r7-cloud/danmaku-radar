@@ -26,6 +26,7 @@ def to_payload(conn):
         "platform": "bilibili",
         "content_rank": [{
             "rank": p["rank"], "title": p["title"], "author": p["author"], "url": p["url"],
+            "pic": p.get("pic", ""),
             "category": p["category"], "topics": p["topics"], "published_at": p["published_at"],
             "comment_summary": p["comment_summary"], "summary": p["summary"],
             "desc": p.get("desc", ""), "duration": p.get("duration", 0),

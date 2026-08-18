@@ -86,6 +86,7 @@ def get_conn():
         conn.execute("ALTER TABLE subscribers ADD COLUMN categories TEXT DEFAULT ''")
     pcols = [r[1] for r in conn.execute("PRAGMA table_info(posts)").fetchall()]
     for col, ddl in {
+        "pic": "TEXT DEFAULT ''",
         "desc": "TEXT DEFAULT ''",
         "duration": "INTEGER DEFAULT 0",
         "author_mid": "INTEGER DEFAULT 0",
@@ -145,13 +146,13 @@ def upsert_week(conn, week, posts, topics, hot_search=None):
         prev = prev_scores.get(p.get("source_id"), 0)
         cur.execute(
             """INSERT INTO posts
-               (week, source_id, rank, title, author, url, category, topics, score, prev_score,
+               (week, source_id, rank, title, author, url, pic, category, topics, score, prev_score,
                 like_growth, comments, views, saves, summary, comment_summary, published_at, fetched_at,
                 desc, duration, author_mid, author_fans, author_archives, author_level, author_sign,
                 top_comments, danmaku_words)
-               VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)""",
+               VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)""",
             (week, p.get("source_id"), p.get("rank"), p.get("title"), p.get("author"), p.get("url"),
-             p.get("category"), json.dumps(p.get("topics", []), ensure_ascii=False),
+             p.get("pic", ""), p.get("category"), json.dumps(p.get("topics", []), ensure_ascii=False),
              p.get("score", 0), prev, max(0, p.get("score", 0) - prev),
              p.get("comments", 0), p.get("views", 0), p.get("saves", 0),
              p.get("summary", ""), p.get("comment_summary", ""), p.get("published_at", ""), now(),
