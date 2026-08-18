@@ -258,7 +258,7 @@ def build_week(limit=20, week=None):
             "title": title,
             "author": owner.get("name", ""),
             "url": "https://www.bilibili.com/video/" + bvid,
-            "pic": it.get("pic") or "",
+            "pic": (it.get("pic") or "").replace("http://", "https://"),
             "category": tname,
             "topics": topics,
             "score": stat.get("like", 0),

@@ -27,7 +27,7 @@ const state = { data: null, favs: [], filter: '全部' };
 async function loadStatic() {
   const urls = ['../data/latest.json', 'data/latest.json', 'examples/demo-posts.json'];
   for (const u of urls) {
-    try { const r = await fetch(u, { cache: 'no-store' }); if (r.ok) { state.data = await r.json(); state.fromBackend = false; return true; } } catch (e) { /* next */ }
+    try { const r = await fetchWithTimeout(u, 3000); if (r.ok) { state.data = await r.json(); state.fromBackend = false; return true; } } catch (e) { /* next */ }
   }
   state.data = FALLBACK; state.fromBackend = false; return false;
 }
@@ -122,9 +122,10 @@ function postCard(p) {
   const meta = [esc(p.author), esc(p.category || ''), esc(p.published_at || '')].filter(Boolean);
   if (dur) meta.push('时长 ' + dur);
   const link = p.url && p.url !== '#' ? p.url : '';
+  const pic = String(p.pic || '').replace(/^http:\/\//i, 'https://');
   return '<div class="post-card">'
     + '<div class="post-top"><span class="rank-badge' + (Number(p.rank) <= 3 ? ' rb-' + Number(p.rank) : '') + '">' + (p.rank || '') + '</span>'
-    + (p.pic && link ? '<a class="thumb" href="' + esc(link) + '" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="' + esc(p.pic) + '" alt="" loading="lazy"></a>' : '')
+    + (p.pic && link ? '<a class="thumb" href="' + esc(link) + '" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="' + esc(pic) + '" alt="" loading="lazy"></a>' : '')
     + '<div class="post-main">'
     + (link ? '<a class="post-title" href="' + esc(link) + '" target="_blank" rel="noopener">' + esc(p.title) + '</a>' : '<h3 class="post-title">' + esc(p.title) + '</h3>')
     + '<div class="post-meta">' + meta.join('<span class="dot-sep">·</span>') + (fans ? '<span class="dot-sep">·</span>' + fans : '') + '</div>'
@@ -561,7 +562,7 @@ function skeleton(n) {
   if (savedTheme === 'dark') { document.body.classList.add('dark'); $('#btn-theme').innerHTML = ic('sun'); }
   if ('serviceWorker' in navigator) { navigator.serviceWorker.register('sw.js').catch(() => {}); }
   $('#trends-list').innerHTML = skeleton(6);
-  await loadData();
+  try { await loadData(); } catch (e) { state.data = state.data || FALLBACK; }
   localStorage.setItem('dm_lastload', String(Date.now()));
   renderTrends();
   renderFavs();
