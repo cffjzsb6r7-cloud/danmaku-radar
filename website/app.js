@@ -24,16 +24,28 @@ const FALLBACK = {
 };
 const state = { data: null, favs: [], filter: '全部' };
 
-async function loadData() {
-  try {
-    const r = await fetchWithTimeout(BACKEND + '/api/trends');
-    if (r.ok) { state.data = await r.json(); state.fromBackend = true; return; }
-  } catch (e) { /* 后端未启动，回退静态数据 */ }
+async function loadStatic() {
   const urls = ['../data/latest.json', 'data/latest.json', 'examples/demo-posts.json'];
   for (const u of urls) {
-    try { const r = await fetch(u, { cache: 'no-store' }); if (r.ok) { state.data = await r.json(); return; } } catch (e) { /* next */ }
+    try { const r = await fetch(u, { cache: 'no-store' }); if (r.ok) { state.data = await r.json(); state.fromBackend = false; return true; } } catch (e) { /* next */ }
   }
-  state.data = FALLBACK;
+  state.data = FALLBACK; state.fromBackend = false; return false;
+}
+async function loadBackend() {
+  try {
+    const r = await fetchWithTimeout(BACKEND + '/api/trends', 4000);
+    if (r.ok) {
+      const j = await r.json();
+      if (j && Array.isArray(j.content_rank) && j.content_rank.length) {
+        state.data = j; state.fromBackend = true;
+        renderTrends(); renderFavs();
+      }
+    }
+  } catch (e) { /* 后端未连接，保持静态数据 */ }
+}
+async function loadData() {
+  await loadStatic();
+  loadBackend();
 }
 function allPosts() { return state.data.content_rank || []; }
 

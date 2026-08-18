@@ -3,17 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#F5F6F7">
+<meta name="theme-color" content="#F9F7F5">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <link rel="manifest" href="manifest.webmanifest">
 <meta name="description" content="弹幕雷达：B站真实热度追踪 + 爆款拆解 + 选题克隆，每 6 小时自动更新，每周推送中英双语周报。">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 256'%3E%3Cpath fill='%23FF3E5F' d='M224,128a96,96,0,0,1-192,0c0-24.64,9.53-49.84,28.31-74.87a8,8,0,0,1,11.66-.91l26.73,25.95,18.43-57.66a8,8,0,0,1,13.36-3.46C168.18,37.09,224,87.56,224,128Zm-16,0c0-33.45-31.28-74.32-53.33-93.79L138.42,89.16a8,8,0,0,1-12.19,3.8l-25.24-19.4C85.63,94.62,80,111.65,80,128a48,48,0,0,0,128,0Z'/%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 256'%3E%3Crect width='256' height='256' rx='56' fill='%23231C33'/%3E%3Cpath fill='%238B5CF6' d='M224,128a96,96,0,0,1-192,0c0-24.64,9.53-49.84,28.31-74.87a8,8,0,0,1,11.66-.91l26.73,25.95,18.43-57.66a8,8,0,0,1,13.36-3.46C168.18,37.09,224,87.56,224,128Zm-16,0c0-33.45-31.28-74.32-53.33-93.79L138.42,89.16a8,8,0,0,1-12.19,3.8l-25.24-19.4C85.63,94.62,80,111.65,80,128a48,48,0,0,0,128,0Z'/%3E%3C/svg%3E">
 <meta property="og:title" content="弹幕雷达 Danmaku Radar">
 <meta property="og:description" content="每天 5 分钟，知道最近什么火。B站真实数据 + 中英双语周报。">
 <title>弹幕雷达 Danmaku Radar · B站真实热度雷达</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Noto+Sans+SC:wght@400;500;700;900&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700;900&family=Noto+Sans+SC:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -42,8 +42,8 @@
   <symbol id="i-radar" viewBox="0 0 256 256"><path d="M232,120h-8.34A96.14,96.14,0,0,0,136,32.34V24a8,8,0,0,0-16,0v8.34A96.14,96.14,0,0,0,32.34,120H24a8,8,0,0,0,0,16h8.34A96.14,96.14,0,0,0,120,223.66V232a8,8,0,0,0,16,0v-8.34A96.14,96.14,0,0,0,223.66,136H232a8,8,0,0,0,0-16Zm-96,87.6V200a8,8,0,0,0-16,0v7.6A80.15,80.15,0,0,1,48.4,136H56a8,8,0,0,0,0-16H48.4A80.15,80.15,0,0,1,120,48.4V56a8,8,0,0,0,16,0V48.4A80.15,80.15,0,0,1,207.6,120H200a8,8,0,0,0,0,16h7.6A80.15,80.15,0,0,1,136,207.6ZM128,88a40,40,0,1,0,40,40A40,40,0,0,0,128,88Zm0,64a24,24,0,1,1,24-24A24,24,0,0,1,128,152Z"/></symbol>
   <symbol id="i-down" viewBox="0 0 256 256"><path d="M224,144v64a8,8,0,0,1-8,8H40a8,8,0,0,1-8-8V144a8,8,0,0,1,16,0v56H208V144a8,8,0,0,1,16,0Zm-101.66,5.66a8,8,0,0,0,11.32,0l40-40a8,8,0,0,0-11.32-11.32L136,124.69V32a8,8,0,0,0-16,0v92.69L93.66,98.34a8,8,0,0,0-11.32,11.32Z"/></symbol>
   <symbol id="i-search" viewBox="0 0 256 256"><path d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"/></symbol>
-  <symbol id="i-menu" viewBox="0 0 256 256"><path d="M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128ZM40,72H216a8,8,0,0,0,0-16H40a8,8,0,0,0,0,16ZM216,184H40a8,8,0,0,0,0,16H216a8,8,0,0,0,0-16Z"/></symbol>
   <symbol id="i-play" viewBox="0 0 256 256"><path d="M232.4,114.49,88.32,26.35a16,16,0,0,0-16.2-.3A15.86,15.86,0,0,0,64,39.87V216.13A15.94,15.94,0,0,0,80,232a16.07,16.07,0,0,0,8.36-2.35L232.4,141.51a15.81,15.81,0,0,0,0-27ZM80,215.94V40l143.83,88Z"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 256 256"><path d="M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128ZM40,72H216a8,8,0,0,0,0-16H40a8,8,0,0,0,0,16ZM216,184H40a8,8,0,0,0,0,16H216a8,8,0,0,0,0-16Z"/></symbol>
 </svg>
 
 <header class="site-header" id="top">
@@ -58,46 +58,25 @@
       <a href="#clone" class="nav-link">克隆选题</a>
       <a href="#faq" class="nav-link">FAQ</a>
     </nav>
-    <button id="btn-menu" class="icon-btn menu-btn" aria-label="打开菜单" aria-expanded="false"><svg class="ic"><use href="#i-menu"/></svg></button>
     <button id="btn-theme" class="icon-btn" aria-label="切换暗色模式"><svg class="ic"><use href="#i-moon"/></svg></button>
-    <button id="btn-subscribe-top" class="btn primary small">订阅周报</button>
+    <button id="btn-menu" class="icon-btn menu-btn" aria-label="打开菜单" aria-expanded="false"><svg class="ic"><use href="#i-menu"/></svg></button>
+    <button id="btn-subscribe-top" class="btn btn-blurple small">订阅周报</button>
   </div>
 </header>
 
 <main>
   <!-- Hero -->
   <section class="hero">
-    <div class="container">
-      <div class="hero-copy">
-        <p class="status"><span class="live-dot" aria-hidden="true"></span>REAL DATA · BILIBILI · 每 6 小时自动更新</p>
-        <h1>我们终于帮你<br>搞定<em>追热点</em>这件事</h1>
-        <p class="hero-sub">不用天天刷。每天 5 分钟，知道最近什么火。喜欢的爆款，一键拆解，一键克隆成你自己的选题。</p>
-        <form class="subscribe" id="hero-subscribe" onsubmit="return false">
-          <label class="sr-only" for="sub-email">邮箱地址</label>
-          <input id="sub-email" type="email" placeholder="输入邮箱，每周一自动收到周报">
-          <button id="btn-subscribe" class="btn primary big" type="submit">订阅周报 <span class="arrow"><svg class="ic sm"><use href="#i-arrow"/></svg></span></button>
-        </form>
-        <p class="hint" id="sub-msg"></p>
-      </div>
-      <div class="radar-console reveal" aria-hidden="true">
-        <div class="rc-head">
-          <span class="rc-dot"></span><span class="rc-title">LIVE SCAN</span><span class="rc-freq">6H</span>
-        </div>
-        <div class="rc-body">
-          <div class="radar">
-            <div class="sweep"></div>
-            <i class="blip b1"></i><i class="blip b2"></i><i class="blip b3"></i><i class="blip b4"></i>
-            <span class="center"></span>
-          </div>
-          <div class="rc-readout">
-            <div class="rc-line"><span>TOP GAIN</span><b id="rc-gain">+62,400</b></div>
-            <div class="rc-line"><span>PLATFORM</span><b>BILIBILI</b></div>
-            <div class="rc-line"><span>REFRESH</span><b>6 HOURS</b></div>
-          </div>
-        </div>
-        <div class="rc-foot"><span class="tag">#动画</span><span class="tag">#知识</span><span class="tag">#科技</span><span class="tag rc-more">+17</span></div>
-      </div>
-    </div>
+    <div class="hero-bg" aria-hidden="true"><i class="orb o1"></i><i class="orb o2"></i><i class="orb o3"></i></div>
+    <p class="eyebrow reveal">SOCIAL TREND AGENT · 每 6 小时更新</p>
+    <h1 class="reveal">我们终于帮你<br><em>搞定追热点</em>这件事</h1>
+    <p class="hero-sub reveal">不用天天刷。每天 5 分钟，知道最近什么火。喜欢的爆款，一键拆解，一键克隆成你自己的选题。</p>
+    <form class="subscribe reveal" onsubmit="return false">
+      <label class="sr-only" for="sub-email">邮箱地址</label>
+      <input id="sub-email" type="email" placeholder="输入邮箱，每周一自动收到周报">
+      <button id="btn-subscribe" class="btn btn-blurple big" type="submit">订阅周报 <span class="arrow"><svg class="ic sm"><use href="#i-arrow"/></svg></span></button>
+    </form>
+    <p class="hint" id="sub-msg"></p>
   </section>
 
   <!-- 热词跑马灯 -->
@@ -105,192 +84,168 @@
 
   <!-- 数据 -->
   <section class="stats-band" aria-label="本周数据">
-    <div class="container">
-      <div class="stat reveal"><b data-count="20">0</b><span>本周收录</span></div>
-      <div class="stat reveal"><b data-count="86200">0</b><span>总点赞增量</span></div>
-      <div class="stat reveal"><b data-count="20">0</b><span>百度热词</span></div>
-    </div>
+    <div class="stat reveal"><b data-count="20">0</b><span>本周收录</span></div>
+    <div class="stat reveal"><b data-count="86200">0</b><span>总点赞增量</span></div>
+    <div class="stat reveal"><b data-count="20">0</b><span>百度热词</span></div>
   </section>
 
   <!-- 初衷与痛点 -->
-  <section id="why" class="section">
-    <div class="container">
-      <p class="why-copy reveal">刷不完的热搜，<em>追不完的梗</em>。追热点不该是一件累人的事。</p>
-      <div class="why-list">
-        <div class="why-row reveal">
-          <div class="why-ico"><svg class="ic lg"><use href="#i-chat"/></svg></div>
-          <div><h3>信息太多</h3><p>每天刷几个小时，最后什么也没记住，时间全没了。</p></div>
-        </div>
-        <div class="why-row reveal">
-          <div class="why-ico"><svg class="ic lg"><use href="#i-bolt"/></svg></div>
-          <div><h3>总是慢半拍</h3><p>别人聊的话题你没听过，面试、聚会、写作都接不上话。</p></div>
-        </div>
-        <div class="why-row reveal">
-          <div class="why-ico"><svg class="ic lg"><use href="#i-pen"/></svg></div>
-          <div><h3>有内容没灵感</h3><p>看到爆款只觉得「厉害」，却不知道怎么变成自己的东西。</p></div>
-        </div>
-      </div>
-      <div class="letter reveal">
-        <p>「我们相信，追热点不该是一件累人的事。它应该像每天早上的一份报纸：五分钟，看完就懂，看完就有想法。弹幕雷达把一周的爆款、话题和灵感装进一封信，每周一准时送到你手里。剩下的时间，留给你自己。」</p>
-        <span class="letter-sign">弹幕雷达团队</span>
-      </div>
+  <section id="why" class="section band-paper">
+    <div class="section-head reveal">
+      <p class="kicker">WHY WE BUILT THIS</p>
+      <h2>刷不完的热搜，<em>追不完的梗</em></h2>
+      <p class="hint">我们做弹幕雷达，是因为我们自己也不想追热点，却怕错过该知道的事。</p>
+    </div>
+    <div class="pain-grid">
+      <div class="pain-card reveal"><div class="pain-ico"><svg class="ic lg"><use href="#i-chat"/></svg></div><h3>信息太多</h3><p>每天刷几个小时，最后什么也没记住，时间全没了。</p></div>
+      <div class="pain-card reveal"><div class="pain-ico"><svg class="ic lg"><use href="#i-bolt"/></svg></div><h3>总是慢半拍</h3><p>别人聊的话题你没听过，面试、聚会、写作都接不上话。</p></div>
+      <div class="pain-card reveal"><div class="pain-ico"><svg class="ic lg"><use href="#i-pen"/></svg></div><h3>有内容没灵感</h3><p>看到爆款只觉得「厉害」，却不知道怎么变成自己的东西。</p></div>
+    </div>
+    <div class="letter reveal">
+      <p>「我们相信，追热点不该是一件累人的事。它应该像每天早上的一份报纸：五分钟，看完就懂，看完就有想法。弹幕雷达把一周的爆款、话题和灵感装进一封信，每周一准时送到你手里。剩下的时间，留给你自己。」</p>
+      <span class="letter-sign">弹幕雷达团队</span>
     </div>
   </section>
 
   <!-- 内容热榜 -->
-  <section id="trends" class="section">
-    <div class="container">
-      <div class="section-head reveal">
-        <h2><svg class="ic lg"><use href="#i-fire"/></svg> 内容热榜 Top 20</h2>
-        <span class="hint" id="trends-week"></span>
-        <span class="badge-real" id="data-badge">真实数据 · B站</span>
-        <div id="highlights" class="highlights"></div>
-        <div class="chips" id="trends-filter"><button class="chip active" data-cat="全部">全部</button></div>
+  <section id="trends" class="section band-lavender">
+    <div class="section-head reveal">
+      <p class="kicker">WEEKLY TRENDS</p>
+      <h2><svg class="ic lg"><use href="#i-fire"/></svg> 内容热榜 Top 20</h2>
+      <span class="hint" id="trends-week"></span>
+      <span class="badge-real" id="data-badge">真实数据 · B站</span>
+      <div id="highlights" class="highlights"></div>
+      <div class="chips" id="trends-filter"><button class="chip active" data-cat="全部">全部</button></div>
+    </div>
+    <div class="frame reveal">
+      <div class="frame-bar">
+        <span class="fdot fdot-red"></span><span class="fdot fdot-yellow"></span><span class="fdot fdot-green"></span>
+        <span class="frame-url">danmaku-radar / 内容热榜</span>
       </div>
-      <div class="list-panel reveal">
-        <div class="list-panel-bar"><span class="mono">danmaku-radar / 内容热榜</span><span class="mono">SORTED BY LIKE GROWTH · 7D</span></div>
-        <div id="trends-list"></div>
-      </div>
+      <div id="trends-list"></div>
     </div>
   </section>
 
   <!-- 跨平台学习搜索台 -->
-  <section id="search-lab" class="section">
-    <div class="container">
-      <div class="section-head reveal">
-        <h2><svg class="ic lg"><use href="#i-search"/></svg> 跨平台学习搜索台</h2>
-        <p class="hint">输入标题或关键词，一键跳到 B站 / YouTube / 抖音 / 小红书 / 快手 / 微博 / X / Reddit 搜索同类视频，跟着别人的爆款学。</p>
+  <section id="search-lab" class="section band-mint">
+    <div class="section-head reveal">
+      <p class="kicker">LEARN FROM ANYWHERE</p>
+      <h2><svg class="ic lg"><use href="#i-search"/></svg> 跨平台学习搜索台</h2>
+      <p class="hint">输入标题或关键词，一键跳到 B站 / YouTube / 抖音 / 小红书 / 快手 / 微博 / X / Reddit 搜索同类视频，跟着别人的爆款学。</p>
+    </div>
+    <div class="search-lab reveal">
+      <div class="lab-row">
+        <label class="sr-only" for="lab-keyword">搜索关键词</label>
+        <input id="lab-keyword" type="text" placeholder="输入标题或关键词，如：年度动画盘点">
+        <button id="btn-lab-go" class="btn btn-blurple">生成跨平台链接 <span class="arrow"><svg class="ic sm"><use href="#i-arrow"/></svg></span></button>
       </div>
-      <div class="search-lab reveal">
-        <div class="lab-row">
-          <label class="sr-only" for="lab-keyword">搜索关键词</label>
-          <input id="lab-keyword" type="text" placeholder="输入标题或关键词，如：年度动画盘点">
-          <button id="btn-lab-go" class="btn primary">生成跨平台链接 <span class="arrow"><svg class="ic sm"><use href="#i-arrow"/></svg></span></button>
-        </div>
-        <p class="hint" id="lab-msg"></p>
-        <div class="lab-links" id="lab-links"></div>
-      </div>
+      <p class="hint" id="lab-msg"></p>
+      <div class="lab-links" id="lab-links"></div>
     </div>
   </section>
 
   <!-- 百度热搜 -->
-  <section id="hot" class="section">
-    <div class="container">
-      <div class="section-head reveal">
-        <h2><svg class="ic lg"><use href="#i-bolt"/></svg> 百度热搜</h2>
-        <p class="hint">全站实时热搜快照。</p>
-      </div>
-      <div id="hot-search" class="hot-search reveal"></div>
+  <section id="hot" class="section band-sky">
+    <div class="section-head reveal">
+      <p class="kicker">BAIDU HOT SEARCH</p>
+      <h2><svg class="ic lg"><use href="#i-bolt"/></svg> 百度热搜</h2>
+      <p class="hint">全站实时热搜快照。</p>
     </div>
+    <div id="hot-search" class="hot-search reveal"></div>
   </section>
 
   <!-- 拆解爆款 -->
-  <section id="learn" class="section">
-    <div class="container">
-      <div class="split">
-        <div class="split-text reveal">
-          <h2><svg class="ic lg"><use href="#i-pen"/></svg> 把爆款拆成方法论</h2>
-          <p class="hint">粘贴一条爆款，自动从热度、选题、剪辑、画面、热词、评论区、作者与发布因素八个维度生成专业拆解卡。</p>
-        </div>
-        <div class="split-form reveal">
-          <div class="card form-card">
-            <div class="row"><label for="learn-title">标题</label><input id="learn-title" placeholder="爆款标题"></div>
-            <div class="row"><label for="learn-content">内容</label><textarea id="learn-content" rows="4" placeholder="粘贴正文（可选）"></textarea></div>
-            <div class="row"><label for="learn-tags">标签</label><input id="learn-tags" placeholder="如：#搞笑 #知识"></div>
-            <div class="btn-row"><button id="btn-learn" class="btn primary">开始拆解 <span class="arrow"><svg class="ic sm"><use href="#i-arrow"/></svg></span></button></div>
-          </div>
+  <section id="learn" class="section band-canary">
+    <div class="split">
+      <div class="split-text reveal">
+        <p class="kicker">LEARN FROM ME</p>
+        <h2>把爆款<em>拆成方法论</em></h2>
+        <p class="hint">粘贴一条爆款，自动从热度、选题、剪辑、画面、热词、评论区、作者与发布因素八个维度生成专业拆解卡。</p>
+      </div>
+      <div class="split-form reveal">
+        <div class="card form-card">
+          <div class="row"><label for="learn-title">标题</label><input id="learn-title" placeholder="爆款标题"></div>
+          <div class="row"><label for="learn-content">内容</label><textarea id="learn-content" rows="4" placeholder="粘贴正文（可选）"></textarea></div>
+          <div class="row"><label for="learn-tags">标签</label><input id="learn-tags" placeholder="如：#搞笑 #知识"></div>
+          <div class="btn-row"><button id="btn-learn" class="btn btn-blurple">开始拆解 <span class="arrow"><svg class="ic sm"><use href="#i-arrow"/></svg></span></button></div>
         </div>
       </div>
-      <div id="learn-result"></div>
     </div>
+    <div id="learn-result"></div>
   </section>
 
   <!-- 克隆选题 -->
-  <section id="clone" class="section">
-    <div class="container">
-      <div class="split">
-        <div class="split-text reveal">
-          <h2><svg class="ic lg"><use href="#i-copy"/></svg> 把爆款变成你的选题</h2>
-          <p class="hint">基于一条爆款，生成完整克隆脚本：标题方案、分镜文案、剪辑制作、发布策略与账号建议。从「围观别人的火」到「制造自己的火」。</p>
-        </div>
-        <div class="split-form reveal">
-          <div class="card form-card">
-            <div class="row"><label for="clone-title">标题</label><input id="clone-title" placeholder="参考的爆款标题"></div>
-            <div class="row"><label for="clone-content">内容</label><textarea id="clone-content" rows="4" placeholder="粘贴正文（可选）"></textarea></div>
-            <div class="row"><label for="clone-tags">标签</label><input id="clone-tags" placeholder="如：#搞笑 #知识"></div>
-            <div class="btn-row"><button id="btn-clone" class="btn dark">生成完整脚本 <span class="arrow"><svg class="ic sm"><use href="#i-arrow"/></svg></span></button></div>
-          </div>
+  <section id="clone" class="section band-mint">
+    <div class="split">
+      <div class="split-text reveal">
+        <p class="kicker">CLONE THIS IDEA</p>
+        <h2>把爆款变成<em>你的选题</em></h2>
+        <p class="hint">基于一条爆款，生成完整克隆脚本：标题方案、分镜文案、剪辑制作、发布策略与账号建议。从「围观别人的火」到「制造自己的火」。</p>
+      </div>
+      <div class="split-form reveal">
+        <div class="card form-card">
+          <div class="row"><label for="clone-title">标题</label><input id="clone-title" placeholder="参考的爆款标题"></div>
+          <div class="row"><label for="clone-content">内容</label><textarea id="clone-content" rows="4" placeholder="粘贴正文（可选）"></textarea></div>
+          <div class="row"><label for="clone-tags">标签</label><input id="clone-tags" placeholder="如：#搞笑 #知识"></div>
+          <div class="btn-row"><button id="btn-clone" class="btn btn-dark">生成完整脚本 <span class="arrow"><svg class="ic sm"><use href="#i-arrow"/></svg></span></button></div>
         </div>
       </div>
-      <div id="clone-result"></div>
     </div>
+    <div id="clone-result"></div>
   </section>
 
   <!-- 订阅说服 -->
-  <section id="subscribe" class="section band-subscribe">
-    <div class="container">
-      <div class="reveal">
-        <h2>每周一，<em>热榜自动送到你邮箱</em></h2>
-        <p class="hint" style="margin-top:14px">免费 · 每周一期 · 可随时退订。支持按分区个性化订阅。</p>
-        <div class="proof">
-          <div class="proof-item"><b>5 分钟</b><span>每天阅读时长</span></div>
-          <div class="proof-item"><b>Top 20</b><span>内容 + 热词双榜</span></div>
-          <div class="proof-item"><b>0 元</b><span>永久免费</span></div>
-        </div>
+  <section id="subscribe" class="section band-blurple">
+    <div class="subscribe-hero reveal">
+      <p class="kicker kicker-light">FREE WEEKLY DIGEST</p>
+      <h2>每周一，<em>热榜自动送到你邮箱</em></h2>
+      <p class="hint light">免费 · 每周一期 · 可随时退订 · 支持按分区个性化订阅</p>
+      <div class="subscribe subscribe-big">
+        <label class="sr-only" for="sub-email2">邮箱地址</label>
+        <input id="sub-email2" type="email" placeholder="输入邮箱，每周一自动收到周报">
+        <label class="sr-only" for="sub-cat">关注分区</label>
+        <input id="sub-cat" type="text" placeholder="关注分区（可选，如：搞笑,知识,科技）">
+        <button id="btn-subscribe2" class="btn btn-yellow big">订阅周报 <span class="arrow"><svg class="ic sm"><use href="#i-arrow"/></svg></span></button>
       </div>
-      <div class="reveal">
-        <div class="subscribe subscribe-big">
-          <label class="sr-only" for="sub-email2">邮箱地址</label>
-          <input id="sub-email2" type="email" placeholder="输入邮箱，每周一自动收到周报">
-          <label class="sr-only" for="sub-cat">关注分区</label>
-          <input id="sub-cat" type="text" placeholder="关注分区（可选，如：搞笑,知识,科技）">
-          <button id="btn-subscribe2" class="btn primary big">订阅周报 <span class="arrow"><svg class="ic sm"><use href="#i-arrow"/></svg></span></button>
-        </div>
-        <p class="hint" id="sub-msg2" style="margin-top:12px"></p>
-      </div>
+      <p class="hint light" id="sub-msg2"></p>
     </div>
   </section>
 
   <!-- FAQ -->
-  <section id="faq" class="section">
-    <div class="container">
-      <div class="section-head reveal">
-        <h2>常见问题</h2>
-      </div>
-      <div class="faq-list reveal">
-        <details class="faq-item"><summary>数据从哪里来？准确吗？<span class="plus"><svg class="ic sm"><use href="#i-plus"/></svg></span></summary><p>数据来自 B站（bilibili）公开页面，由后端爬虫定时抓取真实排行榜与弹幕热词，并标注抓取时间与来源；抓取失败时会保留最近一次成功的数据并如实标注。</p></details>
-        <details class="faq-item"><summary>订阅收费吗？<span class="plus"><svg class="ic sm"><use href="#i-plus"/></svg></span></summary><p>完全免费。每周一期，通过邮箱推送；你随时可以退订，邮件里和网站上都有一键退订。</p></details>
-        <details class="faq-item"><summary>多久更新一次？<span class="plus"><svg class="ic sm"><use href="#i-plus"/></svg></span></summary><p>每 6 小时自动更新（GitHub Actions 定时任务）：抓取 → 更新数据 → 重新发布网站；每周还会生成中英双语周报推送邮箱。</p></details>
-        <details class="faq-item"><summary>Learn from me 和 Clone this idea 需要联网 AI 吗？<span class="plus"><svg class="ic sm"><use href="#i-plus"/></svg></span></summary><p>不需要。全部在浏览器本地用规则实现，不调用任何付费 AI，不费 token，也不上传你的内容。</p></details>
-        <details class="faq-item"><summary>我的收藏和订阅数据安全吗？<span class="plus"><svg class="ic sm"><use href="#i-plus"/></svg></span></summary><p>收藏保存在你自己的浏览器本地；邮箱仅用于每周推送，不会泄露或用作其他用途。</p></details>
-        <details class="faq-item"><summary>支持其他平台吗？<span class="plus"><svg class="ic sm"><use href="#i-plus"/></svg></span></summary><p>当前支持 B站（bilibili），适配器架构已预留 Instagram、X（Twitter）、抖音、微博等，后续会逐步开放。</p></details>
-      </div>
+  <section id="faq" class="section band-peach">
+    <div class="section-head reveal">
+      <p class="kicker">FAQ</p>
+      <h2>常见问题</h2>
+    </div>
+    <div class="faq-list reveal">
+      <details class="faq-item"><summary>数据从哪里来？准确吗？<span class="plus"><svg class="ic sm"><use href="#i-plus"/></svg></span></summary><p>数据来自 B站（bilibili）公开页面，由后端爬虫定时抓取真实排行榜与弹幕热词，并标注抓取时间与来源；抓取失败时会保留最近一次成功的数据并如实标注。</p></details>
+      <details class="faq-item"><summary>订阅收费吗？<span class="plus"><svg class="ic sm"><use href="#i-plus"/></svg></span></summary><p>完全免费。每周一期，通过邮箱推送；你随时可以退订，邮件里和网站上都有一键退订。</p></details>
+      <details class="faq-item"><summary>多久更新一次？<span class="plus"><svg class="ic sm"><use href="#i-plus"/></svg></span></summary><p>每 6 小时自动更新（GitHub Actions 定时任务）：抓取 → 更新数据 → 重新发布网站；每周还会生成中英双语周报推送邮箱。</p></details>
+      <details class="faq-item"><summary>Learn from me 和 Clone this idea 需要联网 AI 吗？<span class="plus"><svg class="ic sm"><use href="#i-plus"/></svg></span></summary><p>不需要。全部在浏览器本地用规则实现，不调用任何付费 AI，不费 token，也不上传你的内容。</p></details>
+      <details class="faq-item"><summary>我的收藏和订阅数据安全吗？<span class="plus"><svg class="ic sm"><use href="#i-plus"/></svg></span></summary><p>收藏保存在你自己的浏览器本地；邮箱仅用于每周推送，不会泄露或用作其他用途。</p></details>
+      <details class="faq-item"><summary>支持其他平台吗？<span class="plus"><svg class="ic sm"><use href="#i-plus"/></svg></span></summary><p>当前支持 B站（bilibili），适配器架构已预留 Instagram、X（Twitter）、抖音、微博等，后续会逐步开放。</p></details>
     </div>
   </section>
 
   <!-- 收藏 -->
-  <section id="favs" class="section">
-    <div class="container">
-      <div class="section-head reveal">
-        <h2><svg class="ic lg"><use href="#i-star"/></svg> 收藏 · 灵感清单</h2>
-        <p class="hint">拆解卡和克隆选题都收在这里，随时回看、可导出。</p>
-        <div class="btn-row">
-          <button id="btn-export-favs" class="btn ghost small">导出 JSON</button>
-          <button id="btn-clear-favs" class="btn coral small">清空</button>
-        </div>
+  <section id="favs" class="section band-paper">
+    <div class="section-head reveal">
+      <p class="kicker">YOUR IDEAS</p>
+      <h2><svg class="ic lg"><use href="#i-star"/></svg> 收藏 · 灵感清单</h2>
+      <p class="hint">拆解卡和克隆选题都收在这里，随时回看、可导出。</p>
+      <div class="btn-row">
+        <button id="btn-export-favs" class="btn ghost small">导出 JSON</button>
+        <button id="btn-clear-favs" class="btn btn-coral small">清空</button>
       </div>
-      <div class="card reveal"><ul id="favs-list" class="list"></ul></div>
     </div>
+    <div class="card reveal"><ul id="favs-list" class="list"></ul></div>
   </section>
 </main>
 
 <footer class="site-footer">
-  <div class="container">
-    <div>
-      <b>弹幕雷达 Danmaku Radar</b>
-      <div class="sub">每天 5 分钟，知道最近什么火 · 每 6 小时自动更新</div>
-    </div>
-    <a href="#top" class="btn ghost small">回到顶部 <svg class="ic sm"><use href="#i-up"/></svg></a>
+  <div class="footer-inner">
+    <div><b>弹幕雷达 Danmaku Radar</b><span class="sub">每天 5 分钟，知道最近什么火 · 每 6 小时自动更新</span></div>
+    <a href="#top" class="btn btn-blurple small">回到顶部 <svg class="ic sm"><use href="#i-up"/></svg></a>
   </div>
 </footer>
 
