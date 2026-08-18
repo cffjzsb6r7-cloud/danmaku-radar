@@ -1,5 +1,5 @@
 /* 弹幕雷达 Service Worker：页面导航网络优先（保证每次打开都是最新版），静态资源缓存优先 */
-const CACHE = 'danmaku-radar-v12';
+const CACHE = 'danmaku-radar-v13';
 const SHELL = ['./', './index.html', './style.css', './app.js', './icon.svg', './manifest.webmanifest'];
 self.addEventListener('install', (e) => {
   e.waitUntil(caches.open(CACHE).then((c) => c.addAll(SHELL)).then(() => self.skipWaiting()));
