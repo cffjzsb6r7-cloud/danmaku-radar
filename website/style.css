@@ -63,7 +63,15 @@ ul,ol{list-style:none}
 .band-mint{background:linear-gradient(180deg,rgba(22,186,91,.06),rgba(255,184,77,.04)),#EFFBF5}
 .band-peach{background:linear-gradient(180deg,rgba(249,92,92,.07),rgba(255,184,77,.05)),#FFF4EF}
 .band-blurple{background:linear-gradient(135deg,var(--blurple) 0%,var(--cobalt) 100%);border-top:2px solid var(--ink);border-bottom:2px solid var(--ink)}
-.band-canary,.band-sky,.band-lavender,.band-mint,.band-peach{max-width:none}
+.band-blurple{position:relative;overflow:hidden}
+.band-blurple::before{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(58% 82% at 16% 0%,rgba(255,255,255,.16),transparent 60%),radial-gradient(50% 72% at 92% 100%,rgba(255,184,77,.24),transparent 62%)}
+.subscribe-hero{position:relative;max-width:680px}
+.subscribe-hero h2{font-size:clamp(30px,4.2vw,44px)}
+.subscribe-big{background:rgba(255,255,255,.14);border:2px solid rgba(255,255,255,.42);border-radius:24px;padding:24px;box-shadow:0 24px 60px -24px rgba(20,12,60,.5)}
+.band-blurple input{border:2px solid rgba(35,28,51,.22);border-radius:16px;background:#fff;padding:15px 18px;font-size:15px}
+.band-blurple input:focus{box-shadow:0 0 0 4px rgba(255,255,255,.4);border-color:var(--blurple)}
+.band-blurple .btn-yellow{box-shadow:0 5px 0 rgba(35,28,51,.32)}
+.band-canary,.band-sky,.band-lavender,.band-mint,.band-peach,.band-blurple{max-width:none}
 
 /* 顶栏 */
 .site-header{position:sticky;top:0;z-index:60;background:rgba(249,247,245,.88);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid rgba(35,28,51,.08)}
