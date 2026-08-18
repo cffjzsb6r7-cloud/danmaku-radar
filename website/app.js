@@ -79,8 +79,7 @@ function renderTrends() {
     badge.style.display = '';
     badge.classList.add('ok');
   } else {
-    badge.textContent = '';
-    badge.style.display = 'none';
+    badge.textContent = '数据更新于 ' + fetchTime;
     badge.classList.remove('ok');
   }
   // 分类筛选
@@ -184,18 +183,29 @@ function onPostAction(e) {
   const content = p.summary || p.comment_summary || '';
   if (e.target.dataset.act === 'learn') {
     $('#learn-title').value = p.title; $('#learn-content').value = content; $('#learn-tags').value = (p.topics || []).join(' ');
-    document.getElementById('learn').scrollIntoView({ behavior: 'smooth' });
-    toast('已填入爆款，点「开始拆解」');
+    runLearn(); document.getElementById('learn-result').scrollIntoView({ behavior: 'smooth' }); toast('拆解卡已生成');
   }
   if (e.target.dataset.act === 'clone') {
     $('#clone-title').value = p.title; $('#clone-content').value = content; $('#clone-tags').value = (p.topics || []).join(' ');
-    document.getElementById('clone').scrollIntoView({ behavior: 'smooth' });
-    toast('已填入爆款，点「生成完整脚本」');
+    runClone(); document.getElementById('clone-result').scrollIntoView({ behavior: 'smooth' }); toast('克隆脚本已生成');
   }
   if (e.target.dataset.act === 'favpost') { addFav('爆款', p.title, '作者 ' + p.author + ' ｜ ▲' + ((p.stats && p.stats.like_growth) || 0) + ' 赞 ｜ ' + (p.url || '')); toast('已收藏'); }
   if (e.target.dataset.act === 'download') { openDownloadModal(p); }
   if (e.target.dataset.act === 'learnsearch') { openLearnModal(p); }
 }
+
+function runLearn() {
+  const r = analyzePost($('#learn-title').value, $('#learn-content').value, $('#learn-tags').value, state.curPost || null);
+  $('#learn-result').innerHTML = renderBreakdown(r);
+  $('#btn-save-breakdown').addEventListener('click', () => { addFav('拆解卡', $('#learn-title').value || '未命名爆款', r.summary); toast('拆解卡已收藏'); });
+}
+function runClone() {
+  const scr = generateScript($('#clone-title').value, state.curPost || null);
+  $('#clone-result').innerHTML = '<div class="card reveal in" style="max-width:1160px;margin:26px auto;padding-left:28px;padding-right:28px;"><h2>完整克隆脚本（基于原爆款 + 作者账号）</h2>' + renderScript(scr) + '</div>';
+  const saveBtn = $('#clone-result [data-save-script]');
+  if (saveBtn) saveBtn.addEventListener('click', () => { addFav('脚本', $('#clone-title').value || '克隆脚本', scr.scriptText); toast('脚本已收藏'); });
+}
+
 
 // ---------- 下载源视频 & 跨平台同类学习 ----------
 const PLATFORMS = [
@@ -485,16 +495,6 @@ function bindEvents() {
     localStorage.setItem('dm_theme', dark ? 'dark' : 'light');
     $('#btn-theme').innerHTML = dark ? ic('sun') : ic('moon');
 
-  $('#btn-menu').addEventListener('click', () => {
-    const open = $('#nav').classList.toggle('open');
-    $('#btn-menu').setAttribute('aria-expanded', String(open));
-    $('#btn-menu').setAttribute('aria-label', open ? '关闭菜单' : '打开菜单');
-  });
-  $$('.nav-link').forEach(a => a.addEventListener('click', () => {
-    $('#nav').classList.remove('open');
-    $('#btn-menu').setAttribute('aria-expanded', 'false');
-    $('#btn-menu').setAttribute('aria-label', '打开菜单');
-  }));
   });
 
   $('#btn-lab-go').addEventListener('click', () => {
@@ -510,17 +510,8 @@ function bindEvents() {
   $('#btn-subscribe').addEventListener('click', () => subscribe('sub-email', 'sub-msg'));
   $('#btn-subscribe2').addEventListener('click', () => subscribe('sub-email2', 'sub-msg2'));
   $('#btn-subscribe-top').addEventListener('click', () => { document.getElementById('subscribe').scrollIntoView({ behavior: 'smooth' }); setTimeout(() => $('#sub-email2').focus(), 500); });
-  $('#btn-learn').addEventListener('click', () => {
-    const r = analyzePost($('#learn-title').value, $('#learn-content').value, $('#learn-tags').value, state.curPost || null);
-    $('#learn-result').innerHTML = renderBreakdown(r);
-    $('#btn-save-breakdown').addEventListener('click', () => { addFav('拆解卡', $('#learn-title').value || '未命名爆款', r.summary); toast('拆解卡已收藏'); });
-  });
-  $('#btn-clone').addEventListener('click', () => {
-    const scr = generateScript($('#clone-title').value, state.curPost || null);
-    $('#clone-result').innerHTML = '<div class="card reveal in" style="max-width:1160px;margin:26px auto;padding-left:28px;padding-right:28px;"><h2>完整克隆脚本（基于原爆款 + 作者账号）</h2>' + renderScript(scr) + '</div>';
-    const saveBtn = $('#clone-result [data-save-script]');
-    if (saveBtn) saveBtn.addEventListener('click', () => { addFav('脚本', $('#clone-title').value || '克隆脚本', scr.scriptText); toast('脚本已收藏'); });
-  });
+  $('#btn-learn').addEventListener('click', runLearn);
+  $('#btn-clone').addEventListener('click', runClone);
   $('#btn-export-favs').addEventListener('click', () => {
     const blob = new Blob([JSON.stringify(state.favs, null, 2)], { type: 'application/json' });
     const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = 'danmaku-radar-favs.json'; a.click();

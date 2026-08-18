@@ -276,6 +276,8 @@ a.post-title:hover{color:var(--blurple)}
 .site-footer b{font-family:var(--font-display);font-weight:900;font-size:17px}
 .site-footer .sub{display:block;font-family:var(--font-mono);font-size:12px;letter-spacing:.04em;color:rgba(255,255,255,.6);margin-top:4px}
 .site-footer .btn-blurple{box-shadow:0 4px 0 rgba(0,0,0,.35)}
+.footer-actions{display:flex;gap:10px;flex-wrap:wrap}
+.site-footer .btn.ghost{border-color:rgba(255,255,255,.35);color:#fff}
 
 /* 弹窗 */
 .modal{position:fixed;inset:0;z-index:100;background:rgba(35,28,51,.62);display:grid;place-items:center;opacity:0;pointer-events:none;transition:opacity .22s}
