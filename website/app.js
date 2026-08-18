@@ -426,10 +426,19 @@ function renderFavs() {
 
 // ---------- 交互 ----------
 function initReveal() {
+  const els = $$('.reveal');
+  if (!('IntersectionObserver' in window)) {
+    els.forEach(el => el.classList.add('in'));
+    return;
+  }
   const io = new IntersectionObserver((entries) => {
     entries.forEach(en => { if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } });
   }, { threshold: 0.1 });
-  $$('.reveal').forEach(el => io.observe(el));
+  els.forEach(el => io.observe(el));
+  // 兜底：3 秒后强制显示所有尚未显现的内容，避免任何区块因动画问题不可见
+  setTimeout(() => {
+    $$('.reveal:not(.in)').forEach(el => el.classList.add('in'));
+  }, 3000);
 }
 function setCounts(pairs) {
   const els = $$('.stat b');
