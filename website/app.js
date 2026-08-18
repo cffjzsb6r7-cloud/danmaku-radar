@@ -125,7 +125,7 @@ function postCard(p) {
   const pic = String(p.pic || '').replace(/^http:\/\//i, 'https://');
   return '<div class="post-card">'
     + '<div class="post-top"><span class="rank-badge' + (Number(p.rank) <= 3 ? ' rb-' + Number(p.rank) : '') + '">' + (p.rank || '') + '</span>'
-    + (p.pic && link ? '<a class="thumb" href="' + esc(link) + '" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="' + esc(pic) + '" alt="" loading="lazy"></a>' : '')
+    + (p.pic && link ? '<a class="thumb" href="' + esc(link) + '" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true" referrerpolicy="no-referrer"><img src="' + esc(pic) + '" alt="" loading="lazy" referrerpolicy="no-referrer"></a>' : '')
     + '<div class="post-main">'
     + (link ? '<a class="post-title" href="' + esc(link) + '" target="_blank" rel="noopener">' + esc(p.title) + '</a>' : '<h3 class="post-title">' + esc(p.title) + '</h3>')
     + '<div class="post-meta">' + meta.join('<span class="dot-sep">·</span>') + (fans ? '<span class="dot-sep">·</span>' + fans : '') + '</div>'
