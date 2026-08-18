@@ -4,7 +4,7 @@ on:
   push:
     branches: [main]
   schedule:
-    - cron: '0 */6 * * *'   # 每 6 小时自动抓取更新（北京时间 02:00 / 08:00 / 14:00 / 20:00）
+    - cron: '0 0 * * *'     # 每 24 小时自动抓取更新（北京时间 08:00）
   workflow_dispatch:
 
 permissions:

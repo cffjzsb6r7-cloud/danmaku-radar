@@ -6,7 +6,7 @@
 <meta name="theme-color" content="#F9F7F5">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <link rel="manifest" href="manifest.webmanifest?v=10">
-<meta name="description" content="弹幕雷达：B站真实热度追踪 + 爆款拆解 + 选题克隆，每 6 小时自动更新，每周推送中英双语周报。">
+<meta name="description" content="弹幕雷达：B站真实热度追踪 + 爆款拆解 + 选题克隆，每 24 小时自动更新，每周推送中英双语周报。">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 256'%3E%3Crect width='256' height='256' rx='56' fill='%23231C33'/%3E%3Cpath fill='%238B5CF6' d='M224,128a96,96,0,0,1-192,0c0-24.64,9.53-49.84,28.31-74.87a8,8,0,0,1,11.66-.91l26.73,25.95,18.43-57.66a8,8,0,0,1,13.36-3.46C168.18,37.09,224,87.56,224,128Zm-16,0c0-33.45-31.28-74.32-53.33-93.79L138.42,89.16a8,8,0,0,1-12.19,3.8l-25.24-19.4C85.63,94.62,80,111.65,80,128a48,48,0,0,0,128,0Z'/%3E%3C/svg%3E">
 <meta property="og:title" content="弹幕雷达 Danmaku Radar">
 <meta property="og:description" content="每天 5 分钟，知道最近什么火。B站真实数据 + 中英双语周报。">
@@ -68,7 +68,7 @@
   <!-- Hero -->
   <section class="hero">
     <div class="hero-bg" aria-hidden="true"><i class="orb o1"></i><i class="orb o2"></i><i class="orb o3"></i></div>
-    <p class="eyebrow reveal">SOCIAL TREND AGENT · 每 6 小时更新</p>
+    <p class="eyebrow reveal">SOCIAL TREND AGENT · 每 24 小时更新</p>
     <h1 class="reveal">我们终于帮你<br><em>搞定追热点</em>这件事</h1>
     <p class="hero-sub reveal">不用天天刷。每天 5 分钟，知道最近什么火。喜欢的爆款，一键拆解，一键克隆成你自己的选题。</p>
     <form class="subscribe reveal" onsubmit="return false">
@@ -220,7 +220,7 @@
     <div class="faq-list reveal">
       <details class="faq-item"><summary>数据从哪里来？准确吗？<span class="plus"><svg class="ic sm"><use href="#i-plus"/></svg></span></summary><p>数据来自 B站（bilibili）公开页面，由后端爬虫定时抓取真实排行榜与弹幕热词，并标注抓取时间与来源；抓取失败时会保留最近一次成功的数据并如实标注。</p></details>
       <details class="faq-item"><summary>订阅收费吗？<span class="plus"><svg class="ic sm"><use href="#i-plus"/></svg></span></summary><p>完全免费。每周一期，通过邮箱推送；你随时可以退订，邮件里和网站上都有一键退订。</p></details>
-      <details class="faq-item"><summary>多久更新一次？<span class="plus"><svg class="ic sm"><use href="#i-plus"/></svg></span></summary><p>每 6 小时自动更新（GitHub Actions 定时任务）：抓取 → 更新数据 → 重新发布网站；每周还会生成中英双语周报推送邮箱。</p></details>
+      <details class="faq-item"><summary>多久更新一次？<span class="plus"><svg class="ic sm"><use href="#i-plus"/></svg></span></summary><p>每 24 小时自动更新（GitHub Actions 定时任务，每天 08:00 北京时间）：抓取 → 更新数据 → 重新发布网站；每周还会生成中英双语周报推送邮箱。</p></details>
       <details class="faq-item"><summary>Learn from me 和 Clone this idea 需要联网 AI 吗？<span class="plus"><svg class="ic sm"><use href="#i-plus"/></svg></span></summary><p>不需要。全部在浏览器本地用规则实现，不调用任何付费 AI，不费 token，也不上传你的内容。</p></details>
       <details class="faq-item"><summary>我的收藏和订阅数据安全吗？<span class="plus"><svg class="ic sm"><use href="#i-plus"/></svg></span></summary><p>收藏保存在你自己的浏览器本地；邮箱仅用于每周推送，不会泄露或用作其他用途。</p></details>
       <details class="faq-item"><summary>支持其他平台吗？<span class="plus"><svg class="ic sm"><use href="#i-plus"/></svg></span></summary><p>当前支持 B站（bilibili），适配器架构已预留 Instagram、X（Twitter）、抖音、微博等，后续会逐步开放。</p></details>
@@ -244,7 +244,7 @@
 
 <footer class="site-footer">
   <div class="footer-inner">
-    <div><b>弹幕雷达 Danmaku Radar</b><span class="sub">每天 5 分钟，知道最近什么火 · 每 6 小时自动更新</span></div>
+    <div><b>弹幕雷达 Danmaku Radar</b><span class="sub">每天 5 分钟，知道最近什么火 · 每 24 小时自动更新</span></div>
     <a href="#top" class="btn btn-blurple small">回到顶部 <svg class="ic sm"><use href="#i-up"/></svg></a>
   </div>
 </footer>
