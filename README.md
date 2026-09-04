@@ -105,3 +105,7 @@ GitHub Actions 每 24 小时（每天 08:00 北京时间）自动执行一次：
 ## License
 
 MIT © 2026 Danmaku Radar
+
+## 独立域名与微信小程序
+
+生产部署、HTTPS/备案、Render 持久化磁盘、微信小程序合法域名和 `wx.request` 示例见 [DEPLOYMENT_CN.md](DEPLOYMENT_CN.md)。单域名部署时设置 `DANMAKU_SERVE_WEB=true`，FastAPI 会同时托管 `website/` 和 `/api/*`。

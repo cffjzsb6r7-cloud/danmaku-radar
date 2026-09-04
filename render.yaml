@@ -4,13 +4,27 @@ services:
   - type: web
     name: danmaku-radar-api
     runtime: python
-    plan: free
+    # SQLite stores subscribers, so use a persistent disk for production.
+    # Render persistent disks require the Starter plan or above.
+    plan: starter
     buildCommand: pip install -r backend/requirements.txt
     startCommand: uvicorn backend.app.main:app --host 0.0.0.0 --port $PORT
     healthCheckPath: /api/health
+    disk:
+      name: danmaku-data
+      mountPath: /var/data
+      sizeGB: 1
     envVars:
       - key: DANMAKU_CORS
-        value: "*"
+        sync: false
+      - key: DANMAKU_DB
+        value: /var/data/danmaku.db
+      - key: DANMAKU_SERVE_WEB
+        value: "true"
+      - key: DANMAKU_REFRESH_TOKEN
+        sync: false
+      - key: DANMAKU_STALE_HOURS
+        value: "48"
       - key: SMTP_HOST
         sync: false
       - key: SMTP_PORT

@@ -12,11 +12,13 @@
 import json
 import os
 import re
+import secrets
 import sys
+from datetime import datetime, timezone
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
 
-from fastapi import FastAPI
+from fastapi import FastAPI, HTTPException, Request
 from fastapi.responses import HTMLResponse
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
@@ -25,6 +27,11 @@ from backend.app import crawler, db
 
 app = FastAPI(title="弹幕雷达 API", version="1.2.0", description="B站真实热度数据 API")
 _STARTED = __import__("datetime").datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+_REFRESH_TOKEN = os.environ.get("DANMAKU_REFRESH_TOKEN", "").strip()
+try:
+    _STALE_HOURS = max(1, int(os.environ.get("DANMAKU_STALE_HOURS", "48")))
+except ValueError:
+    _STALE_HOURS = 48
 
 _origins = os.environ.get("DANMAKU_CORS", "*").split(",")
 app.add_middleware(
@@ -67,6 +74,11 @@ def _trends_payload(conn):
         "stale": False,
         "content_rank": [{
             "rank": p["rank"], "title": p["title"], "author": p["author"], "url": p["url"],
+            "pic": p.get("pic", ""), "desc": p.get("desc", ""), "duration": p.get("duration", 0),
+            "author_mid": p.get("author_mid", 0), "author_fans": p.get("author_fans", 0),
+            "author_archives": p.get("author_archives", 0), "author_level": p.get("author_level", 0),
+            "author_sign": p.get("author_sign", ""), "top_comments": p.get("top_comments") or [],
+            "danmaku_words": p.get("danmaku_words") or [],
             "category": p["category"], "topics": p["topics"], "published_at": p["published_at"],
             "comment_summary": p["comment_summary"], "summary": p["summary"],
             "stats": {"likes": p["score"], "like_growth": p["like_growth"], "comments": p["comments"],
@@ -88,6 +100,28 @@ def _trends_payload(conn):
     }
 
 
+def _is_stale(last_fetch):
+    if not last_fetch:
+        return True
+    try:
+        fetched = datetime.strptime(last_fetch, "%Y-%m-%d %H:%M:%S").replace(tzinfo=timezone.utc)
+        return (datetime.now(timezone.utc) - fetched).total_seconds() > _STALE_HOURS * 3600
+    except (TypeError, ValueError):
+        return True
+
+
+def _check_refresh_token(request: Request):
+    """Protect the expensive crawler endpoint when a token is configured."""
+    if not _REFRESH_TOKEN:
+        return
+    supplied = request.headers.get("authorization", "")
+    if supplied.lower().startswith("bearer "):
+        supplied = supplied[7:].strip()
+    supplied = supplied or request.headers.get("x-refresh-token", "")
+    if not secrets.compare_digest(supplied, _REFRESH_TOKEN):
+        raise HTTPException(status_code=401, detail="refresh authentication required")
+
+
 @app.get("/api/health")
 def health():
     conn = db.get_conn()
@@ -100,7 +134,7 @@ def health():
         "posts": len(posts),
         "topics": len(db.latest_topics(conn)),
         "subscribers": len(db.active_subscribers(conn)),
-        "stale": not posts,
+        "stale": _is_stale(db.last_fetch(conn)) or not posts,
     }
 
 
@@ -114,12 +148,14 @@ def trends():
         except crawler.CrawlerError as e:
             return {"ok": False, "msg": "数据抓取失败：" + str(e), "content_rank": [], "topic_rank": []}
     payload = _trends_payload(conn)
-    payload["stale"] = False
+    payload["stale"] = _is_stale(payload.get("last_fetch"))
+    payload["ok"] = True
     return payload
 
 
 @app.post("/api/refresh")
-def refresh():
+def refresh(request: Request):
+    _check_refresh_token(request)
     try:
         data = _refresh()
         return {"ok": True, "week": data["week"], "posts": len(data["posts"]), "topics": len(data["topics"])}
@@ -140,7 +176,7 @@ def subscribe(body: SubscribeIn):
 @app.get("/api/history")
 def history(weeks: int = 8):
     conn = db.get_conn()
-    return {"weeks": db.week_summary(conn, weeks)}
+    return {"weeks": db.week_summary(conn, max(1, min(52, weeks)))}
 
 
 @app.get("/api/stats")
@@ -187,4 +223,18 @@ def unsubscribe_get(token: str = ""):
 @app.get("/api/digests")
 def digests(limit: int = 10):
     conn = db.get_conn()
-    return {"digests": db.get_digests(conn, limit)}
+    return {"digests": db.get_digests(conn, max(1, min(100, limit)))}
+
+
+# A single-domain deployment can serve the existing static site from this API
+# process. GitHub Pages deployments leave this disabled and use DANMAKU_API.
+if os.environ.get("DANMAKU_SERVE_WEB", "0").lower() in {"1", "true", "yes"}:
+    from fastapi.staticfiles import StaticFiles
+
+    _website_dir = os.path.normpath(os.path.join(os.path.dirname(__file__), "..", "..", "website"))
+    if os.path.isdir(_website_dir):
+        app.mount("/", StaticFiles(directory=_website_dir, html=True), name="website")
+else:
+    @app.get("/")
+    def root():
+        return {"name": "danmaku-radar-api", "ok": True, "docs": "/docs", "health": "/api/health"}
