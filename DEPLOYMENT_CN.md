@@ -1,6 +1,6 @@
 # 弹幕雷达：独立域名与微信小程序上线
 
-仓库已经包含可运行的 FastAPI 后端。之前页面里的 `https://danmaku-radar-api.onrender.com` 目前返回 `404 / no-server`，因此线上网页会自动显示 `data/latest.json` 的静态快照。下面的部署会把 API、网站和 SQLite 数据放到同一个服务，并为数据库配置持久化磁盘。
+仓库已经包含可运行的 FastAPI 后端。之前页面里的 `https://danmaku-radar-api.onrender.com` 目前返回 `404 / no-server`，因此线上网页会自动显示 `data/latest.json` 的静态快照。本项目当前的 Render 配置是免费测试模式；正式模式可以再切换到持久化磁盘。
 
 ## 推荐架构
 
@@ -17,7 +17,7 @@ danmaku-radar.cn（网站 + API，同源）
 ## 方案 A：Render（最快验证）
 
 1. 把仓库推送到自己的 GitHub 仓库，在 Render 选择 **New > Blueprint**，导入仓库根目录的 `render.yaml`。
-2. `render.yaml` 使用 Starter 计划和 1GB persistent disk。免费计划没有持久化磁盘，重启后订阅邮箱会丢失，不适合正式小程序。
+2. 当前 `render.yaml` 使用 Free 计划，仅适合测试。服务休眠或重新部署后，SQLite 数据可能丢失；正式使用时改回 Starter 并添加 persistent disk。
 3. 在 Render 环境变量中填写：
    - `DANMAKU_CORS`：`https://你的域名`（多个来源用英文逗号分隔）。
    - `DANMAKU_REFRESH_TOKEN`：随机长字符串，例如 `openssl rand -hex 32` 的结果。
@@ -36,7 +36,7 @@ curl -X POST https://你的服务.onrender.com/api/refresh \
   -H "Authorization: Bearer 你的DANMAKU_REFRESH_TOKEN"
 ```
 
-5. 在 Render 的 Custom Domains 绑定 `api.你的域名` 或 `你的域名`。Render 会签发 HTTPS 证书。若网站仍部署在 GitHub Pages，只需将 `website/api-config.js` 中的 API 地址改为这个自定义 API 域名；若使用本服务托管网站，则直接访问该域名即可。
+5. Render 会自动提供 `https://服务名.onrender.com`。若网站仍部署在 GitHub Pages，把 `website/api-config.js` 中的 API 地址改为这个 Render 地址；若以后购买域名，再绑定 Custom Domain 即可。
 
 ## 方案 B：中国大陆云服务器（正式小程序）
 
