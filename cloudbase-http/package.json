@@ -1,0 +1,7 @@
+{
+  "name": "danmaku-radar-cloudbase-http",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Danmaku Radar free Tencent CloudBase HTTP function",
+  "main": "index.js"
+}

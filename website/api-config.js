@@ -8,6 +8,6 @@
   if (window.DANMAKU_API) return;
   var host = window.location.hostname;
   window.DANMAKU_API = host.endsWith('github.io')
-    ? 'https://danmaku-radar-api.onrender.com'
+    ? 'https://danmaku-radar-dev-d4dekxb1008817-1481518365.ap-shanghai.app.tcloudbase.com'
     : window.location.origin;
 })();
