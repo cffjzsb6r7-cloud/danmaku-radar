@@ -1,283 +1,281 @@
 {
-  "week": "2026-09-19 ~ 2026-09-25",
-  "last_fetch": "2026-09-25 04:35:04",
+  "week": "2026-09-20 ~ 2026-09-26",
+  "last_fetch": "2026-09-26 04:39:03",
   "platform": "bilibili",
   "content_rank": [
     {
       "rank": 1,
-      "title": "《柯洁围棋入门课》",
-      "author": "柯洁",
-      "url": "https://www.bilibili.com/video/BV1YDhJ6ZEL6",
-      "pic": "https://i2.hdslb.com/bfs/archive/35baeae957483b53d75c1dd12eecb7e6d2f498c4.jpg",
-      "category": "影视剪辑",
+      "title": "游本昌爷爷，一路走好！我们会继续向前",
+      "author": "人民日报",
+      "url": "https://www.bilibili.com/video/BV17Eaw6DEMi",
+      "pic": "https://i0.hdslb.com/bfs/archive/3c5a54b979479eadbf616672f94673cfff7a0b18.jpg",
+      "category": "日常",
       "topics": [
-        "围棋",
-        "课程",
-        "入门",
-        "教学",
-        "柯洁",
-        "男神",
-        "启蒙"
+        "游本昌"
       ],
-      "published_at": "2026-09-22",
-      "comment_summary": "公开评论约 16779 条，热评：以前听说你在卖围棋课，现在看来你确实在卖了。；为什么这个白子这么大",
-      "summary": "《《柯洁围棋入门课》》是一条影视剪辑类、教学向视频，核心话题是「柯洁围棋、入门课」。观众弹幕高频出现「这白子谁下的这么大」「不是，这么大一颗白子我咋玩啊」，说明大家在讨论这些点。评论区讨论集中在「以前听说你在卖围棋课，现在看来你确实在卖了。；为什么这个白子这么大」。",
-      "desc": "-",
-      "duration": 499,
-      "author_mid": 525952604,
-      "author_fans": 3926761,
-      "author_archives": 133,
+      "published_at": "2026-09-24",
+      "comment_summary": "公开评论约 7940 条，热评：济公爷爷一路走好🙏🏻🙏🏻🙏🏻；此去灵山归佛位，何日复返渡凡尘？[保佑]",
+      "summary": "《游本昌爷爷，一路走好！我们会继续向前》是一条日常类、内容向视频，核心话题是「游本昌爷、一路走好、我们会继」。观众弹幕高频出现「一路走好」「致敬 爷爷一路走好」，说明大家在讨论这些点。评论区讨论集中在「济公爷爷一路走好；此去灵山归佛位，何日复返渡凡尘？[保佑]」。",
+      "desc": "",
+      "duration": 50,
+      "author_mid": 1131457022,
+      "author_fans": 18959025,
+      "author_archives": 5593,
       "author_level": 6,
-      "author_sign": "商务合作（唯一联系人）：kejieshangwu0802@163.com",
+      "author_sign": "参与、沟通、记录时代。",
       "top_comments": [
         {
-          "user": "权小溪初号机",
-          "likes": 2580,
-          "content": "以前听说你在卖围棋课，现在看来你确实在卖了。"
+          "user": "一个小老铁",
+          "likes": 550,
+          "content": "济公爷爷一路走好🙏🏻🙏🏻🙏🏻"
         },
         {
-          "user": "susu稣_",
-          "likes": 805,
-          "content": "为什么这个白子这么大"
+          "user": "怀揣一瓶红星",
+          "likes": 1868,
+          "content": "此去灵山归佛位，何日复返渡凡尘？[保佑]"
         },
         {
-          "user": "空调可乐炸鸡",
-          "likes": 3643,
-          "content": "谁点的男模围棋？[doge]"
+          "user": "她随风而散",
+          "likes": 1352,
+          "content": "可惜老爷子过不上中秋了 唉，中秋前一天啊[大哭]"
         }
       ],
       "danmaku_words": [
         {
-          "word": "怎么",
-          "count": 13
+          "word": "一路",
+          "count": 356
         },
         {
-          "word": "白子",
-          "count": 11
+          "word": "走好",
+          "count": 356
         },
         {
-          "word": "柯洁",
-          "count": 11
+          "word": "路走",
+          "count": 355
         },
         {
-          "word": "么大",
-          "count": 10
+          "word": "一路走",
+          "count": 355
         },
         {
-          "word": "这么",
-          "count": 8
+          "word": "路走好",
+          "count": 355
         },
         {
-          "word": "宝宝",
-          "count": 8
+          "word": "一路走好",
+          "count": 355
         },
         {
-          "word": "你谁",
-          "count": 8
+          "word": "爷爷",
+          "count": 9
         },
         {
-          "word": "这么大",
-          "count": 7
+          "word": "爷一",
+          "count": 4
         },
         {
-          "word": "什么",
-          "count": 7
+          "word": "爷爷一",
+          "count": 4
         },
         {
-          "word": "老师",
-          "count": 7
+          "word": "爷一路",
+          "count": 4
         }
       ],
       "stats": {
-        "likes": 401422,
-        "like_growth": 401422,
-        "comments": 16779,
-        "saves": 77579,
-        "views": 3913841
+        "likes": 688494,
+        "like_growth": 688494,
+        "comments": 7940,
+        "saves": 65419,
+        "views": 2040884
       }
     },
     {
       "rank": 2,
-      "title": "《原神》角色预告-「沃雅妮莎：此夜共沦」",
-      "author": "原神",
-      "url": "https://www.bilibili.com/video/BV1BqhB6nEdN",
-      "pic": "https://i0.hdslb.com/bfs/archive/dff4badd37bdf86481a648c9d3a8dd818af10c69.jpg",
-      "category": "手机游戏",
+      "title": "在机场当志愿者用六门语言帮助老外是什么体验？！",
+      "author": "小宋同学机场志愿者",
+      "url": "https://www.bilibili.com/video/BV1F5h86PEUH",
+      "pic": "https://i1.hdslb.com/bfs/archive/4cbfe277edffe3e0ab7fb2bd2c1bf79204c53b5d.jpg",
+      "category": "短片",
       "topics": [
-        "沃雅妮莎",
-        "米哈游",
-        "miHoYo",
-        "原神"
+        "西班牙语",
+        "日语",
+        "俄语",
+        "语言",
+        "老外",
+        "韩语",
+        "机场",
+        "英语口语"
       ],
-      "published_at": "2026-09-22",
-      "comment_summary": "公开评论约 11616 条，热评：这下知道为什么海报上画的是沃雅妮莎了；我说制作组审美高的惊人，这个字体真的太漂亮了",
-      "summary": "《《原神》角色预告-「沃雅妮莎：此夜共沦」》是一条手机游戏类、内容向视频，核心话题是「原神、角色预告、沃雅妮莎」。简介里它写道：向高天祈祷，再向远海寄托愁思。。观众弹幕高频出现「看到我的小保底不歪，大保底双黄」「沃不歪！」，说明大家在讨论这些点。评论区讨论集中在「这下知道为什么海报上画的是沃雅妮莎了；我说制作组审美高的惊人，这个字体真的太漂亮了」。",
-      "desc": "向高天祈祷，再向远海寄托愁思。\n高天或许不语，但波浪会带给你回信，如一声水妖的咏叹。\n\n中文CV：\n沃雅妮莎——苏婉\n\n日文CV：\n沃雅妮莎——伊藤加奈惠\n\n《原神》bilibili服下载地址： https://www.biligame.com/detail/?id=103496",
-      "duration": 712,
-      "author_mid": 401742377,
-      "author_fans": 20862208,
-      "author_archives": 740,
-      "author_level": 6,
-      "author_sign": "原神官方账号",
+      "published_at": "2026-09-23",
+      "comment_summary": "公开评论约 5876 条，热评：体验就是\n手机翻译软件更好用[doge]；哥们内存够大的，装这么多语种语音包",
+      "summary": "《在机场当志愿者用六门语言帮助老外是什么体验？！》是一条短片类、测评向视频，核心话题是「在机场当、志愿者用、六门语言」。观众弹幕高频出现「大厂喝大了」「属于是大厂优化，人才下乡」，说明大家在讨论这些点。评论区讨论集中在「体验就是 手机翻译软件更好用[doge]；哥们内存够大的，装这么多语种语音包」。",
+      "desc": "-",
+      "duration": 284,
+      "author_mid": 173857806,
+      "author_fans": 59348,
+      "author_archives": 140,
+      "author_level": 4,
+      "author_sign": "山东小哥在沪，产品经理被裁员，现机场志愿者\n《让100个国家的老外帮助中国人》，1/100！\n《帮助100个国家的老外》系列，57/100！",
       "top_comments": [
         {
-          "user": "执灯人的夜莺",
-          "likes": 4538,
-          "content": "这下知道为什么海报上画的是沃雅妮莎了"
+          "user": "面里牛肉不见了",
+          "likes": 8069,
+          "content": "体验就是\n手机翻译软件更好用[doge]"
         },
         {
-          "user": "就酱被我征服",
-          "likes": 4185,
-          "content": "我说制作组审美高的惊人，这个字体真的太漂亮了"
+          "user": "油腻腻De师姐",
+          "likes": 5877,
+          "content": "哥们内存够大的，装这么多语种语音包"
         },
         {
-          "user": "清风拾月ぎ岚",
-          "likes": 10355,
-          "content": "此时就有明天10连三金沃雅妮莎的旅行者疑惑了"
+          "user": "俏柿",
+          "likes": 5907,
+          "content": "等我哪天也学六门去装一波[支持][支持][支持]"
         }
       ],
       "danmaku_words": [
         {
-          "word": "沃来",
-          "count": 148
+          "word": "大厂",
+          "count": 21
         },
         {
-          "word": "来了",
-          "count": 148
+          "word": "什么",
+          "count": 21
         },
         {
-          "word": "沃来了",
-          "count": 148
+          "word": "音包",
+          "count": 19
         },
         {
-          "word": "不歪",
-          "count": 101
+          "word": "语音",
+          "count": 18
         },
         {
-          "word": "沃不",
-          "count": 87
+          "word": "语音包",
+          "count": 18
         },
         {
-          "word": "沃不歪",
-          "count": 87
+          "word": "怎么",
+          "count": 16
         },
         {
-          "word": "好看",
-          "count": 86
+          "word": "说什",
+          "count": 16
         },
         {
-          "word": "沃真",
-          "count": 85
+          "word": "说什么",
+          "count": 16
         },
         {
-          "word": "真好",
-          "count": 85
+          "word": "中文",
+          "count": 16
         },
         {
-          "word": "沃真好",
-          "count": 85
+          "word": "哈哈",
+          "count": 15
         }
       ],
       "stats": {
-        "likes": 253960,
-        "like_growth": 253960,
-        "comments": 11616,
-        "saves": 50408,
-        "views": 2049146
+        "likes": 340674,
+        "like_growth": 340674,
+        "comments": 5876,
+        "saves": 36871,
+        "views": 2587823
       }
     },
     {
       "rank": 3,
-      "title": "比电影更夸张？专业保镖到底在做什么？",
-      "author": "影视飓风",
-      "url": "https://www.bilibili.com/video/BV1J7hE6aEDQ",
-      "pic": "https://i0.hdslb.com/bfs/archive/6646bc361d2c9f37b009317725abc242a6bd23cd.jpg",
-      "category": "数码",
+      "title": "我记录下了妹妹的最后7天...【自制伪纪录片电影】",
+      "author": "沢人",
+      "url": "https://www.bilibili.com/video/BV1Deht6rEpZ",
+      "pic": "https://i0.hdslb.com/bfs/archive/25532448b0bef5b5a71b1515bb4264da3f6b5890.jpg",
+      "category": "搞笑",
       "topics": [
-        "冷知识",
-        "4K",
-        "动作",
-        "电影",
-        "知识",
-        "影视",
-        "拉片",
-        "职业"
+        "意识流",
+        "冒险",
+        "旅行",
+        "伪纪录片",
+        "妹妹",
+        "记录",
+        "自由",
+        "超现实"
       ],
-      "published_at": "2026-09-22",
-      "comment_summary": "公开评论约 6138 条，热评：安倍：视频很好，就是时间迟了点[doge]；专业保镖采访完了，下一期该轮到专业杀手了吧[doge]",
-      "summary": "《比电影更夸张？专业保镖到底在做什么？》是一条数码类、内容向视频，核心话题是「比电影更、夸张、专业保镖」。简介里它写道：在各类作品中，保镖似乎总是训练有素，配备着神奇的装备，能在危险发生的瞬间救下目标。这次我们请来了从事保镖工作30多年的李旭老师，一起拉片看看影视作品中的保镖，和。观众弹幕高频出现「黄金3秒钟这个我知道，食物落地不超过3秒都能吃」「保镖是保护人，不是干掉所有人」，说明大家在讨论这些点。评论区讨论集中在「安倍：视频很好，就是时间迟了点[doge]；专业保镖采访完了，下一期该轮到专业杀手了吧[」。",
-      "desc": "在各类作品中，保镖似乎总是训练有素，配备着神奇的装备，能在危险发生的瞬间救下目标。这次我们请来了从事保镖工作30多年的李旭老师，一起拉片看看影视作品中的保镖，和现实中到底一不一样？如果你喜欢这期视频，请多多支持我们，并把视频分享给你的朋友们一起看看～",
-      "duration": 785,
-      "author_mid": 946974,
-      "author_fans": 18364273,
-      "author_archives": 944,
+      "published_at": "2026-09-24",
+      "comment_summary": "公开评论约 4163 条，热评：评论区有人骂是因为标题中的伪纪录片是后面加上的，这个视频他用了标题引流；有钱人假装穷人拍电影给穷人看赚穷人的钱，还问穷人看的开心吗[doge]",
+      "summary": "《我记录下了妹妹的最后7天...【自制伪纪录片电影】》是一条搞笑类、内容向视频，核心话题是「我记录下、了妹妹的、最后」。简介里它写道：本片主演：。观众弹幕高频出现「《再见绘梨》」「“是不是缺少了一抹奇幻色彩呢”」，说明大家在讨论这些点。评论区讨论集中在「评论区有人骂是因为标题中的伪纪录片是后面加上；有钱人假装穷人拍电影给穷人看赚穷人的钱，还问」。",
+      "desc": "本片主演：\n妹妹：CooolKey\n妹妹女友：正义\n哥哥：沢人\n阿荣：董向荣\n\n本片导演&作者：沢人\n\n《关于我妹的最后7天》\n愿这部带着超现实色彩的伪纪录片能为各位带来一份值得被记住与感受的体验\n感谢观看。",
+      "duration": 399,
+      "author_mid": 2057895471,
+      "author_fans": 585318,
+      "author_archives": 7,
       "author_level": 6,
-      "author_sign": "无限进步！｜商务合作请联系邮箱：bd@ysjf.com（邮件中麻烦备注公司、咨询内容）｜店铺名：影视飓风",
+      "author_sign": "欢迎致信，我的邮箱：zeren-blue@foxmail.com",
       "top_comments": [
         {
-          "user": "想混想躺想摸鱼",
-          "likes": 1715,
-          "content": "安倍：视频很好，就是时间迟了点[doge]"
+          "user": "未名海港湾",
+          "likes": 596,
+          "content": "评论区有人骂是因为标题中的伪纪录片是后面加上的，这个视频他用了标题引流"
         },
         {
-          "user": "包杍椿卷",
-          "likes": 1331,
-          "content": "专业保镖采访完了，下一期该轮到专业杀手了吧[doge]"
+          "user": "荻原沙优-崭新出厂",
+          "likes": 116,
+          "content": "有钱人假装穷人拍电影给穷人看赚穷人的钱，还问穷人看的开心吗[doge]"
         },
         {
-          "user": "浅湾-深峡",
-          "likes": 1877,
-          "content": "其实这位老师说的很清楚了，保镖主要是“弄清哪有坑，然后绕着走”，不是“雇主眼看要摔死在坑里了给他拽上来”，如果一个人能突然出现并对雇主亮出武器，保镖就已经是一个失职的情况了，制服袭击者只能算是弥补和善后"
+          "user": "安小nnnnn",
+          "likes": 182,
+          "content": "我也不知道这个片子在传达什么……可能为了冲突感与戏剧性所以是“最后七天”的伪纪录片。但最后七天大多都已经是弥留之际了……我妹室友的奶奶冬天查出胰腺癌（癌王），全家年底一起出去旅游，热热闹闹过完年，过完年一两个月去世了。也许想表达（正向的）临终关怀？但临终关怀也不是这样的啊……再加上虽然说是伪纪录片，但还脱离不了女网红那一套，从妆造化上就感觉到了……"
         }
       ],
       "danmaku_words": [
         {
-          "word": "保镖",
-          "count": 43
+          "word": "哈哈",
+          "count": 23
         },
         {
-          "word": "哈哈",
-          "count": 38
+          "word": "感觉",
+          "count": 22
         },
         {
           "word": "哈哈哈",
-          "count": 26
+          "count": 17
         },
         {
-          "word": "这个",
-          "count": 18
-        },
-        {
-          "word": "不是",
-          "count": 16
-        },
-        {
-          "word": "安倍",
-          "count": 16
-        },
-        {
-          "word": "保护",
-          "count": 15
-        },
-        {
-          "word": "哈哈哈哈",
-          "count": 15
-        },
-        {
-          "word": "怎么",
+          "word": "再见",
           "count": 14
         },
         {
-          "word": "脖子",
-          "count": 10
+          "word": "不是",
+          "count": 14
+        },
+        {
+          "word": "见绘",
+          "count": 13
+        },
+        {
+          "word": "绘梨",
+          "count": 13
+        },
+        {
+          "word": "再见绘",
+          "count": 13
+        },
+        {
+          "word": "是剧",
+          "count": 13
+        },
+        {
+          "word": "见绘梨",
+          "count": 12
         }
       ],
       "stats": {
-        "likes": 273808,
-        "like_growth": 273808,
-        "comments": 6138,
-        "saves": 61296,
-        "views": 5820707
+        "likes": 241555,
+        "like_growth": 241555,
+        "comments": 4163,
+        "saves": 106209,
+        "views": 3983479
       }
     },
     {
@@ -298,538 +296,919 @@
         "真珠"
       ],
       "published_at": "2026-09-23",
-      "comment_summary": "公开评论约 13017 条，热评：真珠因为画了这么一张图，被星神啊哈瞥视，踏上了欢愉的命途[思考][思考]；经典艺术品《喜剧演员》",
-      "summary": "《《崩坏：星穹铁道》即兴巡演PV——「至此，已成艺术」》是一条手机游戏类、内容向视频，核心话题是「崩坏、星穹铁道、即兴巡演」。简介里它写道：楼主[匿名]：画成这样…可以接稿吗？。观众弹幕高频出现「终于明白真珠为什么是欢愉命途了」「真珠女士都开始左右脑互搏了」，说明大家在讨论这些点。评论区讨论集中在「真珠因为画了这么一张图，被星神啊哈瞥视，踏上；经典艺术品《喜剧演员》」。",
+      "comment_summary": "公开评论约 13507 条，热评：真珠因为画了这么一张图，被星神啊哈瞥视，踏上了欢愉的命途[思考][思考]；经典艺术品《喜剧演员》",
+      "summary": "《《崩坏：星穹铁道》即兴巡演PV——「至此，已成艺术」》是一条手机游戏类、内容向视频，核心话题是「崩坏、星穹铁道、即兴巡演」。简介里它写道：楼主[匿名]：画成这样…可以接稿吗？。观众弹幕高频出现「她真可爱」「她真好看！」，说明大家在讨论这些点。评论区讨论集中在「真珠因为画了这么一张图，被星神啊哈瞥视，踏上；经典艺术品《喜剧演员》」。",
       "desc": "楼主[匿名]：画成这样…可以接稿吗？\nID[Jade]：每日审美积累已达成\nID[点石成金]：稿子有点熟悉啊，你不会是……\nID[扑满保护协会名誉会长]：下次让账账做模特好不好~\nID[龙颜大悦]：这就是你在半夜敲我门的原因？\nID[高清条形码]：我用最简单最直接最不绕弯子的方式告诉你：老师，你是我的神！\n \n中文CV：\n真珠——苏婉\n托帕——陆敏悦\n砂金——杨超然\n龙晶——洪海天\n虚照——子音\n ‌\n日文CV：\n真珠——安野希世乃\n托帕——南条爱乃\n砂金——河西健吾\n龙晶——上坂堇\n虚照——户松遥\n ‌",
       "duration": 738,
       "author_mid": 1340190821,
-      "author_fans": 12502403,
+      "author_fans": 12503352,
       "author_archives": 331,
       "author_level": 6,
       "author_sign": "愿此行，终抵群星。",
       "top_comments": [
         {
           "user": "渚汐之誓",
-          "likes": 14686,
+          "likes": 15306,
           "content": "真珠因为画了这么一张图，被星神啊哈瞥视，踏上了欢愉的命途[思考][思考]"
         },
         {
           "user": "圆环使徒沙耶加",
-          "likes": 4383,
+          "likes": 4492,
           "content": "经典艺术品《喜剧演员》"
         },
         {
-          "user": "-粉色系女控-",
-          "likes": 3682,
-          "content": "真珠 宇宙 思考"
+          "user": "玫瑰干叶瓦斯当水喝",
+          "likes": 3627,
+          "content": "等等，这个龙颜大悦不会是龙晶吧[热词系列_知识增加]"
         }
       ],
       "danmaku_words": [
         {
+          "word": "她真",
+          "count": 85
+        },
+        {
+          "word": "真好",
+          "count": 85
+        },
+        {
+          "word": "好看",
+          "count": 85
+        },
+        {
+          "word": "真好看",
+          "count": 85
+        },
+        {
+          "word": "她真好",
+          "count": 84
+        },
+        {
+          "word": "她真好看",
+          "count": 84
+        },
+        {
           "word": "真珠",
-          "count": 37
+          "count": 31
         },
         {
           "word": "不歪",
-          "count": 29
+          "count": 26
         },
         {
           "word": "许愿",
-          "count": 20
+          "count": 17
         },
         {
-          "word": "愿真",
-          "count": 16
-        },
-        {
-          "word": "许愿真",
-          "count": 16
-        },
-        {
-          "word": "愿真珠",
-          "count": 16
-        },
-        {
-          "word": "许愿真珠",
-          "count": 16
-        },
-        {
-          "word": "玩到",
-          "count": 13
-        },
-        {
-          "word": "到关",
-          "count": 13
-        },
-        {
-          "word": "关服",
-          "count": 13
+          "word": "珠不",
+          "count": 14
         }
       ],
       "stats": {
-        "likes": 230804,
-        "like_growth": 230804,
-        "comments": 13017,
-        "saves": 46151,
-        "views": 2891237
+        "likes": 247101,
+        "like_growth": 61870,
+        "comments": 13507,
+        "saves": 49039,
+        "views": 3130397
       }
     },
     {
       "rank": 5,
-      "title": "游本昌爷爷，一路走好！我们会继续向前",
-      "author": "人民日报",
-      "url": "https://www.bilibili.com/video/BV17Eaw6DEMi",
-      "pic": "https://i0.hdslb.com/bfs/archive/3c5a54b979479eadbf616672f94673cfff7a0b18.jpg",
-      "category": "日常",
+      "title": "《柯洁围棋入门课》",
+      "author": "柯洁",
+      "url": "https://www.bilibili.com/video/BV1YDhJ6ZEL6",
+      "pic": "https://i2.hdslb.com/bfs/archive/35baeae957483b53d75c1dd12eecb7e6d2f498c4.jpg",
+      "category": "影视剪辑",
       "topics": [
-        "游本昌"
+        "入门",
+        "围棋",
+        "课程",
+        "教学",
+        "柯洁",
+        "启蒙",
+        "男神"
       ],
-      "published_at": "2026-09-24",
-      "comment_summary": "公开评论约 5947 条，热评：济公爷爷一路走好🙏🏻🙏🏻🙏🏻；此去灵山归佛位，何日复返渡凡尘？[保佑]",
-      "summary": "《游本昌爷爷，一路走好！我们会继续向前》是一条日常类、内容向视频，核心话题是「游本昌爷、一路走好、我们会继」。观众弹幕高频出现「一路走好」「再见，一路走好」，说明大家在讨论这些点。评论区讨论集中在「济公爷爷一路走好；此去灵山归佛位，何日复返渡凡尘？[保佑]」。",
-      "desc": "",
-      "duration": 50,
-      "author_mid": 1131457022,
-      "author_fans": 18946595,
-      "author_archives": 5587,
+      "published_at": "2026-09-22",
+      "comment_summary": "公开评论约 17707 条，热评：为什么这个白子这么大；以前听说你在卖围棋课，现在看来你确实在卖了。",
+      "summary": "《《柯洁围棋入门课》》是一条影视剪辑类、教学向视频，核心话题是「柯洁围棋、入门课」。观众弹幕高频出现「我去不早说」「这白子谁下的这么大」，说明大家在讨论这些点。评论区讨论集中在「为什么这个白子这么大；以前听说你在卖围棋课，现在看来你确实在卖了。」。",
+      "desc": "-",
+      "duration": 499,
+      "author_mid": 525952604,
+      "author_fans": 3934639,
+      "author_archives": 134,
       "author_level": 6,
-      "author_sign": "参与、沟通、记录时代。",
+      "author_sign": "商务合作（唯一联系人）：kejieshangwu0802@163.com",
       "top_comments": [
         {
-          "user": "一个小老铁",
-          "likes": 369,
-          "content": "济公爷爷一路走好🙏🏻🙏🏻🙏🏻"
+          "user": "susu稣_",
+          "likes": 1139,
+          "content": "为什么这个白子这么大"
         },
         {
-          "user": "怀揣一瓶红星",
-          "likes": 1576,
-          "content": "此去灵山归佛位，何日复返渡凡尘？[保佑]"
+          "user": "权小溪初号机",
+          "likes": 3072,
+          "content": "以前听说你在卖围棋课，现在看来你确实在卖了。"
         },
         {
-          "user": "小l梨l涡",
-          "likes": 4158,
-          "content": "不是？去世了？我之前看他拍的视频身子骨不是挺好的吗？这么突然啊[酸了][酸了]"
+          "user": "空调可乐炸鸡",
+          "likes": 3991,
+          "content": "谁点的男模围棋？[doge]"
         }
       ],
       "danmaku_words": [
         {
-          "word": "走好",
-          "count": 354
+          "word": "我去",
+          "count": 48
         },
         {
-          "word": "一路",
-          "count": 352
+          "word": "去不",
+          "count": 48
         },
         {
-          "word": "路走",
-          "count": 352
+          "word": "不早",
+          "count": 48
         },
         {
-          "word": "一路走",
-          "count": 352
+          "word": "早说",
+          "count": 48
         },
         {
-          "word": "路走好",
-          "count": 352
+          "word": "我去不",
+          "count": 48
         },
         {
-          "word": "一路走好",
-          "count": 352
+          "word": "去不早",
+          "count": 48
         },
         {
-          "word": "爷爷",
-          "count": 8
+          "word": "不早说",
+          "count": 48
         },
         {
-          "word": "再见",
-          "count": 3
+          "word": "我去不早",
+          "count": 48
         },
         {
-          "word": "罗汉",
-          "count": 3
+          "word": "去不早说",
+          "count": 48
         },
         {
-          "word": "汉归",
-          "count": 3
+          "word": "哈哈",
+          "count": 15
         }
       ],
       "stats": {
-        "likes": 464819,
-        "like_growth": 464819,
-        "comments": 5947,
-        "saves": 44036,
-        "views": 1410999
+        "likes": 450714,
+        "like_growth": 141143,
+        "comments": 17707,
+        "saves": 86376,
+        "views": 4378921
       }
     },
     {
       "rank": 6,
-      "title": "【毕导】这个X你肯定见过，但它其实根本不存在",
-      "author": "毕导",
-      "url": "https://www.bilibili.com/video/BV1VVhk6pEiR",
-      "pic": "https://i2.hdslb.com/bfs/archive/bec8a99e1e614bf0860d85bc8100adc0b637a679.jpg",
-      "category": "科学科普",
+      "title": "每百年一次深渊血战，恶魔世界会如何发展？",
+      "author": "末影大黑",
+      "url": "https://www.bilibili.com/video/BV1JBaA6oEmA",
+      "pic": "https://i1.hdslb.com/bfs/archive/300df1f1cf8489d78a00df1e0bff2dfa4d91efff.jpg",
+      "category": "单机游戏",
       "topics": [
-        "光学",
-        "物理",
-        "科普",
-        "数学",
-        "双曲线",
-        "反射",
-        "光盘",
-        "圆锥曲线"
+        "搞笑",
+        "恶魔",
+        "文明",
+        "魔鬼",
+        "魔界",
+        "斗蛐蛐",
+        "worldbox",
+        "世界盒子"
       ],
-      "published_at": "2026-09-22",
-      "comment_summary": "公开评论约 3714 条，热评：别这么说…别这么拍视频……这要害得多少懵懂的孩子写义无反悔地跳进去学物理啊[笑哭]；艹，看成“这个X上你肯定见过”[笑哭]",
-      "summary": "《【毕导】这个X你肯定见过，但它其实根本不存在》是一条科学科普类、内容向视频，核心话题是「毕导、这个、你肯定见」。简介里它写道：看完这期视频，你有没有感受到沟槽之美呢？。观众弹幕高频出现「毕导是怎么能做到每期都拍一些抽象小视频的」「所以什么时候备战奥运？」，说明大家在讨论这些点。评论区讨论集中在「别这么说…别这么拍视频……这要害得多少懵懂的；艹，看成“这个X上你肯定见过”[笑哭]」。",
-      "desc": "看完这期视频，你有没有感受到沟槽之美呢？\n\n\n———————————————————————————— \n你还可以看看:  这是什么妖术？酒在坛子里是绿色，舀出来瞬间变红！ BV1JiVb6EEi7 \n我预言了一个物理规律，历时100天我证明了它  BV1wPoVB7Egv \n这个现象你肯定见过，但初中教材上的解释几乎都是错的  BV18yXbB8EJw \n这条线看得清摸得着，但你永远测不出它的长度 BV1MbFXz5Esa \n光一直在欺骗你，而只有开塞露可以揭穿它  BV1cyS3BdECH \n地球是平",
-      "duration": 903,
-      "author_mid": 254463269,
-      "author_fans": 8363218,
-      "author_archives": 175,
+      "published_at": "2026-09-24",
+      "comment_summary": "公开评论约 5398 条，热评：看得我热血沸腾啊……陪一张 意外发现了帝国兵器的xp；看之前:是纯爱啊[打call]\n看之后:怎么是纯战士[热]",
+      "summary": "《每百年一次深渊血战，恶魔世界会如何发展？》是一条单机游戏类、内容向视频，核心话题是「每百年一、次深渊血、恶魔世界」。简介里它写道：有趣的视频，希望大家喜欢。观众弹幕高频出现「相当于让恶魔领主亲自锁死了增加战力的可能性。。。」「冰霜恶魔：我帅爆了」，说明大家在讨论这些点。评论区讨论集中在「看得我热血沸腾啊……陪一张 意外发现了帝国兵；看之前:是纯爱啊[打call] 看之后:怎么」。",
+      "desc": "有趣的视频，希望大家喜欢",
+      "duration": 2475,
+      "author_mid": 88022283,
+      "author_fans": 787699,
+      "author_archives": 61,
       "author_level": 6,
-      "author_sign": "和你一起感受科学的快乐和美！！也欢迎关注一个UP叫毕的二阶导。B站商务联系: s1012295607",
+      "author_sign": "要二创写小说做视频随意，游戏名worldbox，steam可下",
       "top_comments": [
         {
-          "user": "Childish__",
-          "likes": 109,
-          "content": "别这么说…别这么拍视频……这要害得多少懵懂的孩子写义无反悔地跳进去学物理啊[笑哭]"
+          "user": "Fiamme_arancioni",
+          "likes": 139,
+          "content": "看得我热血沸腾啊……陪一张 意外发现了帝国兵器的xp"
         },
         {
-          "user": "Skad1Zz",
-          "likes": 704,
-          "content": "艹，看成“这个X上你肯定见过”[笑哭]"
+          "user": "如临东方",
+          "likes": 428,
+          "content": "看之前:是纯爱啊[打call]\n看之后:怎么是纯战士[热]"
         },
         {
-          "user": "芝麻苏唐",
-          "likes": 235,
-          "content": "省流：沟槽"
+          "user": "长期以来的世界",
+          "likes": 279,
+          "content": "男频打怪升级的超雄男主\n                vs\n女频苦大仇深白莲花女主\n             [歪嘴][支持]"
         }
       ],
       "danmaku_words": [
         {
-          "word": "还有",
-          "count": 16
-        },
-        {
-          "word": "毕导",
-          "count": 15
-        },
-        {
-          "word": "数学",
-          "count": 15
+          "word": "恶魔",
+          "count": 50
         },
         {
           "word": "什么",
+          "count": 40
+        },
+        {
+          "word": "最强",
+          "count": 25
+        },
+        {
+          "word": "魔鬼",
+          "count": 23
+        },
+        {
+          "word": "没有",
+          "count": 21
+        },
+        {
+          "word": "一个",
+          "count": 20
+        },
+        {
+          "word": "不是",
+          "count": 18
+        },
+        {
+          "word": "索伦",
+          "count": 14
+        },
+        {
+          "word": "家人",
+          "count": 14
+        },
+        {
+          "word": "正义",
           "count": 13
-        },
-        {
-          "word": "这个",
-          "count": 12
-        },
-        {
-          "word": "物理",
-          "count": 10
-        },
-        {
-          "word": "小奶",
-          "count": 10
-        },
-        {
-          "word": "奶油",
-          "count": 10
-        },
-        {
-          "word": "小奶油",
-          "count": 10
-        },
-        {
-          "word": "好像",
-          "count": 9
         }
       ],
       "stats": {
-        "likes": 186224,
-        "like_growth": 186224,
-        "comments": 3714,
-        "saves": 53788,
-        "views": 2772302
+        "likes": 170929,
+        "like_growth": 170929,
+        "comments": 5398,
+        "saves": 57011,
+        "views": 2304957
       }
     },
     {
       "rank": 7,
-      "title": "狼王传奇系列1-11集合集【AI全民制作人】",
-      "author": "制霸美食街",
-      "url": "https://www.bilibili.com/video/BV1BreB6tEWT",
-      "pic": "https://i1.hdslb.com/bfs/archive/f1d6a4325a3fabbce96dff80741a898cbd1cedfc.jpg",
-      "category": "汪星人",
+      "title": "超市里已经……没有人类了……",
+      "author": "老番茄",
+      "url": "https://www.bilibili.com/video/BV18fhb65EGs",
+      "pic": "https://i1.hdslb.com/bfs/archive/2e42752824225a1c578db1d66fe7ea727c9b7a68.jpg",
+      "category": "单机游戏",
       "topics": [
-        "黑猫",
-        "制霸美食街",
-        "狼王",
-        "AI整活全宇宙"
+        "老番茄",
+        "恐怖",
+        "搞笑",
+        "午夜轮班",
+        "伪人超市",
+        "沙雕",
+        "某幻",
+        "中国boy"
       ],
-      "published_at": "2026-09-21",
-      "comment_summary": "公开评论约 3018 条，热评：这个是我看过最棒的一个缝合怪了；[微笑]",
-      "summary": "《狼王传奇系列1-11集合集【AI全民制作人】》是一条汪星人类、盘点向视频，核心话题是「狼王传奇、系列、集合集」。简介里它写道：制霸美食街狼王传奇系列合集。观众弹幕高频出现「美食街发现一只木乃伊狼，请求支援，请求支援」「美食街发现一群狼，请求支援，请求支援」，说明大家在讨论这些点。评论区讨论集中在「这个是我看过最棒的一个缝合怪了；[微笑]」。",
-      "desc": "制霸美食街狼王传奇系列合集",
-      "duration": 1256,
-      "author_mid": 396589564,
-      "author_fans": 50780,
-      "author_archives": 32,
-      "author_level": 5,
-      "author_sign": "原创剧情制霸美食街，豹哥系列合集，狼王系列合集，定期更新。欢迎关注了解。",
+      "published_at": "2026-09-24",
+      "comment_summary": "公开评论约 1685 条，热评：由两个动物和一个水果经营的杀人商厦[doge_金箍]；这游戏主角的真实身份是从良的连环杀手，还是疑似信恐虐的，每个月杀8个，为了给自己能无限吞噬尸体不带打",
+      "summary": "《超市里已经……没有人类了……》是一条单机游戏类、内容向视频，核心话题是「超市里已、没有人类」。简介里它写道：游戏：午夜轮班。观众弹幕高频出现「？？哈哈哈哈破绷了」「玩过那个保安找伪人的茄哥就是不一样」，说明大家在讨论这些点。评论区讨论集中在「由两个动物和一个水果经营的杀人商厦[doge；这游戏主角的真实身份是从良的连环杀手，还是疑」。",
+      "desc": "游戏：午夜轮班\n如果喜欢看我们玩多人游戏，能不能给这个视频点个赞！！我一定尽快更新！！",
+      "duration": 2022,
+      "author_mid": 546195,
+      "author_fans": 20800173,
+      "author_archives": 678,
+      "author_level": 6,
+      "author_sign": "新浪微博：_老番茄_",
       "top_comments": [
         {
-          "user": "中原狂人南宫恨",
-          "likes": 151,
-          "content": "这个是我看过最棒的一个缝合怪了"
+          "user": "新手村的史莱姆",
+          "likes": 3166,
+          "content": "由两个动物和一个水果经营的杀人商厦[doge_金箍]"
         },
         {
-          "user": "苏白薯挞",
-          "likes": 4308,
-          "content": "[微笑]"
+          "user": "大碎冰",
+          "likes": 5217,
+          "content": "这游戏主角的真实身份是从良的连环杀手，还是疑似信恐虐的，每个月杀8个，为了给自己能无限吞噬尸体不带打嗝的可爱宠物付医药费来店里打工。\n手臂力量能把人类直接撕裂成肉块，可以在火焰中和怪物贴身肉搏，能把钢化伪人撕裂的捕兽夹对他只是小伤，呼吸回血，会反转术式，能以可观效率治愈自己直到70%最大生命值，是现代最强人类，但是没有领域，面对现代最强伪人［牙医］的领域展开只能躲避，但凭借更强的速度与意志力最终战"
         },
         {
-          "user": "亚瑟摩根ArthurMorga",
-          "likes": 3717,
-          "content": "狼：吃过肉吗你们？\n其他狼：谁没吃过呀\n狼：我说的是熟的，土狗[笑哭]"
+          "user": "我熊妈黑欺旅游区官方",
+          "likes": 5035,
+          "content": "午夜轮班 这款曾经爆火的游戏 玩起来 太刺激了简直不要太爽 硬生生玩成搞笑游戏[滑稽]"
         }
       ],
       "danmaku_words": [
         {
           "word": "哈哈",
-          "count": 71
+          "count": 81
         },
         {
           "word": "哈哈哈",
-          "count": 52
+          "count": 60
         },
         {
           "word": "哈哈哈哈",
-          "count": 33
+          "count": 40
         },
         {
-          "word": "还有",
-          "count": 17
+          "word": "某幻",
+          "count": 26
         },
         {
-          "word": "北极",
-          "count": 16
+          "word": "伪人",
+          "count": 25
         },
         {
-          "word": "美食",
-          "count": 15
+          "word": "这个",
+          "count": 24
         },
         {
-          "word": "食街",
-          "count": 14
+          "word": "什么",
+          "count": 20
         },
         {
-          "word": "美食街",
-          "count": 14
+          "word": "中国",
+          "count": 19
         },
         {
-          "word": "平头",
-          "count": 14
+          "word": "一个",
+          "count": 18
         },
         {
-          "word": "头哥",
-          "count": 14
+          "word": "个人",
+          "count": 18
         }
       ],
       "stats": {
-        "likes": 207053,
-        "like_growth": 207053,
-        "comments": 3018,
-        "saves": 58926,
-        "views": 2900440
+        "likes": 176385,
+        "like_growth": 176385,
+        "comments": 1685,
+        "saves": 47558,
+        "views": 1803054
       }
     },
     {
       "rank": 8,
-      "title": "复仇者联盟",
-      "author": "脱缰凯Kk",
-      "url": "https://www.bilibili.com/video/BV1pYhJ63EA7",
-      "pic": "https://i0.hdslb.com/bfs/archive/d5fecc5f5f1dcfdd2b9bb857b979e184fadf7889.jpg",
-      "category": "小剧场",
-      "topics": [
-        "超级英雄",
-        "短片",
-        "原创",
-        "搞笑小剧场"
-      ],
-      "published_at": "2026-09-22",
-      "comment_summary": "公开评论约 4343 条，热评：主任3页，校长4页，比老头子12页，真ne啊；不认识比老师说明你这个官当的也不高啊[doge]",
-      "summary": "《复仇者联盟》是一条小剧场类、内容向视频，核心话题是「复仇者联」。观众弹幕高频出现「领导已经被吓哭了」「请输入文本」，说明大家在讨论这些点。评论区讨论集中在「主任3页，校长4页，比老头子12页，真ne啊；不认识比老师说明你这个官当的也不高啊[dog」。",
-      "desc": "-",
-      "duration": 304,
-      "author_mid": 373388923,
-      "author_fans": 6779472,
-      "author_archives": 846,
-      "author_level": 6,
-      "author_sign": "商务v: Xdwh1230",
-      "top_comments": [
-        {
-          "user": "狂奔一万里",
-          "likes": 441,
-          "content": "主任3页，校长4页，比老头子12页，真ne啊"
-        },
-        {
-          "user": "青依树tree",
-          "likes": 783,
-          "content": "不认识比老师说明你这个官当的也不高啊[doge]"
-        },
-        {
-          "user": "阿方四连斩",
-          "likes": 423,
-          "content": "笑点一高有好人，有坏人，就是没有没实力的人[doge]"
-        }
-      ],
-      "danmaku_words": [
-        {
-          "word": "吓哭",
-          "count": 75
-        },
-        {
-          "word": "哭了",
-          "count": 75
-        },
-        {
-          "word": "吓哭了",
-          "count": 75
-        },
-        {
-          "word": "请输",
-          "count": 69
-        },
-        {
-          "word": "输入",
-          "count": 69
-        },
-        {
-          "word": "入文",
-          "count": 69
-        },
-        {
-          "word": "文本",
-          "count": 69
-        },
-        {
-          "word": "请输入",
-          "count": 69
-        },
-        {
-          "word": "输入文",
-          "count": 69
-        },
-        {
-          "word": "入文本",
-          "count": 69
-        }
-      ],
-      "stats": {
-        "likes": 180401,
-        "like_growth": 180401,
-        "comments": 4343,
-        "saves": 23056,
-        "views": 2108731
-      }
-    },
-    {
-      "rank": 9,
       "title": "『飙马野郎 JOJO的奇妙冒险』 OP Kroi 「SPIN」",
       "author": "WBJ_Anime",
       "url": "https://www.bilibili.com/video/BV1e6h46UEfG",
       "pic": "https://i1.hdslb.com/bfs/archive/3b49aa06630a79d9ab887709ff8126a591a26859.jpg",
       "category": "综合",
       "topics": [
+        "JOJO",
         "OP",
         "JOJO的奇妙冒险",
-        "JOJO",
         "动画种草激励计划",
         "飙马野郎",
         "SBR",
         "JOJO的奇妙冒险飙马野郎"
       ],
       "published_at": "2026-09-23",
-      "comment_summary": "公开评论约 11704 条，热评：感谢小伙伴的精彩推荐~送上前作正片传送门：【https://www.bilibili.com/ban；感觉这个op画面固然是好的，神风做的漫画镜头一看就会心一笑，但是唱的部分感觉缺少一个引爆情绪的点，从",
-      "summary": "《『飙马野郎 JOJO的奇妙冒险』 OP Kroi 「SPIN」》是一条综合类、内容向视频，核心话题是「飙马野郎、的奇妙冒」。简介里它写道：♦OP动画制作：神风动画。观众弹幕高频出现「这是一个关于大卫贷的故事」「真是贷了好大一笔啊………」，说明大家在讨论这些点。评论区讨论集中在「感谢小伙伴的精彩推荐~送上前作正片传送门：【；感觉这个op画面固然是好的，神风做的漫画镜头」。",
+      "comment_summary": "公开评论约 13469 条，热评：感谢小伙伴的精彩推荐~送上前作正片传送门：【https://www.bilibili.com/ban；男孩的9.25：\n食用一些糕点，观赏一些月亮\n男人的9.25：\n观看铁蛋快跑",
+      "summary": "《『飙马野郎 JOJO的奇妙冒险』 OP Kroi 「SPIN」》是一条综合类、内容向视频，核心话题是「飙马野郎、的奇妙冒」。简介里它写道：♦OP动画制作：神风动画。观众弹幕高频出现「哇草！细节！杰洛的马在跑步时会向左栽一下」「杰洛笑了暗示亿泰不聪明」，说明大家在讨论这些点。评论区讨论集中在「感谢小伙伴的精彩推荐~送上前作正片传送门：【；男孩的9.25： 食用一些糕点，观赏一些月亮」。",
       "desc": "♦OP动画制作：神风动画\n\n♦OP主题曲：Kroi《SPIN》\n作词：内田怜央\n作曲・编曲：Kroi\n\nKroi\nare\n主唱／吉他／打击乐：Leo Uchida\n吉他：Yuki Hasebe\n贝斯：Masanori Seki\n键盘：Daiki Chiba\n鼓：Hidetomo Masuda\n\n更多详情，敬请关注官网咨询：\n⇒https://jojo-portal-anime.com/sbr/\n\n#jojo_anime# #SBR新OP动画解禁# \n\n©LUCKY LAND COMMUNICATIONS/",
       "duration": 91,
       "author_mid": 2061838341,
-      "author_fans": 233420,
-      "author_archives": 150,
+      "author_fans": 238421,
+      "author_archives": 151,
       "author_level": 6,
       "author_sign": "华纳兄弟日本动画 Warner Bros Japan Anime",
       "top_comments": [
         {
           "user": "善良的小矿工",
-          "likes": 135,
+          "likes": 1438,
           "content": "感谢小伙伴的精彩推荐~送上前作正片传送门：【https://www.bilibili.com/bangumi/play/ss4334】【https://www.bilibili.com/bangumi/play/ss4185】【https://www.bilibili.com/bangumi/play/ss4213】【https://www.bilibili.com/bangumi/play/ss"
         },
         {
-          "user": "诸神無念",
-          "likes": 390,
-          "content": "感觉这个op画面固然是好的，神风做的漫画镜头一看就会心一笑，但是唱的部分感觉缺少一个引爆情绪的点，从回转吧那一段开始同音调拖得太长了，结尾还有一句往下压的"
+          "user": "就叫阿杰罢",
+          "likes": 701,
+          "content": "男孩的9.25：\n食用一些糕点，观赏一些月亮\n男人的9.25：\n观看铁蛋快跑"
         },
         {
-          "user": "鱼骨箭",
-          "likes": 22,
-          "content": "这个人长的和非酋一样 运气一定很差吧"
+          "user": "诸神無念",
+          "likes": 448,
+          "content": "感觉这个op画面固然是好的，神风做的漫画镜头一看就会心一笑，但是唱的部分感觉缺少一个引爆情绪的点，从回转吧那一段开始同音调拖得太长了，结尾还有一句往下压的"
         }
       ],
       "danmaku_words": [
         {
           "word": "等了",
-          "count": 36
+          "count": 309
         },
         {
-          "word": "昂贵",
-          "count": 32
+          "word": "这里",
+          "count": 11
         },
         {
-          "word": "大卫",
-          "count": 22
+          "word": "杰洛",
+          "count": 7
         },
         {
-          "word": "好昂",
-          "count": 22
+          "word": "雪中",
+          "count": 7
         },
         {
-          "word": "好昂贵",
-          "count": 22
+          "word": "中对",
+          "count": 7
+        },
+        {
+          "word": "对饮",
+          "count": 7
+        },
+        {
+          "word": "雪中对",
+          "count": 7
+        },
+        {
+          "word": "中对饮",
+          "count": 7
+        },
+        {
+          "word": "雪中对饮",
+          "count": 7
         },
         {
           "word": "真是",
-          "count": 20
-        },
-        {
-          "word": "帅帅",
-          "count": 20
-        },
-        {
-          "word": "大一",
-          "count": 18
-        },
-        {
-          "word": "贵啊",
-          "count": 18
-        },
-        {
-          "word": "帅帅帅",
-          "count": 18
+          "count": 6
         }
       ],
       "stats": {
-        "likes": 185481,
-        "like_growth": 185481,
-        "comments": 11702,
-        "saves": 60300,
-        "views": 2249043
+        "likes": 228960,
+        "like_growth": 228960,
+        "comments": 13469,
+        "saves": 74170,
+        "views": 2914589
+      }
+    },
+    {
+      "rank": 9,
+      "title": "【非AI】这可能是全网最全实拍冷兵器合集！",
+      "author": "含亮老师",
+      "url": "https://www.bilibili.com/video/BV1a2h46yE8m",
+      "pic": "https://i2.hdslb.com/bfs/archive/d23b39c8f7132fc7009821d14da8875c13ebe415.jpg",
+      "category": "运动综合",
+      "topics": [
+        "武术",
+        "冷兵器",
+        "中国"
+      ],
+      "published_at": "2026-09-24",
+      "comment_summary": "公开评论约 4241 条，热评：建议不要把巨剑剪辑进去，封面标明十八般兵器但放一个纯影视游戏虚构出来的巨剑非常误导人；配音用点心呐，所有兵器都一个声效什么玩意",
+      "summary": "《【非AI】这可能是全网最全实拍冷兵器合集！》是一条运动综合类、盘点向视频，核心话题是「这可能是、全网最全、实拍冷兵」。简介里它写道：制作不易，跪谢点赞投币的大侠呀！。观众弹幕高频出现「最喜欢含亮老师」「冷兵器和冷门兵器是两个词」，说明大家在讨论这些点。评论区讨论集中在「建议不要把巨剑剪辑进去，封面标明十八般兵器但；配音用点心呐，所有兵器都一个声效什么玩意」。",
+      "desc": "制作不易，跪谢点赞投币的大侠呀！",
+      "duration": 198,
+      "author_mid": 1833524110,
+      "author_fans": 1606045,
+      "author_archives": 108,
+      "author_level": 6,
+      "author_sign": "出生武术世家，硕士研究生，国家一级武术裁判，讲师，多次在世界、全国武术比赛中荣获剑术、拳术、太极拳、健身气功冠军。曾出访法俄、马来等传播武术",
+      "top_comments": [
+        {
+          "user": "华灯下的铸冶城",
+          "likes": 88,
+          "content": "建议不要把巨剑剪辑进去，封面标明十八般兵器但放一个纯影视游戏虚构出来的巨剑非常误导人"
+        },
+        {
+          "user": "我D慢灵魂",
+          "likes": 30,
+          "content": "配音用点心呐，所有兵器都一个声效什么玩意"
+        },
+        {
+          "user": "冷-水",
+          "likes": 425,
+          "content": "最震撼的是刀比人长，然后一脚踢飞刀鞘[doge]"
+        }
+      ],
+      "danmaku_words": [
+        {
+          "word": "兵器",
+          "count": 40
+        },
+        {
+          "word": "喜欢",
+          "count": 23
+        },
+        {
+          "word": "不是",
+          "count": 19
+        },
+        {
+          "word": "投了",
+          "count": 19
+        },
+        {
+          "word": "冷门",
+          "count": 18
+        },
+        {
+          "word": "冷兵",
+          "count": 16
+        },
+        {
+          "word": "冷兵器",
+          "count": 16
+        },
+        {
+          "word": "老师",
+          "count": 15
+        },
+        {
+          "word": "门兵",
+          "count": 15
+        },
+        {
+          "word": "门兵器",
+          "count": 15
+        }
+      ],
+      "stats": {
+        "likes": 144755,
+        "like_growth": 144755,
+        "comments": 4241,
+        "saves": 56347,
+        "views": 2110266
       }
     },
     {
       "rank": 10,
+      "title": "糟糕！我的粮食被勋宗抢走了！【神奇组织54】",
+      "author": "小约翰可汗",
+      "url": "https://www.bilibili.com/video/BV1WhaA6hE7s",
+      "pic": "https://i2.hdslb.com/bfs/archive/226f434fef1c833057d85dc5faf20c2862e988e9.jpg",
+      "category": "人文历史",
+      "topics": [
+        "历史",
+        "组织",
+        "人文",
+        "奇闻",
+        "苏联",
+        "美国",
+        "知识",
+        "人文历史档案馆"
+      ],
+      "published_at": "2026-09-25",
+      "comment_summary": "公开评论约 7250 条，热评：小约翰同志， 9月份的指标能不能更新10期呢；一部通辽史，半部勋宗传[笑哭]",
+      "summary": "《糟糕！我的粮食被勋宗抢走了！【神奇组织54】》是一条人文历史类、内容向视频，核心话题是「糟糕、我的粮食、被勋宗抢」。简介里它写道：本篇为神奇组织之1972苏联粮食大劫案。。观众弹幕高频出现「勋宗：什么劫案，可是给了黄金的」「正常，作为农业部长不懂农业太正常了」，说明大家在讨论这些点。评论区讨论集中在「小约翰同志， 9月份的指标能不能更新10期呢；一部通辽史，半部勋宗传[笑哭]」。",
+      "desc": "本篇为神奇组织之1972苏联粮食大劫案。",
+      "duration": 2255,
+      "author_mid": 23947287,
+      "author_fans": 10896419,
+      "author_archives": 264,
+      "author_level": 6,
+      "author_sign": "这个人很神秘，什么都没有鸽",
+      "top_comments": [
+        {
+          "user": "I祈风l",
+          "likes": 3288,
+          "content": "小约翰同志， 9月份的指标能不能更新10期呢"
+        },
+        {
+          "user": "恰似流光溢彩虹",
+          "likes": 2088,
+          "content": "一部通辽史，半部勋宗传[笑哭]"
+        },
+        {
+          "user": "阿川Ss",
+          "likes": 2099,
+          "content": "小知识，就是这期的苏联大劫案可汗开头引出这期视频的那个引子，也就是那个路透社评论员的文章确实是存在的，那个作者名字叫做凯伦·布劳恩 (Karen Braun) ，是路透社常驻美国科罗拉多州柯林斯堡的资深农业与大宗商品市场分析师、专栏评论员\n这篇文章是他在2021年1月21日发表的，原文标语叫做文章英文原标题：Column: China&#39;s U.S. grain haul sparks fl"
+        }
+      ],
+      "danmaku_words": [
+        {
+          "word": "苏联",
+          "count": 37
+        },
+        {
+          "word": "粮食",
+          "count": 22
+        },
+        {
+          "word": "勋宗",
+          "count": 16
+        },
+        {
+          "word": "冷战",
+          "count": 16
+        },
+        {
+          "word": "农业",
+          "count": 13
+        },
+        {
+          "word": "哈哈",
+          "count": 13
+        },
+        {
+          "word": "还有",
+          "count": 12
+        },
+        {
+          "word": "老一",
+          "count": 12
+        },
+        {
+          "word": "一辈",
+          "count": 12
+        },
+        {
+          "word": "老一辈",
+          "count": 12
+        }
+      ],
+      "stats": {
+        "likes": 125565,
+        "like_growth": 125565,
+        "comments": 7249,
+        "saves": 34930,
+        "views": 1590884
+      }
+    },
+    {
+      "rank": 11,
+      "title": "热搜上逆天的“后备箱礼物”事件：多少神人，正在把惊喜变成羞辱",
+      "author": "小椰子专栏",
+      "url": "https://www.bilibili.com/video/BV1bdh46BE2z",
+      "pic": "https://i0.hdslb.com/bfs/archive/345721b6169d6959724efca10fa8c632469f1f44.jpg",
+      "category": "社科·法律·心理",
+      "topics": [
+        "逆天",
+        "买名酒上美团闪购",
+        "美团闪购名酒抽免单",
+        "上美团闪购买名酒更划算",
+        "节日送名酒上美团闪购",
+        "礼物",
+        "神人",
+        "送礼"
+      ],
+      "published_at": "2026-09-24",
+      "comment_summary": "公开评论约 6581 条，热评：这就类似你平时是为了工资去工作，然后你身边的人以为你喜欢工作，于是在你生日的时候联系领导给你安排了一；他们看到了老人喜欢捡纸壳子，看不到他们为什么捡纸壳子",
+      "summary": "《热搜上逆天的“后备箱礼物”事件：多少神人，正在把惊喜变成羞辱》是一条社科·法律·心理类、内容向视频，核心话题是「热搜上逆、天的、后备箱礼」。简介里它写道：如果小伙伴有更多的看法，可以在评论区给我留言哦。。观众弹幕高频出现「老爷子：原来我捡纸箱子是因为我喜欢纸箱子」「有没有一种可能只捡纸壳是为了补贴家用」，说明大家在讨论这些点。评论区讨论集中在「这就类似你平时是为了工资去工作，然后你身边的；他们看到了老人喜欢捡纸壳子，看不到他们为什么」。",
+      "desc": "如果小伙伴有更多的看法，可以在评论区给我留言哦。\n下期想看什么热点事件，也可以跟椰子说说呀。\n感谢大家的一键三连，你们的鼓励是我做视频的动力～",
+      "duration": 323,
+      "author_mid": 30947486,
+      "author_fans": 1321638,
+      "author_archives": 464,
+      "author_level": 6,
+      "author_sign": "用独特的视角解读社会热点事件，帮你认知升级。在公众号：小椰子专栏，回复“椰子”，获取《普通人成长必备的30个认知模型》清单。",
+      "top_comments": [
+        {
+          "user": "゚我永远喜欢友利奈绪",
+          "likes": 19663,
+          "content": "这就类似你平时是为了工资去工作，然后你身边的人以为你喜欢工作，于是在你生日的时候联系领导给你安排了一大堆工作("
+        },
+        {
+          "user": "岁岁珏意",
+          "likes": 9628,
+          "content": "他们看到了老人喜欢捡纸壳子，看不到他们为什么捡纸壳子"
+        },
+        {
+          "user": "辣椒擦眼泪",
+          "likes": 3383,
+          "content": "我淘宝380给我姐买了一套拼豆，反手我姐发了个拼多多180的截图告诉我，《弟，你是不是买贵了？你看拼多多才100多》\nPS，他是选了拼多多降低一档的130截的图，我进去看到同档次是180"
+        }
+      ],
+      "danmaku_words": [
+        {
+          "word": "爷爷",
+          "count": 13
+        },
+        {
+          "word": "哈哈",
+          "count": 13
+        },
+        {
+          "word": "喜欢",
+          "count": 10
+        },
+        {
+          "word": "纸壳",
+          "count": 10
+        },
+        {
+          "word": "何意",
+          "count": 9
+        },
+        {
+          "word": "意味",
+          "count": 9
+        },
+        {
+          "word": "何意味",
+          "count": 9
+        },
+        {
+          "word": "笑了",
+          "count": 8
+        },
+        {
+          "word": "没有",
+          "count": 8
+        },
+        {
+          "word": "哈哈哈",
+          "count": 8
+        }
+      ],
+      "stats": {
+        "likes": 256924,
+        "like_growth": 256924,
+        "comments": 6581,
+        "saves": 26075,
+        "views": 1882695
+      }
+    },
+    {
+      "rank": 12,
+      "title": "绷不住就死",
+      "author": "良心发作的chunchun",
+      "url": "https://www.bilibili.com/video/BV19ee86cEae",
+      "pic": "https://i1.hdslb.com/bfs/archive/b6ecfe40745662215883b0ecc0ef4cb2b25e1c52.jpg",
+      "category": "搞笑",
+      "topics": [
+        "搞笑",
+        "全程高能",
+        "搞笑视频",
+        "剧情",
+        "悬疑",
+        "反转",
+        "电影",
+        "模拟恐怖"
+      ],
+      "published_at": "2026-09-24",
+      "comment_summary": "公开评论约 1989 条，热评：操我？[思考]；怎么还有“艹四我”？[思考]",
+      "summary": "《绷不住就死》是一条搞笑类、内容向视频，核心话题是「绷不住就」。简介里它写道：更新啦！超绝无敌烧脑悬疑搞笑短片wwwww！求三连呀xAx。观众弹幕高频出现「这真没绷住」「帝国的毁灭没绷住」，说明大家在讨论这些点。评论区讨论集中在「操我？[思考]；怎么还有“艹四我”？[思考]」。",
+      "desc": "更新啦！超绝无敌烧脑悬疑搞笑短片wwwww！求三连呀xAx",
+      "duration": 254,
+      "author_mid": 1590705,
+      "author_fans": 1694817,
+      "author_archives": 151,
+      "author_level": 6,
+      "author_sign": "商务合作vx：NSHOUSE888 （请备注品牌噢）",
+      "top_comments": [
+        {
+          "user": "梅德道人",
+          "likes": 234,
+          "content": "操我？[思考]"
+        },
+        {
+          "user": "清樱风花散",
+          "likes": 32,
+          "content": "怎么还有“艹四我”？[思考]"
+        },
+        {
+          "user": "鳰川惟",
+          "likes": 88,
+          "content": "全程就鸡把鹿炸了那一句最好笑笑的我直接绷不住了，其他的都是有点恐怖，笑不出来。"
+        }
+      ],
+      "danmaku_words": [
+        {
+          "word": "绷住",
+          "count": 108
+        },
+        {
+          "word": "松绷",
+          "count": 24
+        },
+        {
+          "word": "松绷住",
+          "count": 23
+        },
+        {
+          "word": "轻松",
+          "count": 22
+        },
+        {
+          "word": "轻松绷",
+          "count": 21
+        },
+        {
+          "word": "轻松绷住",
+          "count": 20
+        },
+        {
+          "word": "住了",
+          "count": 18
+        },
+        {
+          "word": "没绷",
+          "count": 18
+        },
+        {
+          "word": "没绷住",
+          "count": 18
+        },
+        {
+          "word": "我了",
+          "count": 15
+        }
+      ],
+      "stats": {
+        "likes": 152499,
+        "like_growth": 152499,
+        "comments": 1989,
+        "saves": 36222,
+        "views": 1780755
+      }
+    },
+    {
+      "rank": 13,
+      "title": "赴一场星河之约，守一段洲年荣光。三角洲二洲年快乐！",
+      "author": "老飞宇66",
+      "url": "https://www.bilibili.com/video/BV1Pwhx6dETi",
+      "pic": "https://i2.hdslb.com/bfs/archive/9c23370a4cb779dc0f2bc8a1bb49c377a0df360d.jpg",
+      "category": "网络游戏",
+      "topics": [
+        "三角洲行动",
+        "星河追梦",
+        "三角洲行动二洲年",
+        "洲年有你"
+      ],
+      "published_at": "2026-09-24",
+      "comment_summary": "公开评论约 7185 条，热评：牛来声音一出整段垮掉[笑哭]；气笑了，还有人要饭，不审核这一块",
+      "summary": "《赴一场星河之约，守一段洲年荣光。三角洲二洲年快乐！》是一条网络游戏类、内容向视频，核心话题是「赴一场星、河之约、守一段洲」。观众弹幕高频出现「二周年快乐！」「杨哥杀死比赛！！」，说明大家在讨论这些点。评论区讨论集中在「牛来声音一出整段垮掉[笑哭]；气笑了，还有人要饭，不审核这一块」。",
+      "desc": "",
+      "duration": 216,
+      "author_mid": 403637371,
+      "author_fans": 4458981,
+      "author_archives": 1648,
+      "author_level": 6,
+      "author_sign": "",
+      "top_comments": [
+        {
+          "user": "Dalmore",
+          "likes": 234,
+          "content": "牛来声音一出整段垮掉[笑哭]"
+        },
+        {
+          "user": "catmajiko",
+          "likes": 84,
+          "content": "气笑了，还有人要饭，不审核这一块"
+        },
+        {
+          "user": "无-不-丧-胆",
+          "likes": 199,
+          "content": "我杨哥绝对三角洲第一歌姬吧[生气][生气]"
+        }
+      ],
+      "danmaku_words": [
+        {
+          "word": "牛来",
+          "count": 171
+        },
+        {
+          "word": "杨哥",
+          "count": 32
+        },
+        {
+          "word": "快乐",
+          "count": 14
+        },
+        {
+          "word": "年快",
+          "count": 13
+        },
+        {
+          "word": "年快乐",
+          "count": 13
+        },
+        {
+          "word": "周年",
+          "count": 11
+        },
+        {
+          "word": "周年快",
+          "count": 11
+        },
+        {
+          "word": "周年快乐",
+          "count": 11
+        },
+        {
+          "word": "二周",
+          "count": 10
+        },
+        {
+          "word": "二周年",
+          "count": 10
+        }
+      ],
+      "stats": {
+        "likes": 145201,
+        "like_growth": 145201,
+        "comments": 7185,
+        "saves": 87745,
+        "views": 1571569
+      }
+    },
+    {
+      "rank": 14,
       "title": "还在肝破译点数？究极焚决！直接送1w破译点！挟持哈夫克网站！拿满奖励！",
       "author": "Key725",
       "url": "https://www.bilibili.com/video/BV16XaF6UETJ",
@@ -846,178 +1225,178 @@
         "S11"
       ],
       "published_at": "2026-09-23",
-      "comment_summary": "公开评论约 3462 条，热评：完全是为了抢发  内容都没仔细做[热]；这里的AI生成是什么鬼啊？",
+      "comment_summary": "公开评论约 4166 条，热评：完全是为了抢发  内容都没仔细做[热]；这里的AI生成是什么鬼啊？",
       "summary": "《还在肝破译点数？究极焚决！直接送1w破译点！挟持哈夫克网站！拿满奖励！》是一条网络游戏类、内容向视频，核心话题是「还在肝破、译点数、究极焚决」。简介里它写道：签约B站了！有KPI了！大家点点赞感谢。观众弹幕高频出现「月满人团圆，洲里共此时」「月满人团圆洲里共此时」，说明大家在讨论这些点。评论区讨论集中在「完全是为了抢发 内容都没仔细做[热]；这里的AI生成是什么鬼啊？」。",
       "desc": "签约B站了！有KPI了！大家点点赞感谢",
       "duration": 240,
       "author_mid": 11332884,
-      "author_fans": 1862669,
-      "author_archives": 3617,
+      "author_fans": 1873446,
+      "author_archives": 3622,
       "author_level": 6,
       "author_sign": "KK日报地址，KKRB.NET",
       "top_comments": [
         {
           "user": "Bili_2173965",
-          "likes": 69,
+          "likes": 86,
           "content": "完全是为了抢发  内容都没仔细做[热]"
         },
         {
           "user": "爱立德-阿玛利亚",
-          "likes": 53,
+          "likes": 65,
           "content": "这里的AI生成是什么鬼啊？"
         },
         {
           "user": "NebuIism",
-          "likes": 49,
+          "likes": 62,
           "content": "骇入活动的攻略重新出视频吧，你讲的啥啊，完全不是从一个不懂得玩家角度讲的，是从你完全理解这个活动的角度讲的"
         }
       ],
       "danmaku_words": [
         {
           "word": "月满",
-          "count": 64
+          "count": 63
         },
         {
           "word": "满人",
-          "count": 64
+          "count": 63
         },
         {
           "word": "人团",
-          "count": 64
+          "count": 63
         },
         {
           "word": "月满人",
-          "count": 64
+          "count": 63
         },
         {
           "word": "满人团",
-          "count": 64
+          "count": 63
         },
         {
           "word": "月满人团",
-          "count": 64
+          "count": 63
         },
         {
           "word": "共此",
-          "count": 64
+          "count": 63
         },
         {
           "word": "此时",
-          "count": 64
+          "count": 63
         },
         {
           "word": "共此时",
-          "count": 64
+          "count": 63
         },
         {
           "word": "团圆",
-          "count": 63
+          "count": 62
         }
       ],
       "stats": {
-        "likes": 87914,
-        "like_growth": 87914,
-        "comments": 3462,
-        "saves": 167948,
-        "views": 2022757
+        "likes": 102181,
+        "like_growth": 102181,
+        "comments": 4166,
+        "saves": 185929,
+        "views": 2432753
       }
     },
     {
-      "rank": 11,
-      "title": "好久不见啊，佐助",
-      "author": "牙牙的包裹",
-      "url": "https://www.bilibili.com/video/BV1B1hJ6wEwe",
-      "pic": "https://i2.hdslb.com/bfs/archive/380ba873739e0b4fc137def6250eb8efd4cf4c8f.jpg",
-      "category": "同人·手书",
+      "rank": 15,
+      "title": "我买下了15万的船票，踏上了前往世界尽头的旅行…..",
+      "author": "Linksphotograph",
+      "url": "https://www.bilibili.com/video/BV19naF66Ezb",
+      "pic": "https://i1.hdslb.com/bfs/archive/6c418aa83f64c7ec86d5c0b13c85520ed791941d.jpg",
+      "category": "出行",
       "topics": [
-        "火影忍者",
-        "动漫",
-        "二次元",
-        "佐助",
-        "鼬",
-        "鸣人",
-        "止水",
-        "动漫二创激励计划"
+        "北欧",
+        "摄影",
+        "北极",
+        "船旅",
+        "了不起的旅行家",
+        "DJI",
+        "帆船",
+        "全景相机"
       ],
-      "published_at": "2026-09-22",
-      "comment_summary": "公开评论约 4967 条，热评：一想到这个世界线最后会有一群人排队帮佐助搓鸟子我就想笑；我觉得最该黑化的就是鸣人，它玛德对他太不公平了，他黑化我100%能接受",
-      "summary": "《好久不见啊，佐助》是一条同人·手书类、内容向视频，核心话题是「好久不见、佐助」。观众弹幕高频出现「三代：真让人摸不到头脑」「If世界线·喝健康牛奶长大的杀意鸣人」，说明大家在讨论这些点。评论区讨论集中在「一想到这个世界线最后会有一群人排队帮佐助搓鸟；我觉得最该黑化的就是鸣人，它玛德对他太不公平」。",
-      "desc": "-",
-      "duration": 131,
-      "author_mid": 3493279194679455,
-      "author_fans": 1436854,
-      "author_archives": 73,
+      "published_at": "2026-09-24",
+      "comment_summary": "公开评论约 2918 条，热评：世界到底有几个尽头？每期都是世界的尽头。[doge]；真好啊 下辈子也当到处旅游 22了，结肠淋巴癌晚期，想吃口榴莲再走，买不起了...想在春天走，可能熬",
+      "summary": "《我买下了15万的船票，踏上了前往世界尽头的旅行…..》是一条出行类、内容向视频，核心话题是「我买下了、万的船票、踏上了前」。观众弹幕高频出现「恭喜你们掌握了北京市最新无人机拍摄技巧……」「完了，无人机没了他疯了，变采蘑菇的LINKS了」，说明大家在讨论这些点。评论区讨论集中在「世界到底有几个尽头？每期都是世界的尽头。[d；真好啊 下辈子也当到处旅游 22了，结肠淋巴」。",
+      "desc": "",
+      "duration": 4284,
+      "author_mid": 3816626,
+      "author_fans": 4814819,
+      "author_archives": 358,
       "author_level": 6,
-      "author_sign": "我能发就是原创（二创也是原创的二创）\n生活号：牙牙的小包裹",
+      "author_sign": "探索世界｜图片在同名ins｜ 工作邮箱：linksphotograph@gmail.com",
       "top_comments": [
         {
-          "user": "AIbum丶",
-          "likes": 487,
-          "content": "一想到这个世界线最后会有一群人排队帮佐助搓鸟子我就想笑"
+          "user": "绝地翻身",
+          "likes": 216,
+          "content": "世界到底有几个尽头？每期都是世界的尽头。[doge]"
         },
         {
-          "user": "贤人七十二",
-          "likes": 277,
-          "content": "我觉得最该黑化的就是鸣人，它玛德对他太不公平了，他黑化我100%能接受"
+          "user": "西瓜你个沃特咩冷",
+          "likes": 31,
+          "content": "真好啊 下辈子也当到处旅游 22了，结肠淋巴癌晚期，想吃口榴莲再走，买不起了...想在春天走，可能熬不过冬天了 如果可以我愿用我的命来换大家 家人平安 幸福安康！"
         },
         {
-          "user": "俺がさホか",
-          "likes": 820,
-          "content": "黄头发，晓组织，鸣人\n全给我懂完了，这就是 黄晓鸣"
+          "user": "东方盖茨比",
+          "likes": 619,
+          "content": "感觉到大家压力都蛮大的，都在讨论费用和时间"
         }
       ],
       "danmaku_words": [
         {
-          "word": "鸣人",
-          "count": 26
-        },
-        {
-          "word": "止水",
-          "count": 25
-        },
-        {
           "word": "哈哈",
-          "count": 24
+          "count": 135
         },
         {
-          "word": "这才",
-          "count": 23
+          "word": "哈哈哈",
+          "count": 99
         },
         {
-          "word": "三代",
-          "count": 21
+          "word": "哈哈哈哈",
+          "count": 65
         },
         {
-          "word": "才是",
-          "count": 21
+          "word": "螃蟹",
+          "count": 30
         },
         {
-          "word": "是正",
-          "count": 19
+          "word": "无人",
+          "count": 29
         },
         {
-          "word": "正版",
-          "count": 19
+          "word": "人机",
+          "count": 29
         },
         {
-          "word": "这是",
-          "count": 17
+          "word": "无人机",
+          "count": 29
         },
         {
-          "word": "这才是",
-          "count": 17
+          "word": "小螃",
+          "count": 29
+        },
+        {
+          "word": "小螃蟹",
+          "count": 29
+        },
+        {
+          "word": "感觉",
+          "count": 20
         }
       ],
       "stats": {
-        "likes": 145992,
-        "like_growth": 145992,
-        "comments": 4967,
-        "saves": 41212,
-        "views": 2965574
+        "likes": 98105,
+        "like_growth": 98105,
+        "comments": 2918,
+        "saves": 43339,
+        "views": 1947103
       }
     },
     {
-      "rank": 12,
+      "rank": 16,
       "title": "欢迎来到我的频道!",
       "author": "GroxOfficial",
       "url": "https://www.bilibili.com/video/BV1N9hp6WExy",
@@ -1025,646 +1404,93 @@
       "category": "单机游戏",
       "topics": [
         "游戏视频",
-        "搞笑",
-        "生存游戏",
         "我的世界",
+        "生存游戏",
+        "搞笑",
         "Minecraft",
         "mc",
         "grox",
         "全球MC创作者集结B站"
       ],
       "published_at": "2026-09-22",
-      "comment_summary": "公开评论约 5948 条，热评：是真的grox！我为这个中文字幕感到超级惊喜！但我想说的是，grox，为什么不在discord上发布；grox。是。。笨蛋。。。先发旧视频然后过好几天再发入站视频是什么操作啊喂！！！",
-      "summary": "《欢迎来到我的频道!》是一条单机游戏类、内容向视频，核心话题是「欢迎来到、我的频道」。观众弹幕高频出现「一切献给grox大人！」「一切献给grox大人」，说明大家在讨论这些点。评论区讨论集中在「是真的grox！我为这个中文字幕感到超级惊喜；grox。是。。笨蛋。。。先发旧视频然后过好」。",
+      "comment_summary": "公开评论约 7115 条，热评：grox。是。。笨蛋。。。先发旧视频然后过好几天再发入站视频是什么操作啊喂！！！；grox：悄悄来给他们一个惊喜\n粉丝：哪里来的高仿【绝望的凝视】",
+      "summary": "《欢迎来到我的频道!》是一条单机游戏类、内容向视频，核心话题是「欢迎来到、我的频道」。观众弹幕高频出现「欢迎Grox大人」「一切献给grox大人！」，说明大家在讨论这些点。评论区讨论集中在「grox。是。。笨蛋。。。先发旧视频然后过好；grox：悄悄来给他们一个惊喜 粉丝：哪里来」。",
       "desc": "",
       "duration": 70,
       "author_mid": 3546886680087018,
-      "author_fans": 358846,
+      "author_fans": 473333,
       "author_archives": 10,
       "author_level": 2,
       "author_sign": "Aight bet!",
       "top_comments": [
         {
-          "user": "Sylvia0_0",
-          "likes": 190,
-          "content": "是真的grox！我为这个中文字幕感到超级惊喜！但我想说的是，grox，为什么不在discord上发布通知，我真的以为你是冒牌货…因为你连你的管理员们都没有告诉"
-        },
-        {
           "user": "冬日里的茶",
-          "likes": 689,
+          "likes": 866,
           "content": "grox。是。。笨蛋。。。先发旧视频然后过好几天再发入站视频是什么操作啊喂！！！"
         },
         {
-          "user": "欲雨行舟ovo",
-          "likes": 251,
-          "content": "我一想到grox本来想搞个惊喜9月初就开始来哔哩哔哩更新结果一直没有流量然后一怒之下把自己马甲爆了就想笑（骨小伙到底有没有想过他的视频现在已经有生肉熟肉全搬运只要敢搜一下自己的词条就全部发现了）还是吃了没有了解市场行情的亏……"
+          "user": "黎姗琳",
+          "likes": 160,
+          "content": "grox：悄悄来给他们一个惊喜\n粉丝：哪里来的高仿【绝望的凝视】"
+        },
+        {
+          "user": "Sylvia0_0",
+          "likes": 355,
+          "content": "是真的grox！我为这个中文字幕感到超级惊喜！但我想说的是，grox，为什么不在discord上发布通知，我真的以为你是冒牌货…因为你连你的管理员们都没有告诉"
         }
       ],
       "danmaku_words": [
         {
           "word": "大人",
-          "count": 125
+          "count": 120
         },
         {
           "word": "一切",
-          "count": 124
+          "count": 117
         },
         {
           "word": "献给",
-          "count": 124
+          "count": 117
         },
         {
           "word": "切献",
-          "count": 123
+          "count": 113
         },
         {
           "word": "一切献",
-          "count": 123
+          "count": 113
         },
         {
           "word": "切献给",
-          "count": 123
+          "count": 113
         },
         {
           "word": "一切献给",
-          "count": 123
+          "count": 113
         },
         {
-          "word": "来了",
-          "count": 3
+          "word": "切都",
+          "count": 4
         },
         {
-          "word": "中文",
-          "count": 2
+          "word": "都献",
+          "count": 4
         },
         {
-          "word": "好有",
-          "count": 1
+          "word": "一切都",
+          "count": 4
         }
       ],
       "stats": {
-        "likes": 245298,
-        "like_growth": 245298,
-        "comments": 5948,
-        "saves": 77842,
-        "views": 1350134
-      }
-    },
-    {
-      "rank": 13,
-      "title": "超市里已经……没有人类了……",
-      "author": "老番茄",
-      "url": "https://www.bilibili.com/video/BV18fhb65EGs",
-      "pic": "https://i0.hdslb.com/bfs/archive/ae3120c46a863db72131706c0a282fa1ea3dd399.jpg",
-      "category": "单机游戏",
-      "topics": [
-        "搞笑",
-        "老番茄",
-        "恐怖",
-        "午夜轮班",
-        "伪人超市",
-        "某幻",
-        "沙雕",
-        "中国boy"
-      ],
-      "published_at": "2026-09-24",
-      "comment_summary": "公开评论约 1452 条，热评：这游戏主角的真实身份是从良的连环杀手，还是疑似信恐虐的，每个月杀8个，为了给自己能无限吞噬尸体不带打；由两个动物和一个水果经营的杀人商厦[doge_金箍]",
-      "summary": "《超市里已经……没有人类了……》是一条单机游戏类、内容向视频，核心话题是「超市里已、没有人类」。简介里它写道：游戏：午夜轮班。观众弹幕高频出现「？？哈哈哈哈破绷了」「认不出来伪人但是好在战斗力强悍」，说明大家在讨论这些点。评论区讨论集中在「这游戏主角的真实身份是从良的连环杀手，还是疑；由两个动物和一个水果经营的杀人商厦[doge」。",
-      "desc": "游戏：午夜轮班\n如果喜欢看我们玩多人游戏，能不能给这个视频点个赞！！我一定尽快更新！！",
-      "duration": 2022,
-      "author_mid": 546195,
-      "author_fans": 20795993,
-      "author_archives": 678,
-      "author_level": 6,
-      "author_sign": "新浪微博：_老番茄_",
-      "top_comments": [
-        {
-          "user": "大碎冰",
-          "likes": 3549,
-          "content": "这游戏主角的真实身份是从良的连环杀手，还是疑似信恐虐的，每个月杀8个，为了给自己能无限吞噬尸体不带打嗝的可爱宠物付医药费来店里打工。\n手臂力量能把人类直接撕裂成肉块，可以在火焰中和怪物贴身肉搏，能把钢化伪人撕裂的捕兽夹对他只是小伤，呼吸回血，会反转术式，能以可观效率治愈自己直到70%最大生命值，是现代最强人类，但是没有领域，面对现代最强伪人［牙医］的领域展开只能躲避，但凭借更强的速度与意志力最终战"
-        },
-        {
-          "user": "新手村的史莱姆",
-          "likes": 2195,
-          "content": "由两个动物和一个水果经营的杀人商厦[doge_金箍]"
-        },
-        {
-          "user": "我熊妈黑欺旅游区官方",
-          "likes": 3010,
-          "content": "午夜轮班 这款曾经爆火的游戏 玩起来 太刺激了简直不要太爽 硬生生玩成搞笑游戏[滑稽]"
-        }
-      ],
-      "danmaku_words": [
-        {
-          "word": "哈哈",
-          "count": 90
-        },
-        {
-          "word": "哈哈哈",
-          "count": 66
-        },
-        {
-          "word": "哈哈哈哈",
-          "count": 43
-        },
-        {
-          "word": "某幻",
-          "count": 31
-        },
-        {
-          "word": "这个",
-          "count": 28
-        },
-        {
-          "word": "伪人",
-          "count": 23
-        },
-        {
-          "word": "什么",
-          "count": 20
-        },
-        {
-          "word": "一个",
-          "count": 20
-        },
-        {
-          "word": "个人",
-          "count": 18
-        },
-        {
-          "word": "三个",
-          "count": 16
-        }
-      ],
-      "stats": {
-        "likes": 121291,
-        "like_growth": 121291,
-        "comments": 1452,
-        "saves": 32887,
-        "views": 1075344
-      }
-    },
-    {
-      "rank": 14,
-      "title": "医生坐诊2——pa大夫，你看我到底能不能红啊！",
-      "author": "papi酱",
-      "url": "https://www.bilibili.com/video/BV13Thi6AE3S",
-      "pic": "https://i1.hdslb.com/bfs/archive/0d6964855096d07774712d9649419f57f52c1b2a.jpg",
-      "category": "短片",
-      "topics": [
-        "搞笑",
-        "幽默",
-        "明星",
-        "网红",
-        "医生",
-        "问诊"
-      ],
-      "published_at": "2026-09-22",
-      "comment_summary": "公开评论约 2306 条，热评：药方开大疆能报医保吗[藏狐]；考古回来了，今年没看到她呢？她还红吗？",
-      "summary": "《医生坐诊2——pa大夫，你看我到底能不能红啊！》是一条短片类、内容向视频，核心话题是「医生坐诊、大夫、你看我到」。观众弹幕高频出现「突然全科会诊啊哈哈哈」「开大疆能走医保不姜医生」，说明大家在讨论这些点。评论区讨论集中在「药方开大疆能报医保吗[藏狐]；考古回来了，今年没看到她呢？她还红吗？」。",
-      "desc": "",
-      "duration": 298,
-      "author_mid": 1532165,
-      "author_fans": 9451484,
-      "author_archives": 444,
-      "author_level": 6,
-      "author_sign": "一个集美貌与才华于一身的女子。 商业合作邮箱：papijiang@papitube.com【请备注papi+品牌信息】",
-      "top_comments": [
-        {
-          "user": "醉蝶-",
-          "likes": 1896,
-          "content": "药方开大疆能报医保吗[藏狐]"
-        },
-        {
-          "user": "暄友蹊",
-          "likes": 7069,
-          "content": "考古回来了，今年没看到她呢？她还红吗？"
-        },
-        {
-          "user": "阳光女孩百目鬼",
-          "likes": 9922,
-          "content": "她妈妈长这样[阴阳师缘结神_我不活啦]"
-        }
-      ],
-      "danmaku_words": [
-        {
-          "word": "哈哈",
-          "count": 336
-        },
-        {
-          "word": "哈哈哈",
-          "count": 282
-        },
-        {
-          "word": "哈哈哈哈",
-          "count": 230
-        },
-        {
-          "word": "医生",
-          "count": 39
-        },
-        {
-          "word": "这个",
-          "count": 21
-        },
-        {
-          "word": "大夫",
-          "count": 17
-        },
-        {
-          "word": "视频",
-          "count": 16
-        },
-        {
-          "word": "大疆",
-          "count": 14
-        },
-        {
-          "word": "球姐",
-          "count": 13
-        },
-        {
-          "word": "怎么",
-          "count": 13
-        }
-      ],
-      "stats": {
-        "likes": 169831,
-        "like_growth": 169831,
-        "comments": 2306,
-        "saves": 7794,
-        "views": 1991094
-      }
-    },
-    {
-      "rank": 15,
-      "title": "我记录下了妹妹的最后7天...【自制伪纪录片电影】",
-      "author": "沢人",
-      "url": "https://www.bilibili.com/video/BV1Deht6rEpZ",
-      "pic": "https://i0.hdslb.com/bfs/archive/25532448b0bef5b5a71b1515bb4264da3f6b5890.jpg",
-      "category": "搞笑",
-      "topics": [
-        "妹妹",
-        "意识流",
-        "冒险",
-        "旅行",
-        "伪纪录片",
-        "记录",
-        "自由",
-        "超现实"
-      ],
-      "published_at": "2026-09-24",
-      "comment_summary": "公开评论约 2485 条，热评：评论区有人骂是因为标题中的伪纪录片是后面加上的，这个视频他用了标题引流；我也不知道这个片子在传达什么……可能为了冲突感与戏剧性所以是“最后七天”的伪纪录片。但最后七天大多都",
-      "summary": "《我记录下了妹妹的最后7天...【自制伪纪录片电影】》是一条搞笑类、内容向视频，核心话题是「我记录下、了妹妹的、最后」。简介里它写道：本片主演：。观众弹幕高频出现「《再见绘梨》」「再见绘梨？」，说明大家在讨论这些点。评论区讨论集中在「评论区有人骂是因为标题中的伪纪录片是后面加上；我也不知道这个片子在传达什么……可能为了冲突」。",
-      "desc": "本片主演：\n妹妹：CooolKey\n妹妹女友：正义\n哥哥：沢人\n阿荣：董向荣\n\n本片导演&作者：沢人\n\n《关于我妹的最后7天》\n愿这部带着超现实色彩的伪纪录片能为各位带来一份值得被记住与感受的体验\n感谢观看。",
-      "duration": 399,
-      "author_mid": 2057895471,
-      "author_fans": 571005,
-      "author_archives": 7,
-      "author_level": 6,
-      "author_sign": "欢迎致信，我的邮箱：zeren-blue@foxmail.com",
-      "top_comments": [
-        {
-          "user": "未名海港湾",
-          "likes": 79,
-          "content": "评论区有人骂是因为标题中的伪纪录片是后面加上的，这个视频他用了标题引流"
-        },
-        {
-          "user": "安小nnnnn",
-          "likes": 21,
-          "content": "我也不知道这个片子在传达什么……可能为了冲突感与戏剧性所以是“最后七天”的伪纪录片。但最后七天大多都已经是弥留之际了……我妹室友的奶奶冬天查出胰腺癌（癌王），全家年底一起出去旅游，热热闹闹过完年，过完年一两个月去世了。也许想表达（正向的）临终关怀？但临终关怀也不是这样的啊……再加上虽然说是伪纪录片，但还脱离不了女网红那一套，从妆造化上就感觉到了……"
-        },
-        {
-          "user": "bili_86183867056",
-          "likes": 156,
-          "content": "千万要是剧本啊！"
-        }
-      ],
-      "danmaku_words": [
-        {
-          "word": "哈哈",
-          "count": 31
-        },
-        {
-          "word": "哈哈哈",
-          "count": 22
-        },
-        {
-          "word": "感觉",
-          "count": 19
-        },
-        {
-          "word": "嗷嗷",
-          "count": 16
-        },
-        {
-          "word": "再见",
-          "count": 14
-        },
-        {
-          "word": "嗷嗷嗷",
-          "count": 14
-        },
-        {
-          "word": "哈哈哈哈",
-          "count": 14
-        },
-        {
-          "word": "不是",
-          "count": 13
-        },
-        {
-          "word": "见绘",
-          "count": 12
-        },
-        {
-          "word": "绘梨",
-          "count": 12
-        }
-      ],
-      "stats": {
-        "likes": 127422,
-        "like_growth": 127422,
-        "comments": 2485,
-        "saves": 55863,
-        "views": 2226150
-      }
-    },
-    {
-      "rank": 16,
-      "title": "在机场当志愿者用六门语言帮助老外是什么体验？！",
-      "author": "小宋同学机场志愿者",
-      "url": "https://www.bilibili.com/video/BV1F5h86PEUH",
-      "pic": "https://i1.hdslb.com/bfs/archive/4cbfe277edffe3e0ab7fb2bd2c1bf79204c53b5d.jpg",
-      "category": "短片",
-      "topics": [
-        "西班牙语",
-        "语言",
-        "俄语",
-        "日语",
-        "老外",
-        "志愿者",
-        "英语口语",
-        "韩语"
-      ],
-      "published_at": "2026-09-23",
-      "comment_summary": "公开评论约 2938 条，热评：哥们内存够大的，装这么多语种语音包；为什么我的地球online不能设置这么多语言",
-      "summary": "《在机场当志愿者用六门语言帮助老外是什么体验？！》是一条短片类、测评向视频，核心话题是「在机场当、志愿者用、六门语言」。观众弹幕高频出现「语言包加载中……」「你怎么想说什么就说什么」，说明大家在讨论这些点。评论区讨论集中在「哥们内存够大的，装这么多语种语音包；为什么我的地球online不能设置这么多语言」。",
-      "desc": "-",
-      "duration": 284,
-      "author_mid": 173857806,
-      "author_fans": 41325,
-      "author_archives": 139,
-      "author_level": 4,
-      "author_sign": "山东小哥在沪，产品经理被裁员，现机场志愿者\n《让100个国家的老外帮助中国人》，1/100！\n《帮助100个国家的老外》系列，57/100！",
-      "top_comments": [
-        {
-          "user": "油腻腻De师姐",
-          "likes": 5125,
-          "content": "哥们内存够大的，装这么多语种语音包"
-        },
-        {
-          "user": "tex桃乐丝",
-          "likes": 2141,
-          "content": "为什么我的地球online不能设置这么多语言"
-        },
-        {
-          "user": "YqYzzzzzZ",
-          "likes": 290,
-          "content": "我会说中国话，完全不卡壳👍"
-        }
-      ],
-      "danmaku_words": [
-        {
-          "word": "哈哈",
-          "count": 41
-        },
-        {
-          "word": "什么",
-          "count": 37
-        },
-        {
-          "word": "说什",
-          "count": 26
-        },
-        {
-          "word": "说什么",
-          "count": 26
-        },
-        {
-          "word": "哈哈哈",
-          "count": 24
-        },
-        {
-          "word": "语言",
-          "count": 22
-        },
-        {
-          "word": "大厂",
-          "count": 20
-        },
-        {
-          "word": "怎么",
-          "count": 19
-        },
-        {
-          "word": "你好",
-          "count": 19
-        },
-        {
-          "word": "这么",
-          "count": 18
-        }
-      ],
-      "stats": {
-        "likes": 174963,
-        "like_growth": 174963,
-        "comments": 2937,
-        "saves": 16732,
-        "views": 1386943
+        "likes": 315649,
+        "like_growth": 315649,
+        "comments": 7115,
+        "saves": 106826,
+        "views": 2055850
       }
     },
     {
       "rank": 17,
-      "title": "《穷亲戚》",
-      "author": "伤心欲茄222",
-      "url": "https://www.bilibili.com/video/BV14yhr6GEbH",
-      "pic": "https://i0.hdslb.com/bfs/archive/bf4def61164682447e1ae1d3d83716ee5f9078aa.jpg",
-      "category": "搞笑",
-      "topics": [
-        "搞笑",
-        "八嘎",
-        "配音小剧场"
-      ],
-      "published_at": "2026-09-22",
-      "comment_summary": "公开评论约 4826 条，热评：“过不惯这种好日子？”\n狗：；女：差点就让狗过上好日子了[doge][doge][doge]",
-      "summary": "《《穷亲戚》》是一条搞笑类、内容向视频，核心话题是「穷亲戚」。观众弹幕高频出现「“他过不惯那种好日子”（doge）」「差一步拿到大结果了」，说明大家在讨论这些点。评论区讨论集中在「“过不惯这种好日子？” 狗：；女：差点就让狗过上好日子了[doge][do」。",
-      "desc": "-",
-      "duration": 97,
-      "author_mid": 3493260618106936,
-      "author_fans": 4444020,
-      "author_archives": 501,
-      "author_level": 6,
-      "author_sign": "你染上八嘎区up主了？你疯啦！合作：nasu222（备注来意） \n *素材源自网络 侵联删",
-      "top_comments": [
-        {
-          "user": "是九月呢-",
-          "likes": 1250,
-          "content": "“过不惯这种好日子？”\n狗："
-        },
-        {
-          "user": "老王绿老王",
-          "likes": 375,
-          "content": "女：差点就让狗过上好日子了[doge][doge][doge]"
-        },
-        {
-          "user": "褪色的旧情书",
-          "likes": 283,
-          "content": "我还以为那茄子🍆本来就流眼泪"
-        }
-      ],
-      "danmaku_words": [
-        {
-          "word": "哈哈",
-          "count": 229
-        },
-        {
-          "word": "哈哈哈",
-          "count": 185
-        },
-        {
-          "word": "哈哈哈哈",
-          "count": 143
-        },
-        {
-          "word": "差一",
-          "count": 38
-        },
-        {
-          "word": "日子",
-          "count": 32
-        },
-        {
-          "word": "好日",
-          "count": 31
-        },
-        {
-          "word": "好日子",
-          "count": 31
-        },
-        {
-          "word": "一步",
-          "count": 28
-        },
-        {
-          "word": "差一步",
-          "count": 28
-        },
-        {
-          "word": "过上",
-          "count": 23
-        }
-      ],
-      "stats": {
-        "likes": 231632,
-        "like_growth": 231632,
-        "comments": 4826,
-        "saves": 11182,
-        "views": 2791113
-      }
-    },
-    {
-      "rank": 18,
-      "title": "赴一场星河之约，守一段洲年荣光。三角洲二洲年快乐！",
-      "author": "老飞宇66",
-      "url": "https://www.bilibili.com/video/BV1Pwhx6dETi",
-      "pic": "https://i2.hdslb.com/bfs/archive/9c23370a4cb779dc0f2bc8a1bb49c377a0df360d.jpg",
-      "category": "网络游戏",
-      "topics": [
-        "三角洲行动",
-        "星河追梦",
-        "三角洲行动二洲年",
-        "洲年有你"
-      ],
-      "published_at": "2026-09-24",
-      "comment_summary": "公开评论约 5686 条，热评：牛来声音一出整段垮掉[笑哭]；我杨哥绝对三角洲第一歌姬吧[生气][生气]",
-      "summary": "《赴一场星河之约，守一段洲年荣光。三角洲二洲年快乐！》是一条网络游戏类、内容向视频，核心话题是「赴一场星、河之约、守一段洲」。观众弹幕高频出现「见证历史」「这句真的好听」，说明大家在讨论这些点。评论区讨论集中在「牛来声音一出整段垮掉[笑哭]；我杨哥绝对三角洲第一歌姬吧[生气][生气]」。",
-      "desc": "",
-      "duration": 216,
-      "author_mid": 403637371,
-      "author_fans": 4454388,
-      "author_archives": 1646,
-      "author_level": 6,
-      "author_sign": "新工粽号:老飞宇陪玩店（怕走错直接来kook:5478）  代杆工粽号:七八杨杨猛跑    叮当网络工粽号:叮当游戏咨询",
-      "top_comments": [
-        {
-          "user": "Dalmore",
-          "likes": 171,
-          "content": "牛来声音一出整段垮掉[笑哭]"
-        },
-        {
-          "user": "无-不-丧-胆",
-          "likes": 135,
-          "content": "我杨哥绝对三角洲第一歌姬吧[生气][生气]"
-        },
-        {
-          "user": "catmajiko",
-          "likes": 41,
-          "content": "气笑了，还有人要饭，不审核这一块"
-        }
-      ],
-      "danmaku_words": [
-        {
-          "word": "牛来",
-          "count": 150
-        },
-        {
-          "word": "见证",
-          "count": 39
-        },
-        {
-          "word": "证历",
-          "count": 39
-        },
-        {
-          "word": "历史",
-          "count": 39
-        },
-        {
-          "word": "见证历",
-          "count": 39
-        },
-        {
-          "word": "证历史",
-          "count": 39
-        },
-        {
-          "word": "见证历史",
-          "count": 39
-        },
-        {
-          "word": "我我",
-          "count": 29
-        },
-        {
-          "word": "杨哥",
-          "count": 28
-        },
-        {
-          "word": "我我我",
-          "count": 26
-        }
-      ],
-      "stats": {
-        "likes": 111170,
-        "like_growth": 111170,
-        "comments": 5685,
-        "saves": 61097,
-        "views": 1084704
-      }
-    },
-    {
-      "rank": 19,
       "title": "《未眠野》18分钟实机演示",
       "author": "未眠野",
       "url": "https://www.bilibili.com/video/BV1Mohb61Em9",
@@ -1680,424 +1506,614 @@
         "开放世界RPG"
       ],
       "published_at": "2026-09-24",
-      "comment_summary": "公开评论约 4787 条，热评：前阵子去线下试玩了一下，两人一起跑图做菜打怪还挺放松（￣▽￣）；这给我干哪来了，这还是国内吗，这么包容？",
-      "summary": "《《未眠野》18分钟实机演示》是一条网络游戏类、内容向视频，核心话题是「未眠野、分钟实机、演示」。简介里它写道：💿预约游戏>>https://www.biligame.com/detail/?id=120518。观众弹幕高频出现「展示做了瀑布水流受力，弹幕：难崩」「还有林克时间」，说明大家在讨论这些点。评论区讨论集中在「前阵子去线下试玩了一下，两人一起跑图做菜打怪；这给我干哪来了，这还是国内吗，这么包容？」。",
+      "comment_summary": "公开评论约 6183 条，热评：前阵子去线下试玩了一下，两人一起跑图做菜打怪还挺放松（￣▽￣）；大大方方抄，你受到的攻击不如当年原神万分之一，不要有心理负担",
+      "summary": "《《未眠野》18分钟实机演示》是一条网络游戏类、内容向视频，核心话题是「未眠野、分钟实机、演示」。简介里它写道：💿预约游戏>>https://www.biligame.com/detail/?id=120518。观众弹幕高频出现「提示 弹幕真人极少」「温馨提示：弹幕真人含量极低，可能引起不适」，说明大家在讨论这些点。评论区讨论集中在「前阵子去线下试玩了一下，两人一起跑图做菜打怪；大大方方抄，你受到的攻击不如当年原神万分之一」。",
       "desc": "💿预约游戏>>https://www.biligame.com/detail/?id=120518\n感谢各位溯行者的关注和期待！我们为大家带来了18分钟实机演示，请和我们一起度过在浮昼群岛游玩的一天吧~\n万物都在回应，世界没有答案\n欢迎各位溯行者的到来",
       "duration": 1119,
       "author_mid": 3707030810396819,
-      "author_fans": 45305,
+      "author_fans": 47600,
       "author_archives": 2,
       "author_level": 2,
       "author_sign": "万物都在回应，世界没有答案",
       "top_comments": [
         {
           "user": "果蝇轰",
-          "likes": 379,
+          "likes": 408,
           "content": "前阵子去线下试玩了一下，两人一起跑图做菜打怪还挺放松（￣▽￣）"
         },
         {
-          "user": "逐渐蒸发的雨星",
-          "likes": 109,
-          "content": "这给我干哪来了，这还是国内吗，这么包容？"
+          "user": "小镇清年",
+          "likes": 147,
+          "content": "大大方方抄，你受到的攻击不如当年原神万分之一，不要有心理负担"
         },
         {
-          "user": "键盘猛禽-大鹏哥",
-          "likes": 181,
-          "content": "原来好料在最后面，笑死了。下次放前面好吗"
+          "user": "75010795301_bili",
+          "likes": 126,
+          "content": "这不对吧，网上反应这么平淡？那我缺的中国游戏最黑暗的一天、光速剪辑对比视频、全网媒体锐评、网友像素级煎炒这块谁给我补啊？"
         }
       ],
       "danmaku_words": [
         {
           "word": "哈哈",
-          "count": 27
-        },
-        {
-          "word": "武器",
-          "count": 22
-        },
-        {
-          "word": "这个",
-          "count": 20
+          "count": 43
         },
         {
           "word": "哈哈哈",
-          "count": 16
+          "count": 31
         },
         {
-          "word": "还有",
-          "count": 15
+          "word": "哈哈哈哈",
+          "count": 22
         },
         {
           "word": "弹幕",
-          "count": 14
+          "count": 21
         },
         {
           "word": "塞尔",
-          "count": 13
+          "count": 21
         },
         {
           "word": "尔达",
-          "count": 13
+          "count": 21
         },
         {
           "word": "塞尔达",
-          "count": 13
+          "count": 21
         },
         {
-          "word": "这么",
-          "count": 13
+          "word": "这个",
+          "count": 21
+        },
+        {
+          "word": "武器",
+          "count": 19
+        },
+        {
+          "word": "还有",
+          "count": 17
         }
       ],
       "stats": {
-        "likes": 79852,
-        "like_growth": 79852,
-        "comments": 4787,
-        "saves": 36072,
-        "views": 2754879
+        "likes": 89945,
+        "like_growth": 89945,
+        "comments": 6183,
+        "saves": 46947,
+        "views": 3242526
+      }
+    },
+    {
+      "rank": 18,
+      "title": "比电影更夸张？专业保镖到底在做什么？",
+      "author": "影视飓风",
+      "url": "https://www.bilibili.com/video/BV1J7hE6aEDQ",
+      "pic": "https://i0.hdslb.com/bfs/archive/6646bc361d2c9f37b009317725abc242a6bd23cd.jpg",
+      "category": "数码",
+      "topics": [
+        "动作",
+        "4K",
+        "知识",
+        "电影",
+        "冷知识",
+        "保镖",
+        "影视",
+        "职业"
+      ],
+      "published_at": "2026-09-22",
+      "comment_summary": "公开评论约 6655 条，热评：安倍：视频很好，就是时间迟了点[doge]；专业保镖采访完了，下一期该轮到专业杀手了吧[doge]",
+      "summary": "《比电影更夸张？专业保镖到底在做什么？》是一条数码类、内容向视频，核心话题是「比电影更、夸张、专业保镖」。简介里它写道：在各类作品中，保镖似乎总是训练有素，配备着神奇的装备，能在危险发生的瞬间救下目标。这次我们请来了从事保镖工作30多年的李旭老师，一起拉片看看影视作品中的保镖，和。观众弹幕高频出现「黄金3秒钟这个我知道，食物落地不超过3秒都能吃」「安倍:早知道请点专业的了，后背都没人守护」，说明大家在讨论这些点。评论区讨论集中在「安倍：视频很好，就是时间迟了点[doge]；专业保镖采访完了，下一期该轮到专业杀手了吧[」。",
+      "desc": "在各类作品中，保镖似乎总是训练有素，配备着神奇的装备，能在危险发生的瞬间救下目标。这次我们请来了从事保镖工作30多年的李旭老师，一起拉片看看影视作品中的保镖，和现实中到底一不一样？如果你喜欢这期视频，请多多支持我们，并把视频分享给你的朋友们一起看看～",
+      "duration": 785,
+      "author_mid": 946974,
+      "author_fans": 18395988,
+      "author_archives": 944,
+      "author_level": 6,
+      "author_sign": "无限进步！｜商务合作请联系邮箱：bd@ysjf.com（邮件中麻烦备注公司、咨询内容）｜店铺名：影视飓风",
+      "top_comments": [
+        {
+          "user": "想混想躺想摸鱼",
+          "likes": 1877,
+          "content": "安倍：视频很好，就是时间迟了点[doge]"
+        },
+        {
+          "user": "包杍椿卷",
+          "likes": 1474,
+          "content": "专业保镖采访完了，下一期该轮到专业杀手了吧[doge]"
+        },
+        {
+          "user": "浅湾-深峡",
+          "likes": 2181,
+          "content": "其实这位老师说的很清楚了，保镖主要是“弄清哪有坑，然后绕着走”，不是“雇主眼看要摔死在坑里了给他拽上来”，如果一个人能突然出现并对雇主亮出武器，保镖就已经是一个失职的情况了，制服袭击者只能算是弥补和善后"
+        }
+      ],
+      "danmaku_words": [
+        {
+          "word": "保镖",
+          "count": 44
+        },
+        {
+          "word": "哈哈",
+          "count": 36
+        },
+        {
+          "word": "哈哈哈",
+          "count": 25
+        },
+        {
+          "word": "这个",
+          "count": 17
+        },
+        {
+          "word": "安倍",
+          "count": 16
+        },
+        {
+          "word": "保护",
+          "count": 16
+        },
+        {
+          "word": "不是",
+          "count": 15
+        },
+        {
+          "word": "哈哈哈哈",
+          "count": 15
+        },
+        {
+          "word": "怎么",
+          "count": 14
+        },
+        {
+          "word": "就是",
+          "count": 10
+        }
+      ],
+      "stats": {
+        "likes": 312272,
+        "like_growth": 100583,
+        "comments": 6655,
+        "saves": 69641,
+        "views": 6699755
+      }
+    },
+    {
+      "rank": 19,
+      "title": "热烈欢迎易立竞！看看高智感的易老师在工作中和工作外的好东西！（期待我的笔上易老师的节目🙏",
+      "author": "papi酱",
+      "url": "https://www.bilibili.com/video/BV1qdhx6UESM",
+      "pic": "https://i2.hdslb.com/bfs/archive/d06a5f1591dc253cf61345860bf8a1c1a1fc8dbf.jpg",
+      "category": "短片",
+      "topics": [
+        "生活记录",
+        "娱乐",
+        "搞笑",
+        "工作",
+        "papi",
+        "易立竞"
+      ],
+      "published_at": "2026-09-24",
+      "comment_summary": "公开评论约 3977 条，热评：感觉好短，一下子就结束了。；你俩 别在这录这种节目了 立刻去张家齐那边节目的观察室  那边急需你俩的嘴",
+      "summary": "《热烈欢迎易立竞！看看高智感的易老师在工作中和工作外的好东西！（期待我的笔上易老师的节目🙏》是一条短片类、内容向视频，核心话题是「热烈欢迎、易立竞、看看高智」。简介里它写道：加更在@papi热烈欢迎。观众弹幕高频出现「鲁豫老师就在后台让我们把她也请出来好吗！！！」「易老师：开团秒跟」，说明大家在讨论这些点。评论区讨论集中在「感觉好短，一下子就结束了。；你俩 别在这录这种节目了 立刻去张家齐那边节」。",
+      "desc": "加更在@papi热烈欢迎",
+      "duration": 2305,
+      "author_mid": 1532165,
+      "author_fans": 9455809,
+      "author_archives": 444,
+      "author_level": 6,
+      "author_sign": "一个集美貌与才华于一身的女子。 商业合作邮箱：papijiang@papitube.com【请备注papi+品牌信息】",
+      "top_comments": [
+        {
+          "user": "水是醒着的冰丶",
+          "likes": 113,
+          "content": "感觉好短，一下子就结束了。"
+        },
+        {
+          "user": "入秋后的第一杯伏特加",
+          "likes": 3179,
+          "content": "你俩 别在这录这种节目了 立刻去张家齐那边节目的观察室  那边急需你俩的嘴"
+        },
+        {
+          "user": "甲醇0905",
+          "likes": 696,
+          "content": "她俩好有化学反应啊"
+        }
+      ],
+      "danmaku_words": [
+        {
+          "word": "哈哈",
+          "count": 325
+        },
+        {
+          "word": "哈哈哈",
+          "count": 248
+        },
+        {
+          "word": "哈哈哈哈",
+          "count": 174
+        },
+        {
+          "word": "老师",
+          "count": 38
+        },
+        {
+          "word": "易老",
+          "count": 34
+        },
+        {
+          "word": "易老师",
+          "count": 34
+        },
+        {
+          "word": "采访",
+          "count": 22
+        },
+        {
+          "word": "真的",
+          "count": 22
+        },
+        {
+          "word": "裙裙",
+          "count": 21
+        },
+        {
+          "word": "这个",
+          "count": 21
+        }
+      ],
+      "stats": {
+        "likes": 118298,
+        "like_growth": 118298,
+        "comments": 3977,
+        "saves": 16072,
+        "views": 1177570
       }
     },
     {
       "rank": 20,
-      "title": "【硬核】俄乌打了四年多，到底谁在买单？",
-      "author": "小Lin说",
-      "url": "https://www.bilibili.com/video/BV1SUhe6xEM2",
-      "pic": "https://i1.hdslb.com/bfs/archive/59630832faa05aa7034139342d216208749d56d9.jpg",
-      "category": "财经商业",
+      "title": "《小杨有约30#》：杨迪",
+      "author": "小杨Johnson",
+      "url": "https://www.bilibili.com/video/BV1JFaN6hEL9",
+      "pic": "https://i0.hdslb.com/bfs/archive/dde639d8ad90db845348ea55396e69293c7b603a.jpg",
+      "category": "搞笑",
       "topics": [
-        "俄罗斯",
-        "财经",
-        "俄乌",
-        "万物皆可商业"
+        "生活",
+        "播客",
+        "娱乐",
+        "访谈",
+        "搞笑",
+        "杨迪",
+        "搞笑小剧场",
+        "小杨"
       ],
-      "published_at": "2026-09-22",
-      "comment_summary": "公开评论约 8859 条，热评：不好意思，3:32 这里可能让大家误解乌克兰已经加入欧盟了, 实际上它现在只是欧盟的候选国，我的表达；支持俄罗斯解决自身安全顾虑\n支持乌克兰维护主权和领土完整",
-      "summary": "《【硬核】俄乌打了四年多，到底谁在买单？》是一条财经商业类、内容向视频，核心话题是「硬核、俄乌打了、四年多」。简介里它写道：俄乌打了四年多，相关报道热度下降，但战场仍处于高强度拉锯消耗，双方军费、兵力投入还在持续加码。。观众弹幕高频出现「乌克兰：绷住，没扛」「俄罗斯是进攻方，它的伤亡绝对高于乌克兰。」，说明大家在讨论这些点。评论区讨论集中在「不好意思，3:32 这里可能让大家误解乌克兰；支持俄罗斯解决自身安全顾虑 支持乌克兰维护主」。",
-      "desc": "俄乌打了四年多，相关报道热度下降，但战场仍处于高强度拉锯消耗，双方军费、兵力投入还在持续加码。\n抛开前线战况，这场战争究竟给俄、乌两国经济造成了多大冲击？两边的经济结构发生怎么样的巨变？\n咱们今天就来看看，战争到底会把一个国家的经济打成什么样？",
-      "duration": 1744,
-      "author_mid": 520819684,
-      "author_fans": 7440755,
-      "author_archives": 197,
+      "published_at": "2026-09-25",
+      "comment_summary": "公开评论约 2139 条，热评：下次记得给嘉宾准备点儿水，有点干了………[doge_金箍]；杨迪也是出息了，都上小杨有约了[doge]",
+      "summary": "《《小杨有约30#》：杨迪》是一条搞笑类、内容向视频，核心话题是「小杨有约、杨迪」。简介里它写道：小杨有约第三十期！。观众弹幕高频出现「哈哈哈游戏主播笑死了」「好有梗哈哈哈哈哈哈哈哈」，说明大家在讨论这些点。评论区讨论集中在「下次记得给嘉宾准备点儿水，有点干了………[d；杨迪也是出息了，都上小杨有约了[doge]」。",
+      "desc": "小杨有约第三十期！\n视频内容纯属娱乐，不要当真～\n你希望在节目里看到谁呢？\n欢迎关注！一键三连也拜托了！！",
+      "duration": 914,
+      "author_mid": 3178005,
+      "author_fans": 2358276,
+      "author_archives": 78,
       "author_level": 6,
-      "author_sign": "Whaat?! 人世间竟有如此有趣又有料的天仙!!\n北大->哥大->摩根大通->创业\n合作xiao_lin_shuo@163.com",
+      "author_sign": "小潮tEam杂谈区的唯一正常人！商务合作请联系QQ2284771898",
       "top_comments": [
         {
-          "user": "小Lin说",
-          "likes": 5070,
-          "content": "不好意思，3:32 这里可能让大家误解乌克兰已经加入欧盟了, 实际上它现在只是欧盟的候选国，我的表达有问题[捂眼]。我的本意说有人可能觉得他都&#34;要&#34;申请加入欧盟了，想来个呈现，你说说结果意思都搞歪了[捂脸] 大家轻点喷"
+          "user": "杨迪",
+          "likes": 22648,
+          "content": "下次记得给嘉宾准备点儿水，有点干了………[doge_金箍]"
         },
         {
-          "user": "烽与火",
-          "likes": 5337,
-          "content": "支持俄罗斯解决自身安全顾虑\n支持乌克兰维护主权和领土完整"
+          "user": "机智の汤姆",
+          "likes": 278,
+          "content": "杨迪也是出息了，都上小杨有约了[doge]"
         },
         {
-          "user": "愿我如钢铁",
-          "likes": 712,
-          "content": "我记得小学的时候有一篇课文，叫在柏林，小时候看没有任何感觉。能感觉到里面的人物的伤心，却感受不出到底为什么？俄乌战争开始之后，现在再回头看，真的是感慨万千。"
+          "user": "原味紫薯",
+          "likes": 267,
+          "content": "小杨不温柔提问因为对面坐着的是杨敌"
         }
       ],
       "danmaku_words": [
         {
-          "word": "乌克",
-          "count": 56
-        },
-        {
-          "word": "克兰",
-          "count": 56
-        },
-        {
-          "word": "乌克兰",
-          "count": 56
-        },
-        {
-          "word": "战争",
-          "count": 31
-        },
-        {
-          "word": "俄罗",
-          "count": 30
-        },
-        {
-          "word": "罗斯",
-          "count": 30
-        },
-        {
-          "word": "俄罗斯",
-          "count": 30
-        },
-        {
-          "word": "欧洲",
-          "count": 22
-        },
-        {
-          "word": "就是",
-          "count": 18
-        },
-        {
           "word": "哈哈",
+          "count": 107
+        },
+        {
+          "word": "哈哈哈",
+          "count": 85
+        },
+        {
+          "word": "哈哈哈哈",
+          "count": 65
+        },
+        {
+          "word": "杨迪",
+          "count": 29
+        },
+        {
+          "word": "老师",
+          "count": 23
+        },
+        {
+          "word": "小潮",
+          "count": 19
+        },
+        {
+          "word": "柔术",
           "count": 18
+        },
+        {
+          "word": "耀庆",
+          "count": 17
+        },
+        {
+          "word": "巴西",
+          "count": 17
+        },
+        {
+          "word": "西柔",
+          "count": 17
         }
       ],
       "stats": {
-        "likes": 82532,
-        "like_growth": 82532,
-        "comments": 8859,
-        "saves": 24653,
-        "views": 1992733
+        "likes": 118468,
+        "like_growth": 118468,
+        "comments": 2138,
+        "saves": 26240,
+        "views": 1245213
       }
     }
   ],
   "hot_search": [
     {
-      "id": 1361,
-      "week": "2026-09-19 ~ 2026-09-25",
+      "id": 1381,
+      "week": "2026-09-20 ~ 2026-09-26",
       "rank": 1,
-      "word": "习近平同美国总统特朗普会谈",
-      "url": "https://m.baidu.com/s?word=%E4%B9%A0%E8%BF%91%E5%B9%B3%E5%90%8C%E7%BE%8E%E5%9B%BD%E6%80%BB%E7%BB%9F%E7%89%B9%E6%9C%97%E6%99%AE%E4%BC%9A%E8%B0%88&sa=fyb_news",
+      "word": "习近平圆满结束对美国的国事访问",
+      "url": "https://m.baidu.com/s?word=%E4%B9%A0%E8%BF%91%E5%B9%B3%E5%9C%86%E6%BB%A1%E7%BB%93%E6%9D%9F%E5%AF%B9%E7%BE%8E%E5%9B%BD%E7%9A%84%E5%9B%BD%E4%BA%8B%E8%AE%BF%E9%97%AE&sa=fyb_news",
       "hot_score": 0
     },
     {
-      "id": 1362,
-      "week": "2026-09-19 ~ 2026-09-25",
+      "id": 1382,
+      "week": "2026-09-20 ~ 2026-09-26",
       "rank": 2,
-      "word": "习近平和彭丽媛出席欢迎宴会",
-      "url": "https://m.baidu.com/s?word=%E4%B9%A0%E8%BF%91%E5%B9%B3%E5%92%8C%E5%BD%AD%E4%B8%BD%E5%AA%9B%E5%87%BA%E5%B8%AD%E6%AC%A2%E8%BF%8E%E5%AE%B4%E4%BC%9A&sa=fyb_news",
+      "word": "中美元首夫妇茶叙高清大图",
+      "url": "https://m.baidu.com/s?word=%E4%B8%AD%E7%BE%8E%E5%85%83%E9%A6%96%E5%A4%AB%E5%A6%87%E8%8C%B6%E5%8F%99%E9%AB%98%E6%B8%85%E5%A4%A7%E5%9B%BE&sa=fyb_news",
       "hot_score": 0
     },
     {
-      "id": 1363,
-      "week": "2026-09-19 ~ 2026-09-25",
+      "id": 1383,
+      "week": "2026-09-20 ~ 2026-09-26",
       "rank": 3,
-      "word": "习近平在美国讲起“赛考斯”的故事",
-      "url": "https://m.baidu.com/s?word=%E4%B9%A0%E8%BF%91%E5%B9%B3%E5%9C%A8%E7%BE%8E%E5%9B%BD%E8%AE%B2%E8%B5%B7%E2%80%9C%E8%B5%9B%E8%80%83%E6%96%AF%E2%80%9D%E7%9A%84%E6%95%85%E4%BA%8B&sa=fyb_news",
+      "word": "普京：俄方乐见中美元首会晤",
+      "url": "https://m.baidu.com/s?word=%E6%99%AE%E4%BA%AC%EF%BC%9A%E4%BF%84%E6%96%B9%E4%B9%90%E8%A7%81%E4%B8%AD%E7%BE%8E%E5%85%83%E9%A6%96%E4%BC%9A%E6%99%A4&sa=fyb_news",
       "hot_score": 0
     },
     {
-      "id": 1364,
-      "week": "2026-09-19 ~ 2026-09-25",
+      "id": 1384,
+      "week": "2026-09-20 ~ 2026-09-26",
       "rank": 4,
-      "word": "跟着古诗追月亮",
-      "url": "https://m.baidu.com/s?word=%E8%B7%9F%E7%9D%80%E5%8F%A4%E8%AF%97%E8%BF%BD%E6%9C%88%E4%BA%AE&sa=fyb_news",
+      "word": "中美站在新的历史起点",
+      "url": "https://m.baidu.com/s?word=%E4%B8%AD%E7%BE%8E%E7%AB%99%E5%9C%A8%E6%96%B0%E7%9A%84%E5%8E%86%E5%8F%B2%E8%B5%B7%E7%82%B9&sa=fyb_news",
       "hot_score": 0
     },
     {
-      "id": 1365,
-      "week": "2026-09-19 ~ 2026-09-25",
+      "id": 1385,
+      "week": "2026-09-20 ~ 2026-09-26",
       "rank": 5,
-      "word": "平均月薪16149元 这类人才紧缺",
-      "url": "https://m.baidu.com/s?word=%E5%B9%B3%E5%9D%87%E6%9C%88%E8%96%AA16149%E5%85%83+%E8%BF%99%E7%B1%BB%E4%BA%BA%E6%89%8D%E7%B4%A7%E7%BC%BA&sa=fyb_news",
+      "word": "中国45小时连发4枚火箭 印媒直呼看懵",
+      "url": "https://m.baidu.com/s?word=%E4%B8%AD%E5%9B%BD45%E5%B0%8F%E6%97%B6%E8%BF%9E%E5%8F%914%E6%9E%9A%E7%81%AB%E7%AE%AD+%E5%8D%B0%E5%AA%92%E7%9B%B4%E5%91%BC%E7%9C%8B%E6%87%B5&sa=fyb_news",
       "hot_score": 0
     },
     {
-      "id": 1366,
-      "week": "2026-09-19 ~ 2026-09-25",
+      "id": 1386,
+      "week": "2026-09-20 ~ 2026-09-26",
       "rank": 6,
-      "word": "白宫墙上悬挂中美元首握手照片",
-      "url": "https://m.baidu.com/s?word=%E7%99%BD%E5%AE%AB%E5%A2%99%E4%B8%8A%E6%82%AC%E6%8C%82%E4%B8%AD%E7%BE%8E%E5%85%83%E9%A6%96%E6%8F%A1%E6%89%8B%E7%85%A7%E7%89%87&sa=fyb_news",
+      "word": "比尔·盖茨警告AI或致十亿人死亡",
+      "url": "https://m.baidu.com/s?word=%E6%AF%94%E5%B0%94%C2%B7%E7%9B%96%E8%8C%A8%E8%AD%A6%E5%91%8AAI%E6%88%96%E8%87%B4%E5%8D%81%E4%BA%BF%E4%BA%BA%E6%AD%BB%E4%BA%A1&sa=fyb_news",
       "hot_score": 0
     },
     {
-      "id": 1367,
-      "week": "2026-09-19 ~ 2026-09-25",
+      "id": 1387,
+      "week": "2026-09-20 ~ 2026-09-26",
       "rank": 7,
-      "word": "一块月饼等于几碗饭",
-      "url": "https://m.baidu.com/s?word=%E4%B8%80%E5%9D%97%E6%9C%88%E9%A5%BC%E7%AD%89%E4%BA%8E%E5%87%A0%E7%A2%97%E9%A5%AD&sa=fyb_news",
+      "word": "陈妤颉赛后收到《五年高考三年模拟》",
+      "url": "https://m.baidu.com/s?word=%E9%99%88%E5%A6%A4%E9%A2%89%E8%B5%9B%E5%90%8E%E6%94%B6%E5%88%B0%E3%80%8A%E4%BA%94%E5%B9%B4%E9%AB%98%E8%80%83%E4%B8%89%E5%B9%B4%E6%A8%A1%E6%8B%9F%E3%80%8B&sa=fyb_news",
       "hot_score": 0
     },
     {
-      "id": 1368,
-      "week": "2026-09-19 ~ 2026-09-25",
+      "id": 1388,
+      "week": "2026-09-20 ~ 2026-09-26",
       "rank": 8,
-      "word": "孙颖莎王楚钦零封张本美和松岛辉空",
-      "url": "https://m.baidu.com/s?word=%E5%AD%99%E9%A2%96%E8%8E%8E%E7%8E%8B%E6%A5%9A%E9%92%A6%E9%9B%B6%E5%B0%81%E5%BC%A0%E6%9C%AC%E7%BE%8E%E5%92%8C%E6%9D%BE%E5%B2%9B%E8%BE%89%E7%A9%BA&sa=fyb_news",
+      "word": "国安部最新披露",
+      "url": "https://m.baidu.com/s?word=%E5%9B%BD%E5%AE%89%E9%83%A8%E6%9C%80%E6%96%B0%E6%8A%AB%E9%9C%B2&sa=fyb_news",
       "hot_score": 0
     },
     {
-      "id": 1369,
-      "week": "2026-09-19 ~ 2026-09-25",
+      "id": 1389,
+      "week": "2026-09-20 ~ 2026-09-26",
       "rank": 9,
-      "word": "马斯克黄仁勋等出席白宫欢迎宴会",
-      "url": "https://m.baidu.com/s?word=%E9%A9%AC%E6%96%AF%E5%85%8B%E9%BB%84%E4%BB%81%E5%8B%8B%E7%AD%89%E5%87%BA%E5%B8%AD%E7%99%BD%E5%AE%AB%E6%AC%A2%E8%BF%8E%E5%AE%B4%E4%BC%9A&sa=fyb_news",
+      "word": "中美元首白宫互动的五个细节",
+      "url": "https://m.baidu.com/s?word=%E4%B8%AD%E7%BE%8E%E5%85%83%E9%A6%96%E7%99%BD%E5%AE%AB%E4%BA%92%E5%8A%A8%E7%9A%84%E4%BA%94%E4%B8%AA%E7%BB%86%E8%8A%82&sa=fyb_news",
       "hot_score": 0
     },
     {
-      "id": 1370,
-      "week": "2026-09-19 ~ 2026-09-25",
+      "id": 1390,
+      "week": "2026-09-20 ~ 2026-09-26",
       "rank": 10,
-      "word": "世界技能大赛 为了更好的未来",
-      "url": "https://m.baidu.com/s?word=%E4%B8%96%E7%95%8C%E6%8A%80%E8%83%BD%E5%A4%A7%E8%B5%9B+%E4%B8%BA%E4%BA%86%E6%9B%B4%E5%A5%BD%E7%9A%84%E6%9C%AA%E6%9D%A5&sa=fyb_news",
+      "word": "中美开启新一轮大熊猫保护国际合作",
+      "url": "https://m.baidu.com/s?word=%E4%B8%AD%E7%BE%8E%E5%BC%80%E5%90%AF%E6%96%B0%E4%B8%80%E8%BD%AE%E5%A4%A7%E7%86%8A%E7%8C%AB%E4%BF%9D%E6%8A%A4%E5%9B%BD%E9%99%85%E5%90%88%E4%BD%9C&sa=fyb_news",
       "hot_score": 0
     },
     {
-      "id": 1371,
-      "week": "2026-09-19 ~ 2026-09-25",
+      "id": 1391,
+      "week": "2026-09-20 ~ 2026-09-26",
       "rank": 11,
-      "word": "美方拿出“顶配”机型迎接中方元首",
-      "url": "https://m.baidu.com/s?word=%E7%BE%8E%E6%96%B9%E6%8B%BF%E5%87%BA%E2%80%9C%E9%A1%B6%E9%85%8D%E2%80%9D%E6%9C%BA%E5%9E%8B%E8%BF%8E%E6%8E%A5%E4%B8%AD%E6%96%B9%E5%85%83%E9%A6%96&sa=fyb_news",
+      "word": "“我和尼克松作出了相同的选择”",
+      "url": "https://m.baidu.com/s?word=%E2%80%9C%E6%88%91%E5%92%8C%E5%B0%BC%E5%85%8B%E6%9D%BE%E4%BD%9C%E5%87%BA%E4%BA%86%E7%9B%B8%E5%90%8C%E7%9A%84%E9%80%89%E6%8B%A9%E2%80%9D&sa=fyb_news",
       "hot_score": 0
     },
     {
-      "id": 1372,
-      "week": "2026-09-19 ~ 2026-09-25",
+      "id": 1392,
+      "week": "2026-09-20 ~ 2026-09-26",
       "rank": 12,
-      "word": "陌生快递寄来礼品卡？误区要注意",
-      "url": "https://m.baidu.com/s?word=%E9%99%8C%E7%94%9F%E5%BF%AB%E9%80%92%E5%AF%84%E6%9D%A5%E7%A4%BC%E5%93%81%E5%8D%A1%EF%BC%9F%E8%AF%AF%E5%8C%BA%E8%A6%81%E6%B3%A8%E6%84%8F&sa=fyb_news",
+      "word": "月饼和螃蟹一起吃会中毒？假的",
+      "url": "https://m.baidu.com/s?word=%E6%9C%88%E9%A5%BC%E5%92%8C%E8%9E%83%E8%9F%B9%E4%B8%80%E8%B5%B7%E5%90%83%E4%BC%9A%E4%B8%AD%E6%AF%92%EF%BC%9F%E5%81%87%E7%9A%84&sa=fyb_news",
       "hot_score": 0
     },
     {
-      "id": 1373,
-      "week": "2026-09-19 ~ 2026-09-25",
+      "id": 1393,
+      "week": "2026-09-20 ~ 2026-09-26",
       "rank": 13,
-      "word": "4.5米长虫从男子体内排出",
-      "url": "https://m.baidu.com/s?word=4.5%E7%B1%B3%E9%95%BF%E8%99%AB%E4%BB%8E%E7%94%B7%E5%AD%90%E4%BD%93%E5%86%85%E6%8E%92%E5%87%BA&sa=fyb_news",
+      "word": "刘欢在家人陪伴下病逝",
+      "url": "https://m.baidu.com/s?word=%E5%88%98%E6%AC%A2%E5%9C%A8%E5%AE%B6%E4%BA%BA%E9%99%AA%E4%BC%B4%E4%B8%8B%E7%97%85%E9%80%9D&sa=fyb_news",
       "hot_score": 0
     },
     {
-      "id": 1374,
-      "week": "2026-09-19 ~ 2026-09-25",
+      "id": 1394,
+      "week": "2026-09-20 ~ 2026-09-26",
       "rank": 14,
-      "word": "高铁站安检仪扫到好多“小圆球”",
-      "url": "https://m.baidu.com/s?word=%E9%AB%98%E9%93%81%E7%AB%99%E5%AE%89%E6%A3%80%E4%BB%AA%E6%89%AB%E5%88%B0%E5%A5%BD%E5%A4%9A%E2%80%9C%E5%B0%8F%E5%9C%86%E7%90%83%E2%80%9D&sa=fyb_news",
+      "word": "日本选手被张展硕7枚金牌惊出表情包",
+      "url": "https://m.baidu.com/s?word=%E6%97%A5%E6%9C%AC%E9%80%89%E6%89%8B%E8%A2%AB%E5%BC%A0%E5%B1%95%E7%A1%957%E6%9E%9A%E9%87%91%E7%89%8C%E6%83%8A%E5%87%BA%E8%A1%A8%E6%83%85%E5%8C%85&sa=fyb_news",
       "hot_score": 0
     },
     {
-      "id": 1375,
-      "week": "2026-09-19 ~ 2026-09-25",
+      "id": 1395,
+      "week": "2026-09-20 ~ 2026-09-26",
       "rank": 15,
-      "word": "央视中秋晚会节目单",
-      "url": "https://m.baidu.com/s?word=%E5%A4%AE%E8%A7%86%E4%B8%AD%E7%A7%8B%E6%99%9A%E4%BC%9A%E8%8A%82%E7%9B%AE%E5%8D%95&sa=fyb_news",
+      "word": "王祖贤：我是安徽人 不久后准备回去",
+      "url": "https://m.baidu.com/s?word=%E7%8E%8B%E7%A5%96%E8%B4%A4%EF%BC%9A%E6%88%91%E6%98%AF%E5%AE%89%E5%BE%BD%E4%BA%BA+%E4%B8%8D%E4%B9%85%E5%90%8E%E5%87%86%E5%A4%87%E5%9B%9E%E5%8E%BB&sa=fyb_news",
       "hot_score": 0
     },
     {
-      "id": 1376,
-      "week": "2026-09-19 ~ 2026-09-25",
+      "id": 1396,
+      "week": "2026-09-20 ~ 2026-09-26",
       "rank": 16,
-      "word": "白宫响起“月亮代表我的心”",
-      "url": "https://m.baidu.com/s?word=%E7%99%BD%E5%AE%AB%E5%93%8D%E8%B5%B7%E2%80%9C%E6%9C%88%E4%BA%AE%E4%BB%A3%E8%A1%A8%E6%88%91%E7%9A%84%E5%BF%83%E2%80%9D&sa=fyb_news",
+      "word": "刘欢曾因股骨头坏死治疗",
+      "url": "https://m.baidu.com/s?word=%E5%88%98%E6%AC%A2%E6%9B%BE%E5%9B%A0%E8%82%A1%E9%AA%A8%E5%A4%B4%E5%9D%8F%E6%AD%BB%E6%B2%BB%E7%96%97&sa=fyb_news",
       "hot_score": 0
     },
     {
-      "id": 1377,
-      "week": "2026-09-19 ~ 2026-09-25",
+      "id": 1397,
+      "week": "2026-09-20 ~ 2026-09-26",
       "rank": 17,
-      "word": "演员李治廷官宣当爸",
-      "url": "https://m.baidu.com/s?word=%E6%BC%94%E5%91%98%E6%9D%8E%E6%B2%BB%E5%BB%B7%E5%AE%98%E5%AE%A3%E5%BD%93%E7%88%B8&sa=fyb_news",
+      "word": "五胞胎爸爸：3个人照顾5个娃没空过节",
+      "url": "https://m.baidu.com/s?word=%E4%BA%94%E8%83%9E%E8%83%8E%E7%88%B8%E7%88%B8%EF%BC%9A3%E4%B8%AA%E4%BA%BA%E7%85%A7%E9%A1%BE5%E4%B8%AA%E5%A8%83%E6%B2%A1%E7%A9%BA%E8%BF%87%E8%8A%82&sa=fyb_news",
       "hot_score": 0
     },
     {
-      "id": 1378,
-      "week": "2026-09-19 ~ 2026-09-25",
+      "id": 1398,
+      "week": "2026-09-20 ~ 2026-09-26",
       "rank": 18,
-      "word": "第一批喝泰奶的“受害者”出现了",
-      "url": "https://m.baidu.com/s?word=%E7%AC%AC%E4%B8%80%E6%89%B9%E5%96%9D%E6%B3%B0%E5%A5%B6%E7%9A%84%E2%80%9C%E5%8F%97%E5%AE%B3%E8%80%85%E2%80%9D%E5%87%BA%E7%8E%B0%E4%BA%86&sa=fyb_news",
+      "word": "救命钱被转 银行1条提醒短信都没发",
+      "url": "https://m.baidu.com/s?word=%E6%95%91%E5%91%BD%E9%92%B1%E8%A2%AB%E8%BD%AC+%E9%93%B6%E8%A1%8C1%E6%9D%A1%E6%8F%90%E9%86%92%E7%9F%AD%E4%BF%A1%E9%83%BD%E6%B2%A1%E5%8F%91&sa=fyb_news",
       "hot_score": 0
     },
     {
-      "id": 1379,
-      "week": "2026-09-19 ~ 2026-09-25",
+      "id": 1399,
+      "week": "2026-09-20 ~ 2026-09-26",
       "rank": 19,
-      "word": "哈萨克斯坦军演突发事故致12死",
-      "url": "https://m.baidu.com/s?word=%E5%93%88%E8%90%A8%E5%85%8B%E6%96%AF%E5%9D%A6%E5%86%9B%E6%BC%94%E7%AA%81%E5%8F%91%E4%BA%8B%E6%95%85%E8%87%B412%E6%AD%BB&sa=fyb_news",
+      "word": "成都一栋楼开成三角梅瀑布",
+      "url": "https://m.baidu.com/s?word=%E6%88%90%E9%83%BD%E4%B8%80%E6%A0%8B%E6%A5%BC%E5%BC%80%E6%88%90%E4%B8%89%E8%A7%92%E6%A2%85%E7%80%91%E5%B8%83&sa=fyb_news",
       "hot_score": 0
     },
     {
-      "id": 1380,
-      "week": "2026-09-19 ~ 2026-09-25",
+      "id": 1400,
+      "week": "2026-09-20 ~ 2026-09-26",
       "rank": 20,
-      "word": "三人操纵股市获利0元被罚800万",
-      "url": "https://m.baidu.com/s?word=%E4%B8%89%E4%BA%BA%E6%93%8D%E7%BA%B5%E8%82%A1%E5%B8%82%E8%8E%B7%E5%88%A90%E5%85%83%E8%A2%AB%E7%BD%9A800%E4%B8%87&sa=fyb_news",
+      "word": "老板奖励优秀员工宝马：心疼其骑电车",
+      "url": "https://m.baidu.com/s?word=%E8%80%81%E6%9D%BF%E5%A5%96%E5%8A%B1%E4%BC%98%E7%A7%80%E5%91%98%E5%B7%A5%E5%AE%9D%E9%A9%AC%EF%BC%9A%E5%BF%83%E7%96%BC%E5%85%B6%E9%AA%91%E7%94%B5%E8%BD%A6&sa=fyb_news",
       "hot_score": 0
     }
   ],
   "danmaku_words": [
     {
       "word": "哈哈",
-      "count": 905
+      "count": 806
     },
     {
       "word": "哈哈哈",
-      "count": 673
+      "count": 573
     },
     {
       "word": "哈哈哈哈",
-      "count": 478
-    },
-    {
-      "word": "走好",
-      "count": 354
+      "count": 381
     },
     {
       "word": "一路",
-      "count": 352
+      "count": 356
+    },
+    {
+      "word": "走好",
+      "count": 356
     },
     {
       "word": "路走",
-      "count": 352
+      "count": 355
     },
     {
       "word": "一路走",
-      "count": 352
+      "count": 355
     },
     {
       "word": "路走好",
-      "count": 352
+      "count": 355
     },
     {
       "word": "一路走好",
-      "count": 352
+      "count": 355
     },
     {
-      "word": "来了",
-      "count": 151
+      "word": "等了",
+      "count": 309
     },
     {
       "word": "牛来",
-      "count": 150
-    },
-    {
-      "word": "沃来",
-      "count": 148
-    },
-    {
-      "word": "沃来了",
-      "count": 148
-    },
-    {
-      "word": "不歪",
-      "count": 130
+      "count": 171
     },
     {
       "word": "大人",
-      "count": 125
+      "count": 120
+    },
+    {
+      "word": "一切",
+      "count": 117
+    },
+    {
+      "word": "献给",
+      "count": 117
+    },
+    {
+      "word": "切献",
+      "count": 113
     }
   ],
   "highlights": [
     {
-      "rank": 5,
+      "rank": 1,
       "title": "游本昌爷爷，一路走好！我们会继续向前",
       "url": "https://www.bilibili.com/video/BV17Eaw6DEMi",
       "category": "日常",
-      "like_growth": 464819,
-      "views": 1410999,
+      "like_growth": 688494,
+      "views": 2040884,
       "author": "人民日报"
     },
     {
-      "rank": 1,
-      "title": "《柯洁围棋入门课》",
-      "url": "https://www.bilibili.com/video/BV1YDhJ6ZEL6",
-      "category": "影视剪辑",
-      "like_growth": 401422,
-      "views": 3913841,
-      "author": "柯洁"
+      "rank": 2,
+      "title": "在机场当志愿者用六门语言帮助老外是什么体验？！",
+      "url": "https://www.bilibili.com/video/BV1F5h86PEUH",
+      "category": "短片",
+      "like_growth": 340674,
+      "views": 2587823,
+      "author": "小宋同学机场志愿者"
     },
     {
-      "rank": 3,
-      "title": "比电影更夸张？专业保镖到底在做什么？",
-      "url": "https://www.bilibili.com/video/BV1J7hE6aEDQ",
-      "category": "数码",
-      "like_growth": 273808,
-      "views": 5820707,
-      "author": "影视飓风"
+      "rank": 16,
+      "title": "欢迎来到我的频道!",
+      "url": "https://www.bilibili.com/video/BV1N9hp6WExy",
+      "category": "单机游戏",
+      "like_growth": 315649,
+      "views": 2055850,
+      "author": "GroxOfficial"
     }
   ],
   "topic_rank": [
@@ -2106,140 +2122,140 @@
       "topic": "#搞笑",
       "post_count": 8,
       "post_growth": 8,
-      "trend": "+100%"
+      "trend": "+133%"
     },
     {
       "rank": 2,
-      "topic": "#米哈游",
-      "post_count": 4,
-      "post_growth": 4,
-      "trend": "+133%"
-    },
-    {
-      "rank": 3,
-      "topic": "#原创",
-      "post_count": 4,
-      "post_growth": 4,
-      "trend": "+133%"
-    },
-    {
-      "rank": 4,
-      "topic": "#鬼畜",
-      "post_count": 4,
-      "post_growth": 4,
-      "trend": "+133%"
-    },
-    {
-      "rank": 5,
-      "topic": "#miHoYo",
+      "topic": "#崩坏：星穹铁道",
       "post_count": 3,
       "post_growth": 3,
       "trend": "+150%"
     },
     {
+      "rank": 3,
+      "topic": "#知识",
+      "post_count": 3,
+      "post_growth": 3,
+      "trend": "+150%"
+    },
+    {
+      "rank": 4,
+      "topic": "#娱乐",
+      "post_count": 3,
+      "post_growth": 3,
+      "trend": "+100%"
+    },
+    {
+      "rank": 5,
+      "topic": "#抽象",
+      "post_count": 3,
+      "post_growth": 3,
+      "trend": "+100%"
+    },
+    {
       "rank": 6,
-      "topic": "#三角洲行动",
+      "topic": "#动漫二创激励计划",
       "post_count": 3,
       "post_growth": 3,
       "trend": "+100%"
     },
     {
       "rank": 7,
-      "topic": "#琵琶曲",
-      "post_count": 3,
-      "post_growth": 3,
-      "trend": "+100%"
-    },
-    {
-      "rank": 8,
-      "topic": "#体育",
-      "post_count": 3,
-      "post_growth": 3,
-      "trend": "新增"
-    },
-    {
-      "rank": 9,
-      "topic": "#上B站看播客",
-      "post_count": 3,
-      "post_growth": 3,
-      "trend": "新增"
-    },
-    {
-      "rank": 10,
-      "topic": "#可爱",
-      "post_count": 3,
-      "post_growth": 3,
-      "trend": "+100%"
-    },
-    {
-      "rank": 11,
       "topic": "#日本",
       "post_count": 3,
       "post_growth": 3,
       "trend": "新增"
     },
     {
-      "rank": 12,
-      "topic": "#崩坏：星穹铁道",
+      "rank": 8,
+      "topic": "#UP主原创剧场",
       "post_count": 2,
       "post_growth": 2,
-      "trend": "+100%"
+      "trend": "+67%"
     },
     {
-      "rank": 13,
+      "rank": 9,
       "topic": "#崩坏星穹铁道",
       "post_count": 2,
       "post_growth": 2,
       "trend": "+100%"
     },
     {
-      "rank": 14,
+      "rank": 10,
       "topic": "#崩坏星穹铁道真珠",
       "post_count": 2,
       "post_growth": 2,
       "trend": "新增"
     },
     {
-      "rank": 15,
-      "topic": "#科普",
+      "rank": 11,
+      "topic": "#米哈游",
       "post_count": 2,
       "post_growth": 2,
-      "trend": "+67%"
+      "trend": "+100%"
+    },
+    {
+      "rank": 12,
+      "topic": "#miHoYo",
+      "post_count": 2,
+      "post_growth": 2,
+      "trend": "+100%"
+    },
+    {
+      "rank": 13,
+      "topic": "#推荐宝藏游戏",
+      "post_count": 2,
+      "post_growth": 2,
+      "trend": "新增"
+    },
+    {
+      "rank": 14,
+      "topic": "#奇闻",
+      "post_count": 2,
+      "post_growth": 2,
+      "trend": "+100%"
+    },
+    {
+      "rank": 15,
+      "topic": "#悬疑",
+      "post_count": 2,
+      "post_growth": 2,
+      "trend": "新增"
     },
     {
       "rank": 16,
-      "topic": "#万物研究所",
+      "topic": "#电影",
       "post_count": 2,
       "post_growth": 2,
-      "trend": "+50%"
+      "trend": "+100%"
     },
     {
       "rank": 17,
-      "topic": "#搞笑小剧场",
+      "topic": "#三角洲行动",
       "post_count": 2,
       "post_growth": 2,
       "trend": "+67%"
     },
     {
       "rank": 18,
-      "topic": "#JOJO的奇妙冒险",
+      "topic": "#彩蛋",
       "post_count": 2,
       "post_growth": 2,
       "trend": "新增"
     },
     {
       "rank": 19,
-      "topic": "#二次元",
+      "topic": "#摄影",
       "post_count": 2,
       "post_growth": 2,
-      "trend": "+100%"
+      "trend": "新增"
     },
     {
       "rank": 20,
-      "topic": "#动漫二创激励计划",
+      "topic": "#了不起的旅行家",
       "post_count": 2,
       "post_growth": 2,
-      "trend": "+50%"
+      "trend": "+67%"
     }
   ]
 }
